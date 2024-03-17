@@ -1,0 +1,12 @@
+---
+title: Using `git` in Research
+author: Aly Lamuri
+format:
+  html: default
+  revealjs:
+    smaller: true
+    scrollable: true
+    output-file: slide.html
+---
+
+## What is `git`?

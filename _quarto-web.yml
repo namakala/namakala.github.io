@@ -9,19 +9,21 @@ website:
     type: textbox
     copy-button: true
     location: sidebar
+  navbar:
+    title: false
+    left:
+      - text: "Home"
+        href: index.qmd
+      - text: "About"
+        href: about.qmd
+      - text: "Learning Space"
+        href: docs/learning-space/index.qmd
   sidebar:
     title: "Policy and Resilience"
     style: docked
     alignment: right
     contents:
       - text: About
-        href: qmd/about.qmd
-      - section: qmd/presentation/index.qmd
-        contents:
-          - text: Introduction to `git`
-            href: qmd/presentation/intro-git/index.qmd
+        href: about.qmd
       - text: Bibliography
-        href: qmd/proposal/references.qmd
-
-format:
-  revealjs: default
+        href: docs/proposal/references.qmd

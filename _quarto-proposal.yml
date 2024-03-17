@@ -13,17 +13,17 @@ book:
   chapters:
     - index.qmd
     - text: Introduction
-      href: qmd/proposal/intro.qmd
+      href: docs/proposal/intro.qmd
     - text: Literature Review
-      href: qmd/proposal/litrev.qmd
+      href: docs/proposal/litrev.qmd
     - text: Research Framework
-      href: qmd/proposal/research-framework.qmd
+      href: docs/proposal/research-framework.qmd
     - text: Methods
-      href: qmd/proposal/methods.qmd
+      href: docs/proposal/methods.qmd
     - text: Summary
-      href: qmd/proposal/summary.qmd
+      href: docs/proposal/summary.qmd
     - text: Bibliography
-      href: qmd/proposal/references.qmd
+      href: docs/proposal/references.qmd
 
 format:
   pdf:

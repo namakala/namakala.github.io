@@ -13,9 +13,9 @@ book:
   chapters:
     - index.qmd
     - text: Introduction
-      href: qmd/proposal/intro.qmd
+      href: docs/proposal/intro.qmd
     - text: Bibliography
-      href: qmd/proposal/references.qmd
+      href: docs/proposal/references.qmd
 
 format:
   pdf:

@@ -25,7 +25,7 @@ citation:
 
 ## What am I doing here? {-}
 
-This website is a makeshift of a book and blog describing my journey as a PhD candidate. I intend to transparently report all my joy and effort in science, because I believe that academic endeavor relies on honesty. In this page, and the following pages to come, I am sharing the essence of what I learned throughout the years as I wish to entice the readers with the beauty and bluntness in research. I hope to encourage the readers to see what I saw, feel what I felt, and think what I thought. You will find several resources I neatly arranged in the [learning space](qmd/learning-space/index.qmd), where I note down topics that enriched my research.
+This website is a makeshift of a book and blog describing my journey as a PhD candidate. I wish to narrate all my joy and effort in science, because I believe that academic endeavor relies on honesty. In this page, and the following pages to come, I am sharing the essence of what I learned throughout the years as I hope to entice the readers with the beauty and bluntness in research. I hope to encourage the readers to see what I saw, feel what I felt, and think what I thought. You will find several resources I neatly arranged in the [learning space](docs/learning-space/index.qmd), where I note down topics that enriched my research.
 
 ## What are *you* doing here? {-}
 

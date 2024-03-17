@@ -13,9 +13,9 @@ book:
   chapters:
     - index.qmd
     - text: Introduction
-      href: qmd/rug-essay/intro.qmd
+      href: docs/rug-essay/intro.qmd
     - text: Bibliography
-      href: qmd/proposal/references.qmd
+      href: docs/proposal/references.qmd
 
 format:
   pdf:
