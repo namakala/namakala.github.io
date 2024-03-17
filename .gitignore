@@ -1,0 +1,23 @@
+# Untrack the rendered content
+.quarto/*
+_render/*
+/.quarto/
+
+# Untrack the freeze components
+_freeze/*
+
+# Untrack specific file types
+*pdf
+
+# Untrack local env files
+*local
+
+# Untrack frozen contents
+_freeze/*
+
+# Untrack specific filetypes
+*pdf
+
+# Only track specific renv artifact
+renv/*
+!renv/activate.R

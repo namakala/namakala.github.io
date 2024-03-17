@@ -1,0 +1,10 @@
+# REFERENCES {.unnumbered}
+
+::: { .content-hidden }
+\multicols{2}
+\footnotesize
+\pagenumbering{gobble}
+:::
+
+::: {#refs}
+:::

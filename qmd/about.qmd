@@ -1,0 +1,32 @@
+---
+title: "AL"
+comments: false
+author:
+  - name: "Aly Lamuri"
+    email: a.l.m.lamuri.murdani@rug.nl
+    orcid: 0000-0002-3410-3767
+    affiliation:
+      - Rijksuniversiteit Groningen
+      - Universitas Indonesia
+    affiliation-url: https://www.rug.nl/
+format:
+  html:
+    grid:
+      body-width: 950px
+    toc: false
+about:
+  template: trestles
+  image: ../fig/profile.jpeg
+  image-shape: round
+  links:
+    - icon: twitter
+      href: https://twitter.com/lamurian
+    - icon: github
+      href: https://github.com/lamurian
+    - icon: linkedin
+      href: https://linkedin.com/in/lamurian
+---
+
+:::{.content-hidden}
+Aly Lamuri is a PhD candidate at Rijksuniversiteit Groningen (RUG) / University Medical Center Groningen (UMCG).
+:::

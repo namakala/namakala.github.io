@@ -1,0 +1,75 @@
+::: {.content-hidden when-profile=proposal}
+
+# Article 5: Survey on Mental Resilience, Burnout, and Depression \label{survey} {#sec-survey}
+
+This survey is a follow up of previous surveys in Indonesia, including @elvira2021psychological and @lamuri2023burnout. In this survey, we will employ a Maslach's Burnout Inventory [MBI, @Maslach1986] to measure burnout; Beck Depression Inventory (BDI) to measure depression; and Beck Anxiety Inventory (BAI) to measure anxiety; alongside collecting sociodemographic data and exposure to stressors as suggested in @sec-stressor.
+
+## Practical Interpretation {-}
+
+The results from this survey imply the state of being resilient as a moderator of stressor and psychological disorders. Conducting the survey will allow us to propose a streamlined and generalisable approach to measure the effectiveness of suggested policy.
+
+:::
+
+## Study Design
+
+This research employs a mixed-method approach by combining qualitative and quantitative cross-sectional design. The quantitative part of this research is a large-scale survey to measure depression, anxiety, and burnout, capture general and health-related stressors, and infer the presence of state resilience. The qualitative part of this research comprises of focus-group discussion and semi-structured in-depth interview with community leaders.
+
+### Location and Time
+
+This research is conducted in three provinces in Indonesia, namely Jakarta, West Java, and East Java.
+
+## Population and Sample
+
+### Research Population
+
+### Research Sample
+
+### Inclusion and Exclusion Criteria
+
+#### Inclusion Criteria {-}
+
+#### Exclusion Criteria {-}
+
+## Sample Size
+
+The required sample for a survey is estimable following various methods. As proposed by @cochran1977sampling, two factors play an important role in determining the sample size, namely the alpha level and the acceptable level or error. @kotrlik2001organizational summarized several ways of calculating the required sample size, where equation \ref{eq-sample1} and \ref{@eq-sample2} excerpted the calculation for continuous variable.
+
+\begin{align}
+n_0 &= \frac{t^2 \cdot s^2}{d^2} \label{eq-sample1} \\
+n   &= \frac{n_0}{1 + \frac{n_0}{N}} \label{eq-sample2}
+\end{align}
+
+Denoted in Equation \ref{@eq-sample1}, $n$ is the estimated minimum number of samples; $t$ is the value acquired from T distribution, where $t$ = 1.96 when $\alpha$ = 0.05; $s$ is the estimated standard deviation of responses in the population; $d$ is the acceptable margin of error mean estimation. Computing $s$ requires dividing the number of inclusive scale in a questionnaire response by 6, the total number of deviation in a normal distribution. In case we are using a 7-point scale, the value of $s$ would be $\frac{7}{6}$ = 1.167. Lastly, the acceptable margin of error for mean estimation $d$ is the product of points on scale and the acceptable margin of error, conveniently set as 7 $\cdot$ 0.3 = 0.21.  Equation \ref{@eq-sample2} is rather straightforward, where the newly introduced variable is $N$ = 10,562,088, representing the total number of population in Jakarta. Plugging in all the numbers into equation resulted in Equation \ref{@eq-sample3}, where the minimum number of samples should be 119.
+
+\begin{align}
+n_0 &= \frac{1.96^2 \cdot 1.167^2}{0.21^2} \label{eq-sample3} \\
+    &= 118.64 \notag \\
+    &\approx 119 \notag \\
+n   &= \frac{119}{1 + \frac{119}{10,562,088}} \notag \\
+    &= 118.99 \notag \\
+    &\approx 119 \notag
+\end{align}
+
+On the other hand, sample size calculation can also be done by inverting the power calculation of a binomial distribution, as presented in \ref{@eq-sample4}. In this equation, $p$ represents the proportion of event; $z$ is a Z distribution corresponding to the $\alpha$ value; $E$ is the expected maximum error, which is conveniently agreed as 3%. Following this formula, it is possible to integrate disease prevalence as a proportion $p$ when calculating the required sample size. According to @GBD2022, the global prevalence of depression and anxiety in 2019 was 3,440 and 3,779 per 100,000 people, respectively. Thus, the proportion for depression $p_D$ and anxiety $p_A$ are 0.034 and 0.038. By choosing the highest proportion, we can estimate the required sample size as indicated in Equation \ref{@eq-sample5}.
+
+\begin{align}
+n &= \frac{p \cdot (1 - p) \cdot z^2}{E^2} \label{eq-sample4} \\
+  &= \frac{0.038 \cdot (1 - 0.038) \cdot 1.96^2}{0.03^2} \label{eq-sample5} \\
+  &\approx 156 \notag
+\end{align}
+
+Having two sample size estimations, i.e. 119 and 156, we tend to choose the higher number of minimum sample. The survey will use a stratified, clustered random sampling. Initially, a pilot study according to @Cohen2013 will be commenced to acquire 156 individuals representing the general population. Then, the required sample size is recalculated with Monte-Carlo simulation using the pilot data [@Green2016]. All stressors as indicated in section [-@sec-stressor] will be grouped based on its type (general and health-related), then a PCA will be fitted and the first principal component will be extracted. Similarly, the sum of items from each psychological outcomes will be fitted into a PCA model and its first principal component will be extracted. Then, a linear regression model will be fitted to measure the association between the first principal component from stressors and the first principal component from psychological outcomes.  Resilience is defined as the regularized inverted residuals from the linear regression. Further exploratory analysis is then conducted to profile the resilience in all participants. From this profile, we can further infer which variables promote a good resilience.
+
+## Data Collection
+
+## Data Processing
+
+## Data Analysis
+
+### Univariate Data Analysis
+
+### Bivariate Data Analysis
+
+### Multivariable Data Analysis
+
+### Dummy Table {-}

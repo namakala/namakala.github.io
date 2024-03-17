@@ -1,0 +1,36 @@
+The questionnaire used in the survey is adapted from the WMH study, which employs CIDI to diagnose mental heath issues [@Kessler2012]. Correspondingly, this survey takes some parts of CIDI and items used in the National Comorbidity Survey to ensure that depression and anxiety closely resemble the clinical diagnostic criteria. The rationale behind collecting these data is to enable stratification based on age and sex, also calibration using depression prevalence; both are further detailed under section [-@sec-dt-process]. The data collected through a large-scale survey are as follow:
+
+- Screening data:^[https://www.hcp.med.harvard.edu/ncs/ftpdir/replication/US%20Screener.pdf]
+  1. Age
+  1. Sex
+  1. Domicile
+  1. Marital status
+  1. Sleeping issue frequency
+  1. Nervousness frequency
+  1. Headache frequency
+  1. Number of days affected by health condition
+- Employment and financial status:^[https://www.hcp.med.harvard.edu/ncs/ftpdir/replication/US%20Employment.pdf]
+  1. Current employment status
+  1. Years spent working
+  1. Industrial sector
+  1. Job levels in the workplace
+  1. Range of monthly income
+  1. Range of monthly expenses
+- Cause of worries:^[https://www.hcp.med.harvard.edu/ncs/ftpdir/replication/US%20Worries%20and%20Unhappiness.pdf]
+  1. Economic and material
+  1. Children
+  1. Marriage
+  1. Other interpersonal issues
+  1. Job
+  1. Personal health
+  1. Family's health
+  1. Independence
+  1. Personal characteristics
+  1. Community, national, or world problems
+- Depression diagnostic criteria^[https://pdf.medenshealth.com/MINI-Standard.pdf]
+- Anxiety diagnostic criteria^[https://www.hcp.med.harvard.edu/ncs/ftpdir/replication/US%20GAD.pdf]
+- Maslach's burnout inventory
+
+A large-scale survey will be conducted online following a convenience sampling procedure. The link to access the online survey will be advertised to reach the targeted population in Jakarta, West Java, and East Java. As a part of non-probability sampling, convenience sampling is favored due to its simplicity and applicability. Although using a probability sampling method is desirable, the absence of an institutionally accessible internet panel for research purposes in Indonesia renders using probability sampling in an online survey impractical. Therefore, we establish a pseudo-panel comprised of multiple groups of heterogeneous sub-populations by adopting convenience sampling procedure. To indirectly compare the survey respondents with the general population, we match respondents' demography data to the basic health research (*riset kesehatan dasar*/Riskesdas), which will allow generalizing specific sub-populations to a certain degree. A list of pseudo-panelists is selected through clustered random sampling by adjusting representativeness using population age group. The disadvantage of this approach is the inability to pre-allocate respondents into clusters, which is only possible by conducting an interim analysis during data collection.
+
+Qualitative data will be collected through focus group discussion and semi-structured in-depth interview. Focus group discussion is intended to collect opinions from four groups, representing male and female respondents aged younger and older than 35 years old. Each focus group has 8-12 participants who will engage in a discussion led by a moderator. Meanwhile, semi-structured in-depth interview is intended to collect perspective from key-opinion leaders, including the chairman of the Indonesian Doctor Association (*Ikatan Dokter Indonesia*/IDI), the chairman of the Indonesian Psychological Association (*Himpunan Psikologi Indonesia*/HIMPSI), the chairman of the Indonesian Psychiatric Association (*Perhimpunan Dokter Spesialis Kesehatan Jiwa Indonesia*/PDSKJI), and the Directorate General of Public Health from the Ministry of Health of the Republic of Indonesia.

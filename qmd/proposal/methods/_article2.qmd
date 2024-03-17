@@ -1,0 +1,99 @@
+## Article 2: Exploring the Trend of Medication Uses \label{med} {#sec-med}
+
+To explore the trend of medication, we relied on the IADB and BPJS data repository. The main variable of interest is medication use over the years. In the exploratory analysis, medication use will be described based on its temporal trend then grouped by subjects' demographics. This approach will let us investigate which medications are prescribed during a specific time of the year.
+
+### Practical Interpretation {-}
+
+The main focus of this exploratory analysis is to find the trend and seasonality of medication uses to be further analyzed in section [-@sec-cost].
+
+### Technical Approach {-}
+
+Periodic medication use (medication name grouped in weekly, monthly, quarterly, or annual basis) can be represented as a sparse matrix, where both rows and columns represent medication entity. $N$ number of medications will then form a square matrix describing the concurrent use of enlisted drugs, therefore, the matrix diagonal represents the use of only one medication over the observation period.  Medication we would consider are psychiatric medication for `ICD-10` codes `F30`-`F39` (mood disorders) and `F40`-`F48` (anxiety, dissociative, stress-related, somatoform, and other non-psychotic mental disorders). The ATC codes for such medications are a part of `N05B` and `N06A`.
+
+The matrix follows a knowledge graph construct with a subject-predicate-object $(s, p, o)$ triples, i.e. `Medication1`-`PrescribedAlongside`-`Medication2`.  The graph object is constructed from recorded prescription claim on a daily epoch.  The edge (predicate) in this graph represents the number of concurrency, which will be different from one epoch to another depending on the number of patients claiming the prescription. To leverage this issue, it is essential to adjust the weight of the edge by dividing to the number of patients ($N$). Adjustment for matrices' elements will regularize all epochs to follow the same scale, as shown in equation [-@eq-adj-mtx1].
+
+$$
+\stackrel{\textrm{Unregularized}}{
+  \begin{bmatrix}
+  n_{1, 1} & \dots & n_{1, N} \\
+  \vdots & \ddots & \vdots \\
+  n_{N, 1} & \dots & n_{N, N} \\
+  \end{bmatrix}
+}
+\to
+\stackrel{\textrm{Regularized by } N}{
+  \begin{bmatrix}
+  \frac{n_{1, 1}}{N} & \dots & \frac{n_{1, N}}{N} \\
+  \vdots & \ddots & \vdots \\
+  \frac{n_{N, 1}}{N} & \dots & \frac{n_{N, N}}{N} \\
+  \end{bmatrix}
+}
+$$ {#eq-adj-mtx1}
+
+Other than the number of patients, we also need to consider regularization based on the defined daily dose [$DDD$, @world2017whocc]. Regularization in equation [-@eq-adj-mtx2] will allow direct comparison of one drug to another when calculating the graph metrics. Regularization based on $DDD$ essentially transforms the dosage into unit-free scale, which will be assigned as a weighted edge in the graph object.
+ 
+$$
+\stackrel{\textrm{Unregularized}}{
+  \begin{bmatrix}
+  n_{1, 1} & \dots & n_{1, N} \\
+  \vdots & \ddots & \vdots \\
+  n_{N, 1} & \dots & n_{N, N} \\
+  \end{bmatrix}
+}
+\to
+\stackrel{\textrm{Regularized by } DDD}{
+  \begin{bmatrix}
+  \frac{1}{2} \cdot \left(\frac{n_1}{DDD_1} + \frac{n_1}{DDD_1} \right) & \dots & \frac{1}{2} \cdot \left(\frac{n_1}{DDD_1} + \frac{n_N}{DDD_N} \right) \\
+  \vdots & \ddots & \vdots \\
+  \frac{1}{2} \cdot \left(\frac{n_N}{DDD_N} + \frac{n_1}{DDD_1} \right) & \dots & \frac{1}{2} \cdot \left(\frac{n_N}{DDD_N} + \frac{n_N}{DDD_N} \right) \\
+  \end{bmatrix}
+}
+$$ {#eq-adj-mtx2}
+
+After obtaining three matrices, we can find the sum of row from the unregularized matrix to calculate the number of individual drug uses in the population. Meanwhile, regularized matrices are useful when constructing graph objects with different weighting, i.e. one weighted by the number of patients and one weighted by the standard dosage recommendation. Graph metrics are individually calculated from both graph objects; per epoch graph metrics are treated as a time-series data, where an epoch equals to daily time point.
+
+Temporal changes of medication uses can be represented as a higher dimension array, creating a temporal embedding to the knowledge graph forming a $(s, p, o, t)$ quadruples [@xu2019temporal; @liu2020context]. As a knowledge graph, matrices in the temporal dimension is subjected to graph measures, which allow us to observe the time-serial change of medication uses. Afterwards, sequences of graph measures are fitted as a time-series data to model the seasonality by performing a time-series decomposition. This investigation will commence using the data of medication uses in the Northern Netherlands as provided by IADB, then, similar approach will be conducted using the data of medication uses in Indonesia as provided by BPJS.
+
+::: {.content-hidden}
+
+ # Inclusion - Exclusion
+
+Inclusion criteria:
+
+- Adult aged 18-65 years old
+- Prescribed for anxiolytics (N05B) or antidepressant (N06A)
+
+Exclusion criteria:
+
+ # Data variables
+
+Required data:
+
+- Patient table:
+  - `anopat`
+  - `mv`
+  - `gebdat`
+- Prescription table
+  - `anopat`
+  - `afldat`
+  - `atc`
+  - `dagdos`
+  - `nddd`
+  - `zkzv`
+  - `bybet`
+- Additional data (if available)
+  - Socioecnomic status (monthly income/expenditure)
+  - Education
+
+ # Analysis
+
+The choice of graph metrics to use would be node centrality, which can be interpreted as node importance in a graph object. From various selection of centrality measures, we will focus on using eigenvector centrality, i.e. a prestige score. By calculating eigenvector centrality, each node will have a relative score. A high-scoring node implies that the node is highly connected with other high-scoring nodes. In a way, this shall reflect the score of importance when one drug is used alongside other drugs. Nodes with high eigenvector centrality can be further interpreted as strongly-connected nodes.
+
+Overtime, changes might occur in the daily medication claim matrices. Such changes are reflected as altering centrality measures in the graph. Changes in eigenvector centrality can imply differences in associated tendency for patients to receive particular medications. Several medications may lose its importance in a particular season, and regain its importance in other seasons. Therefore, it is paramount to investigate the trend and pattern of drug uses as reflected by eigenvector centrality.
+
+In anticipation of noisy data, it is essential to reduce noises by performing data smoothing with a 7-day and 14-day moving average. A period of 7 and 14 days are chosen arbitrarily considering that some drugs may only be prescribed 3 days while some others might be prescribed for two months.
+
+To understand the trend and pattern, I intend to describe the data using a time-series decomposition approach.This will allow separating the components of a time-series data into its constituting trend, seasonality, and noises. The choice of using additive or multiplicative models will be a subject to discuss depends on our initial exploration of the dataset. Afterwards, we can assess the difference of time-series components within the subgroups of the population.
+
+:::
+

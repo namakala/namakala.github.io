@@ -1,0 +1,35 @@
+project:
+  output-dir: _render/rug
+
+book:
+  title: >
+    Mental Resilience as a Determinant of Burnout, Depression, and Anxiety amidst
+    Adversity
+  sidebar:
+    title: Policy and Resilience
+    style: docked
+  output-file: introductory-essay
+  doi: 10.53962/jn77-mprt
+  chapters:
+    - index.qmd
+    - text: Introduction
+      href: qmd/rug-essay/intro.qmd
+    - text: Bibliography
+      href: qmd/proposal/references.qmd
+
+format:
+  pdf:
+    documentclass: scrbook
+    toc: true
+    include-in-header:
+      text: |
+        \usepackage{typearea}
+        \usepackage{longtable}
+        \usepackage{amsmath}
+        \usepackage{amssymb}
+        \usepackage{multicol}
+        \usepackage{float}
+        \floatplacement{figure}{htbp}
+        \floatplacement{table}{htbp}
+  docx:
+    toc: true

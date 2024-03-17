@@ -1,0 +1,56 @@
+project:
+  output-dir: _render/proposal
+
+book:
+  title: >
+    Mental Resilience as a Determinant of Burnout, Depression, and Anxiety amidst
+    Adversity
+  sidebar:
+    title: Policy and Resilience
+    style: docked
+  output-file: proposal
+  doi: 10.53962/jn77-mprt
+  chapters:
+    - index.qmd
+    - text: Introduction
+      href: qmd/proposal/intro.qmd
+    - text: Literature Review
+      href: qmd/proposal/litrev.qmd
+    - text: Research Framework
+      href: qmd/proposal/research-framework.qmd
+    - text: Methods
+      href: qmd/proposal/methods.qmd
+    - text: Summary
+      href: qmd/proposal/summary.qmd
+    - text: Bibliography
+      href: qmd/proposal/references.qmd
+
+format:
+  pdf:
+    toc: true
+    lot: true
+    lof: true
+    linestretch: 1.5
+    pdf-engine: xelatex
+    template: style/ui.tex
+    documentclass: book
+    include-in-header:
+      text: |
+        \usepackage{longtable}
+        \usepackage{amsmath}
+        \usepackage{amssymb}
+        \usepackage{multicol}
+        \usepackage{float}
+        \floatplacement{figure}{htbp}
+        \floatplacement{table}{htbp}
+        \usepackage{lscape}
+        \newcommand{\blandscape}{\begin{landscape}}
+        \newcommand{\elandscape}{\end{landscape}}
+
+logo: fig/logo-ui.png
+supervisor:
+- "Prof. dr. Mondastri Korib Sudaryo, MSc, DSc"
+- "Prof. Talitha Feenstra"
+version:
+  no: 4
+  date: 13-12-2023

@@ -1,0 +1,27 @@
+project:
+  type: website
+  output-dir: _render/web
+  preview:
+    port: 1810
+
+website:
+  search:
+    type: textbox
+    copy-button: true
+    location: sidebar
+  sidebar:
+    title: "Policy and Resilience"
+    style: docked
+    alignment: right
+    contents:
+      - text: About
+        href: qmd/about.qmd
+      - section: qmd/presentation/index.qmd
+        contents:
+          - text: Introduction to `git`
+            href: qmd/presentation/intro-git/index.qmd
+      - text: Bibliography
+        href: qmd/proposal/references.qmd
+
+format:
+  revealjs: default

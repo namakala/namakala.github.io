@@ -1,0 +1,84 @@
+---
+execute:
+  freeze: false
+---
+
+```{r}
+
+pkgs <- c("magrittr")
+pkgs_load <- sapply(pkgs, library, character.only = TRUE)
+
+```
+
+# RESEARCH FRAMEWORK
+
+## Conceptual Framework \label{concept} {#sec-concept}
+
+::: {.content-visible when-profile="rug"}
+
+@fig-concept explains the conceptual framework of the proposed investigation. An individual perceives stressors, moderated by an adaptive resilience, resulting in a varying degree of psychological outcomes. Any medication taken during the course of observable diagnosis is presumed to affect the mental health, which in return influence the resilience. The theoretical remarks of resilience is further investigated in a scoping review (denoted by `#1` in the conceptual framework figure), conducted following the methods in [-@sec-scoping.rev]. The trend of medication uses (`#2`) is investigated following the methods in [-@sec-med].  Psychological outcomes (`#3`) are investigated following the methods in [-@sec-psych.method]. The methods measuring impacts of medication uses to mental resilience (`#4`) is described in section [-@sec-cost]. Lastly, the methods delineating the overall theoretical remarks (`#5`) is defined in section [-@sec-survey].
+
+:::
+
+```{r conceptual.framework}
+#| label: fig-concept
+#| fig.cap: Conceptual framework of how stressors are moderated by mental resilience in affecting the psychological outcome
+#| out.width: "90%"
+
+knitr::include_graphics("../../fig/resilience-conceptual-framework.drawio.png")
+
+```
+
+## Operational Definition
+
+```{r tbl-op-def}
+
+yaml::read_yaml("op-definition.yml") %>%
+  {Reduce(\(x, y) rbind(x, y), .)} %>%
+  data.frame() %>%
+  tibble::tibble() %>%
+  knitr::kable()
+
+```
+
+## Research Hypothesis
+
+The proposed research encompasses five main topics of interest, and the
+hypotheses are ordered accordingly. For brevity, this section only enlist the
+alternative hypotheses for each topic of interest.
+
+::: {.content-visible when-profile="rug"}
+
+1. Scoping review on resilience and mental health  
+   *H~1~:* Resilience acts as a moderator of stressors and psychological
+   outcomes.
+1. Exploring the trend of medication uses   
+   *H~1~:* There exists a seasonal pattern on the overtime trend of
+   psychopharmaca uses.
+1. Exploring the mental health profile before and during the pandemic  
+   *H~1~:* The health perception is nuanced towards the change of environmental
+   stressors and moderated by individual traits.
+1. Cost-effectiveness analysis of policy measures to increase resilience  
+   *H~1~:* Policies acting on institutional entities influence individual
+   resilience.
+1. Survey on mental resilience, burnout, and depression  
+   *H~1~:* The resilient state is a moderator of stressor and psychological
+   disorders.
+
+:::
+
+::: {.content-visible when-profile="proposal"}
+
+1. What is the role of resilience in the emergence of psychological outcomes?  
+   *H~1~*: Resilience acts as a moderator of stressors and psychological outcomes
+1. What is the functional state of resilience in a cross-sectional setting?  
+   *H~1~*: The state resilience is a buffer reflected as a reactivity against stressors
+
+:::
+
+:::{.content-hidden unless-profile="site"}
+
+# References {-}
+
+:::
+

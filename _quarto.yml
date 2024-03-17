@@ -1,0 +1,71 @@
+project:
+  type: book
+  preview:
+    port: 1810
+
+book:
+  title: Policy, Health Economics, and Psychological Resilience
+  author:
+    - name: "Aly Lamuri"
+      affiliation:
+        - Rijksuniversiteit Groningen
+        - Universitas Indonesia
+  sharing: [twitter, linkedin]
+  back-to-top-navigation: true
+  downloads: pdf
+  output-file: journey
+  date: ""
+  license: "CC BY"
+  comments:
+    hypothesis:
+      theme: clean
+      openSidebar: false
+      showHighlights: always
+      usernameUrl: https://hypothes.is/users/lamurian
+    giscus:
+      repo: namakala/namakala.github.io
+      theme: noborder_light
+      input-position: top
+
+website:
+  back-to-top-navigation: true
+  comments:
+    hypothesis:
+      theme: classic
+      openSidebar: false
+      showHighlights: always
+      usernameUrl: https://hypothes.is/users/lamurian
+    giscus:
+      repo: namakala/namakala.github.io
+      theme: noborder_light
+      input-position: top
+
+format:
+  html:
+    theme: flatly
+    toc-title: Contents
+    page-layout: article
+    grid:
+      sidebar-width: 300px
+      body-width: 1200px
+      margin-width: 600px
+    toc: true
+
+profile:
+  default: site
+
+bibliography: ref.bib
+knitr:
+  opts_chunk:
+    echo: false
+    eval: true
+    error: false
+    message: false
+    warning: false
+    fig.width: 10
+    fig.height: 8
+    out.width: "60%"
+    comment: "|"
+
+execute:
+  freeze: auto

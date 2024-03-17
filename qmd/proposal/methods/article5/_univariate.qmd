@@ -1,0 +1,1 @@
+Univariate analysis is conducted to describe the distribution of the variable. For all continuous variables, the value of mean, median, standard deviation, and interquartile range are calculated. For all continuous variables, the frequency and its percentage are presented.

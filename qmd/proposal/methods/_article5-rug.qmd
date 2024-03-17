@@ -1,0 +1,64 @@
+## Article 5: Survey on Mental Resilience, Burnout, and Depression \label{survey} {#sec-survey}
+
+This survey is a follow up of previous surveys in Indonesia, including @elvira2021psychological and @lamuri2023burnout. In this survey, we will employ a Maslach's Burnout Inventory [MBI, @Maslach1986] to measure burnout; Beck Depression Inventory (BDI) to measure depression; and Beck Anxiety Inventory (BAI) to measure anxiety; alongside collecting sociodemographic data and exposure to stressors as suggested in @sec-stressor.
+
+### Practical Interpretation {-}
+
+The results from this survey imply the state of being resilient as a moderator of stressor and psychological disorders. Conducting the survey will allow us to propose a streamlined and generalisable approach to measure the effectiveness of suggested policy.
+
+### Study Design
+
+{{< include methods/article5/_study-design.qmd >}}
+
+### Location and Time
+
+{{< include methods/article5/_location-time.qmd >}}
+
+### Population and Sample
+
+#### Research Population
+
+{{< include methods/article5/_research-population.qmd >}}
+
+#### Research Sample
+
+{{< include methods/article5/_research-sample.qmd >}}
+
+#### Inclusion and Exclusion Criteria {-}
+
+##### Inclusion Criteria {-}
+
+{{< include methods/article5/_inclusion.qmd >}}
+
+##### Exclusion Criteria {-}
+
+{{< include methods/article5/_exclusion.qmd >}}
+
+### Sample Size
+
+{{< include methods/article5/_sample-size.qmd >}}
+
+### Data Collection
+
+{{< include methods/article5/_data-collection.qmd >}}
+
+### Data Processing {#sec-dt-process}
+
+{{< include methods/article5/_data-processing.qmd >}}
+
+### Data Analysis
+
+{{< include methods/article5/_data-analysis.qmd >}}
+
+#### Univariate Data Analysis
+
+{{< include methods/article5/_univariate.qmd >}}
+
+#### Bivariate Data Analysis
+
+{{< include methods/article5/_bivariate.qmd >}}
+
+#### Multivariable Data Analysis
+
+{{< include methods/article5/_multivariable.qmd >}}
+

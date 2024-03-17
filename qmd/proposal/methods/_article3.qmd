@@ -1,0 +1,12 @@
+## Article 3: Exploring the Mental Health Profile Before and During the Pandemic \label{psych.method} {#sec-psych.method}
+
+All data in this analysis procedure are queried from Lifelines or other suitable databases. Exploratory analysis on mental health profile takes mental health indicator as the independent variable, represented as mental health (stress), sleep, smoking, and social support. Individual traits, including personality and MMSE, are regarded as moderating variables. The dependent variable would be health perception.
+
+### Practical Interpretation {-}
+
+In this analysis, we are interested in profiling health perception as grouped by event-based sequences, i.e. before and during the pandemic. In each group, population characteristics are described descriptively by evaluating the association of mental health indicators and health perception.
+
+### Technical Approach {-}
+
+A contingency table is constructed to see the proportional difference of the dependent variable based on temporal contingency of before and during the pandemic. This contingency table is then broken down to evaluate the association of independent and dependent variables. The relative differences (represented as percentages) are extracted and then compared based on the temporal contingency. A generalized linear mixed effect regression is then fitted to measure the extent of each independent variable in affecting health perception by controlling for individual trait and grouped by the temporal contingency.
+

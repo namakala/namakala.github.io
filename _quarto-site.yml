@@ -1,0 +1,36 @@
+project:
+  output-dir: _render/site
+
+book:
+  title: >
+    Mental Resilience as a Determinant of Burnout, Depression, and Anxiety amidst
+    Adversity
+  sidebar:
+    title: Policy and Resilience
+    style: docked
+  output-file: site
+  doi: 10.53962/jn77-mprt
+  chapters:
+    - index.qmd
+    - part: qmd/proposal/index.qmd
+      chapters:
+        - text: Introduction
+          href: qmd/proposal/intro.qmd
+        - text: Literature Review
+          href: qmd/proposal/litrev.qmd
+        - text: Research Framework
+          href: qmd/proposal/research-framework.qmd
+        - text: Methods
+          href: qmd/proposal/methods.qmd
+        - text: Summary
+          href: qmd/proposal/summary.qmd
+    - part: qmd/learning-space/index.qmd
+      chapters:
+        - text: Graph Theory
+          href: qmd/learning-space/graph-theory.qmd
+    - part: qmd/presentation/index.qmd
+      chapters:
+        - text: Introduction to Git
+          href: qmd/presentation/intro-git/index.qmd
+    - text: Bibliography
+      href: qmd/proposal/references.qmd

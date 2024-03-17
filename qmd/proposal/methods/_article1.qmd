@@ -1,0 +1,18 @@
+## Article 1: Scoping Review on Resilience and Mental Health \label{scoping.rev} {#sec-scoping.rev}
+
+The scoping review aims to collect evidences of how resilience acts as a moderator between the causal relationship of stressors and psychological outcomes. To conduct the scoping review, we limited the scope of systematic search as follow:
+
+- **P:** General population aged >18 years old
+- **I:** Stressors as defined in section [-@sec-stressor] *AND* High resilience
+  *AND* Policy intervention
+- **C:** Stressors as defined in section [-@sec-stressor] *AND* Low resilience
+  *AND* Current practices
+- **O:** Depression *OR* Anxiety *OR* Burnout
+
+### Practical Interpretation {-}
+
+Evidence from the scoping review is used to narrate how stressors and resilience contributes to psychological disorders, namely depression, anxiety, and burnout. Parameters obtained from the scoping review will be used in constructing a mathematical model of cost effectiveness (section [-@sec-cost]).
+
+### Technical Approach {-}
+
+The systematic search is conducted through MEDLINE, Embase, PsychInfo, and CINAHL databases. Filtering is done to include only English-language articles and full paper availability. MeSH, Emtree, and thesaurus are used as applicable to include all relevant terminologies. Papers older than twenty years are excluded in favor of retaining the conceptual integrity of resilience. As explained by @davydov2010resilience, resilience studies in the past were too broad and inclusive as to not differentiating the trait and state of resilience.

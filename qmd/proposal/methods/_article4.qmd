@@ -1,0 +1,12 @@
+## Article 4: Cost-Effectiveness Analysis of Policy Measures to Increase Resilience \label{cost} {#sec-cost}
+
+In the cost-effectiveness analysis, we are interested to see how effective the designated medication in improving overall well being, health status, and health perception. The general pre-processing step for independent and dependent variables is as described in the section [-@sec-med], where both resulting matrices will be further analyzed using a simulation conducted per agent-based modelling approach.
+
+### Practical Interpretation {-}
+
+Simulating an agent-based model will return the postulated outcome of event, action, and medication defined as a population aggregate from the individual (agent) level.  This simulation will help to determine which policies can have a desirable impact on improving mental resilience.
+
+### Technical Approach {-}
+
+Each individual, institutional, and governmental entity is defined as a different type of agent. All agents follow specific rules as indicated by its parameters and functions. Parameters used in the model is derived from Lifelines, IADB, and BPJS data as discussed in section [-@sec-med] and [-@sec-psych.method].  Functions in this approach is derived from the findings in section [-@sec-scoping.rev], section [-@sec-med], section [-@sec-psych.method], and unpublished work by the author in measuring burnout, depression, and anxiety in Indonesia. Agent interaction is defined in a pre-specified digital space and iterative period with different rate of innervation, e.g. interaction resulting from the governmental entity has the highest rate of innervation because it reach all the other entity. Iterations in this approach is defined as a cycle of 24 hours to represent a daily cycle, and will be set to 1,000 iterations (daily cycles) by default. Data from Pharmlines and BPJS is analyzed per section [-@sec-med] and used as a ground truth when tweaking the baseline parameters to provide a more contextual generalisable model.
+

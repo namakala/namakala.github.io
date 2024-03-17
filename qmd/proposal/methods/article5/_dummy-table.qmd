@@ -1,0 +1,80 @@
+```{r tbl-univariate}
+#| tbl-cap: Univariate analysis
+
+tbl <- tibble::tibble(
+  "Research Variable" = c(
+    paste("Age:", c("18-30", "31-40", "41-50", "51-64")),
+    paste("Domicile -", c("Jakarta", "West Java", "East Java")),
+    "Female",
+    "Married",
+    "Worriedness",
+    "Depression",
+    "Anxiety",
+    "Burnout",
+    "Resilience"
+  ),
+  "Measure" = c(
+    rep("N (%)", 9),
+    rep("m [sd]; M (IQR)", 5)
+  )
+)
+
+knitr::kable(tbl, booktabs = TRUE, longtable = TRUE, format = "latex") %>%
+  kableExtra::footnote(
+    number = c(
+      "N (%): Frequency (Percentage)",
+      "m [sd]: Mean [Standard Deviation]",
+      "M (IQR): Median (Interquartile Range)"
+    )
+  )
+
+```
+
+```{r tbl-bivariate}
+#| tbl-cap: Bivariate Analysis
+
+tbl <- tibble::tibble(
+  "Research Variable" = c(
+    paste("Age:", c("18-30", "31-40", "41-50", "51-64")),
+    paste("Domicile -", c("Jakarta", "West Java", "East Java")),
+    "Female",
+    "Married",
+    "Worriedness",
+    "Resilience"
+  ),
+  "True" = NA,
+  "False" = NA,
+  "Difference" = NA,
+  "p" = NA
+)
+
+knitr::kable(tbl, booktabs = TRUE, longtable = TRUE) %>%
+  kableExtra::add_header_above(c(" " = 1, "Psych. Disorder" = 2, " " = 2))
+
+```
+
+```{r tbl-multivariable}
+#| tbl-cap: Multivariable Analysis
+
+tbl <- tibble::tibble(
+  "Path" = c(
+    "Stressors -> Depression",
+    "Stressors -> Anxiety",
+    "Stressors -> Burnout",
+    "Resilience ~~ Stressors",
+    "Resilience ~~ Depression",
+    "Resilience ~~ Anxiety",
+    "Resilience ~~ Burnout",
+    "Health stressors =~ Stressors",
+    "General stressors =~ Stressors"
+  ),
+  "Non-norm. coef." = NA,
+  "Norm. coef." = NA,
+  "S.E." = NA,
+  "z" = NA,
+  "p" = NA
+)
+
+knitr::kable(tbl, booktabs = TRUE, longtable = TRUE)
+
+```

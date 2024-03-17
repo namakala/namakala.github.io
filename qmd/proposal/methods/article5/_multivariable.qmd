@@ -1,0 +1,5 @@
+A structural equation model is used to evaluate the moderating effect of state resilience for the emergence of psychological outcomes in presence of stressors. Stressors, as an independent variable, has a direct association with psychological outcomes, as the dependent variables. State resilience will then moderate stressors and psychological outcomes, creating a tripartite relationship. The moderating effect of state resilience is modelled to covary with both IV and DV, as depicted in figure [-@fig-multivariable-model]. RMSEA, CFI, TLI, SRMR, and R^2^ are measured to evaluate the goodness of fit.
+
+::: {#fig-multivariable-model width=80%}
+![Simplified representation of the structural equation model with state resilience as a moderator](../../fig/multivariable-model.png)
+:::
