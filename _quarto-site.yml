@@ -28,9 +28,5 @@ book:
       chapters:
         - text: Graph Theory
           href: docs/learning-space/graph-theory.qmd
-    - part: docs/presentation/index.qmd
-      chapters:
-        - text: Introduction to Git
-          href: docs/presentation/intro-git/index.qmd
     - text: Bibliography
       href: docs/proposal/references.qmd
