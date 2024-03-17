@@ -1,5 +1,11 @@
 ---
-listing: default
+listing:
+  contents:
+    - intro.qmd
+    - litrev.qmd
+    - research-framework.qmd
+    - methods.qmd
+    - summary.qmd
 ---
 
 :::{.content-hidden when-profile="proposal"}

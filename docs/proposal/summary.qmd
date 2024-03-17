@@ -1,4 +1,10 @@
+:::{.content-visible when-profile="web"}
+# Summary
+:::
+
+:::{.content-hidden when-profile="web"}
 # SUMMARY
+:::
 
 Resilience is a moderator between the causality of stressors and psychological
 outcomes. This research focus on unravelling the adaptive resilience, i.e. a

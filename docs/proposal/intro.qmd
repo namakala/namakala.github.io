@@ -3,7 +3,13 @@ citation:
   doi: 10.53962/jn77-mprt
 ---
 
+:::{.content-visible when-profile="web"}
+# Introduction
+:::
+
+:::{.content-hidden when-profile="web"}
 # INTRODUCTION
+:::
 
 \pagenumbering{arabic}
 
@@ -145,7 +151,7 @@ Secondly, for researchers, the use of general modelling framework will aid in th
 
 Thirdly, the general audiences will gain benefits from the knowledge mining process. Generally, this research will highlight effective countermeasures against psychological stressors and psychological disorders. Furthermore, this research will yield an insight regarding improving the resilient state.
 
-::: {.content-hidden unless-profile="site"}
+::: {.content-hidden unless-profile="web"}
 
 # References {-}
 
