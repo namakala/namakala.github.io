@@ -1,5 +1,12 @@
 [
   {
+    "listing": "/docs/learning-space/index.html",
+    "items": [
+      "/docs/learning-space/graph-theory/index.html",
+      "/docs/learning-space/git-in-research/index.html"
+    ]
+  },
+  {
     "listing": "/docs/proposal/index.html",
     "items": [
       "/docs/proposal/intro.html",
@@ -7,13 +14,6 @@
       "/docs/proposal/methods.html",
       "/docs/proposal/research-framework.html",
       "/docs/proposal/summary.html"
-    ]
-  },
-  {
-    "listing": "/docs/learning-space/index.html",
-    "items": [
-      "/docs/learning-space/graph-theory/index.html",
-      "/docs/learning-space/git-in-research/index.html"
     ]
   }
 ]

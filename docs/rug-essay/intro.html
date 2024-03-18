@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-99.9.9">
+<meta name="generator" content="quarto-1.4.551">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -215,7 +215,7 @@ Figure&nbsp;2: Seven pillars of a resilient state, as adapted from <span class="
 <section id="observing-trait-and-state-resilience" class="level3 page-columns page-full">
 <h3 class="anchored" data-anchor-id="observing-trait-and-state-resilience">Observing Trait and State Resilience</h3>
 <p>Resilience, both as a trait and state, contributes to maintaining psychological well-being by reducing or buffering the negative effects of experiencing adversities. <span class="citation" data-cites="hu2015meta">Hu, Zhang, and Wang (<a href="#ref-hu2015meta" role="doc-biblioref">2015</a>)</span> argued that resilience would be best observed as a psychological trait due to its innate and stable nature. Based on resilience traits, it is possible to classify people into groups. However, observing resilience only as a trait will subsequently underestimate the actual occurrence of resilience in the population, where <span class="citation" data-cites="GhaneiGheshlagh2017">Gheshlagh et al. (<a href="#ref-GhaneiGheshlagh2017" role="doc-biblioref">2017</a>)</span> demonstrated in their meta-analysis that resilience as measured with CD-RISC<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>, RSA<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>, ERS<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a>; their findings presented with high heterogeneity, which indirectly implied difference in instrumental measurements of resilience. On a further note, <span class="citation" data-cites="GhaneiGheshlagh2017">Gheshlagh et al. (<a href="#ref-GhaneiGheshlagh2017" role="doc-biblioref">2017</a>)</span> and Hu et al. <span class="citation" data-cites="hu2015meta">(<a href="#ref-hu2015meta" role="doc-biblioref">2015</a>)</span> suggested that the level of resilience positively correlates with reduced depression, anxiety, and negative affect. Research focus on either type of resilience would be a matter of practicality, i.e., researching resilient traits is better intended for grouping the population based on their level of resilience so that clinicians can prevent mental health issues in people with low resilience <span class="citation" data-cites="hu2015meta">(<a href="#ref-hu2015meta" role="doc-biblioref">Hu, Zhang, and Wang 2015</a>)</span>. On the other hand, focusing on a resilient state would allow the establishment of a mental health policy that can provide support to improve the resilient state. In this investigation, the author is interested in evaluating resilience as a state and its relation to adversity, medication uses, mental health policy, and psychological outcomes.</p>
-<div class="no-row-height column-margin column-container"><p><sup>1</sup>&nbsp;Connor-Davidson Resilience Scale, containing 25 items addressing factors contributing to resilient state</p><p><sup>2</sup>&nbsp;Resilience Scale for Adults; containing 33 items addressing self-sufficiency, family coherence, and social support</p><p><sup>3</sup>&nbsp;Essential Resilience Scale; 15 items mostly measuring resilient trait</p></div></section>
+<div class="no-row-height column-margin column-container"><div id="fn1"><p><sup>1</sup>&nbsp;Connor-Davidson Resilience Scale, containing 25 items addressing factors contributing to resilient state</p></div><div id="fn2"><p><sup>2</sup>&nbsp;Resilience Scale for Adults; containing 33 items addressing self-sufficiency, family coherence, and social support</p></div><div id="fn3"><p><sup>3</sup>&nbsp;Essential Resilience Scale; 15 items mostly measuring resilient trait</p></div></div></section>
 </section>
 <section id="key-issues" class="level2">
 <h2 class="anchored" data-anchor-id="key-issues">Key Issues</h2>
@@ -495,6 +495,24 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("https:\/\/namakala\.github\.io\/");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
   function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
@@ -529,7 +547,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      return note.innerHTML;
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
     });
   }
   const xrefs = window.document.querySelectorAll('a.quarto-xref');
@@ -803,7 +825,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
-<script src="https://giscus.app/client.js" data-repo="namakala/namakala.github.io" data-repo-id="R_kgDOJ_Pzvg" data-category="General" data-category-id="DIC_kwDOLhl_9s4CeCPH" data-mapping="title" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="noborder_light" data-lang="en" crossorigin="anonymous" async="">
+<script src="https://giscus.app/client.js" data-repo="namakala/namakala.github.io" data-repo-id="R_kgDOLhl_9g" data-category="General" data-category-id="DIC_kwDOLhl_9s4CeCPH" data-mapping="title" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="noborder_light" data-lang="en" crossorigin="anonymous" async="">
 </script>
 <input type="hidden" id="giscus-base-theme" value="noborder_light">
 <input type="hidden" id="giscus-alt-theme" value="noborder_light">
