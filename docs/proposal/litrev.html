@@ -1,0 +1,1756 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-99.9.9">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="dcterms.date" content="2024-03-19">
+
+<title>litrev</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": true,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script type="application/json" class="js-hypothesis-config">
+{
+  "theme": "classic",
+  "openSidebar": false,
+  "showHighlights": "always",
+  "usernameUrl": "https://hypothes.is/users/lamurian"
+}
+</script>
+<script async="" src="https://hypothes.is/embed.js"></script>
+<script>
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    document.body.classList.add('hypothesis-enabled');
+  });
+</script>
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../docs/learning-space/index.html"> 
+<span class="menu-text">Learning Space</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+          <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Contents</h2>
+   
+  <ul>
+  <li><a href="#literature-review" id="toc-literature-review" class="nav-link active" data-scroll-target="#literature-review">Literature Review</a>
+  <ul class="collapse">
+  <li><a href="#sec-motivation" id="toc-sec-motivation" class="nav-link" data-scroll-target="#sec-motivation">The Scope of Mental Health Burden</a>
+  <ul class="collapse">
+  <li><a href="#depressive-disorder" id="toc-depressive-disorder" class="nav-link" data-scroll-target="#depressive-disorder">Depressive Disorder</a></li>
+  <li><a href="#anxiety-disorder" id="toc-anxiety-disorder" class="nav-link" data-scroll-target="#anxiety-disorder">Anxiety Disorder</a></li>
+  <li><a href="#burnout" id="toc-burnout" class="nav-link" data-scroll-target="#burnout">Burnout</a></li>
+  </ul></li>
+  <li><a href="#sec-attachment" id="toc-sec-attachment" class="nav-link" data-scroll-target="#sec-attachment">Attachment Theory</a></li>
+  <li><a href="#sec-resilience" id="toc-sec-resilience" class="nav-link" data-scroll-target="#sec-resilience">Resilience as an Indicator of Mental Immunity </a></li>
+  <li><a href="#sec-neurobio-resilience" id="toc-sec-neurobio-resilience" class="nav-link" data-scroll-target="#sec-neurobio-resilience">The Neurobiology of Resilience</a></li>
+  <li><a href="#sec-stressor" id="toc-sec-stressor" class="nav-link" data-scroll-target="#sec-stressor">Stressors Precipitating the Development of Mental Issues </a></li>
+  <li><a href="#sec-psych" id="toc-sec-psych" class="nav-link" data-scroll-target="#sec-psych">Psychological Outcomes </a></li>
+  </ul></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content page-columns page-full" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">March 19, 2024</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="literature-review" class="level1 page-columns page-full">
+<h1>Literature Review</h1>
+<p>This chapter focuses on elaborating theories and findings pertaining to resilience and psychological outcomes. <a href="#sec-motivation" class="quarto-xref">Section&nbsp;1.1</a> elaborates the motivation behind this research, including the economic evaluation of mental disorders. <a href="#sec-attachment" class="quarto-xref">Section&nbsp;1.2</a> summarizes child-parent attachments as proposed by <span class="citation" data-cites="bowlby1973attachment">Bowlby (<a href="#ref-bowlby1973attachment" role="doc-biblioref">1973</a>)</span> and <span class="citation" data-cites="ainsworth1979infant">Ainsworth (<a href="#ref-ainsworth1979infant" role="doc-biblioref">1979</a>)</span>. <a href="#sec-resilience" class="quarto-xref">Section&nbsp;1.3</a> explains the scope and context of mental resilience in this research. <a href="#sec-neurobio-resilience" class="quarto-xref">Section&nbsp;1.4</a> outlines the underlying neurobiological mechanism in psychological resilience. <a href="#sec-stressor" class="quarto-xref">Section&nbsp;1.5</a> defines a set of stressors investigated in this research, which will be the generic precipitators of maladaptive behavior. <a href="#sec-psych" class="quarto-xref">Section&nbsp;1.6</a> justifies the psychological outcomes.</p>
+<div class="cell">
+
+</div>
+<section id="sec-motivation" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="sec-motivation">The Scope of Mental Health Burden</h2>
+<p>Using Global Burden of Diseases (GBD) data from 1990 to 2019, <span class="citation" data-cites="owidmentalhealth">Dattani et al. (<a href="#ref-owidmentalhealth" role="doc-biblioref">2023</a>)</span> described the scope of problem with mental illnesses, reported as prevalence and disability-adjusted life years (DALY). The GBD dataset enlists 206 countries and 22 country groups according to the World Health Organization, United Nation, and World Bank classification. The clinical diagnoses included in the GBD dataset is depressive disorder, anxiety disorder, bipolar disorder, eating disorder, and schizophrenia. The author replicated this approach in table <a href="#tbl-summary" class="quarto-xref">1</a> - <a href="#tbl-cor-gbd-4" class="quarto-xref">5</a> to elucidate the regional issues based on country-level income grouping. Interestingly, depression is the most prevalent in low-income countries (<span class="math inline">\(\bar{x}\)</span> [<span class="math inline">\(\sigma\)</span>]<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> = 4.7% [0.04]) and the least prevalent in middle-income country (3.18% [0.06]). Meanwhile, anxiety is the most prevalent in high-income countries (4.84% [0.1]) and the least prevalent in lower-middle-income countries (3.23% [0.09]). The strong and positive association between DALY and prevalence implies the more occurring cases is closely related with increasing burden of diseases. <a href="#tbl-cor-gbd-1" class="quarto-xref">Table&nbsp;2</a> - <a href="#tbl-cor-gbd-4" class="quarto-xref">5</a> show that all mental illnesses present with cross association, though with a different pattern occurring in high-level income countries compared to the others. Specifically looking at depression and anxiety, high-income countries presented with a positive association while other countries presented with negative associations. To further address this issue, <span class="citation" data-cites="Kessler2006">Kessler et al. (<a href="#ref-Kessler2006" role="doc-biblioref">2006</a>)</span> with the Assessment, Classification, and Evaluation Group at the WHO initiated World Mental Health (WMH) survey. WMH complements GBD by providing insight on validated mental health burden worldwide, by incorporating the use of lay-administered Composite International Diagnostic Interview for DSM-IV <span class="citation" data-cites="who2004prevalence">(<a href="#ref-who2004prevalence" role="doc-biblioref">WHO World Mental Health Survey Consortium 2004</a>)</span>.</p>
+<div class="no-row-height column-margin column-container"><p><sup>1</sup>&nbsp;<span class="math inline">\(\bar{x}\)</span> <span class="math inline">\([\sigma]\)</span>: mean [standard deviation]</p></div><div class="cell page-columns page-full">
+<div id="tbl-summary" class="cell quarto-float anchored page-columns page-full">
+<figure class="quarto-float quarto-float-tbl figure page-columns page-full">
+<div aria-describedby="tbl-summary-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output-display">
+<div>
+<table class="do-not-create-environment cell table table-sm table-striped small" data-quarto-postprocess="true">
+<colgroup>
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;" data-quarto-table-cell-role="th">Characteristic</th>
+<th style="text-align: center;" data-quarto-table-cell-role="th">High Income<br>
+N = 30</th>
+<th style="text-align: center;" data-quarto-table-cell-role="th">Low Income<br>
+N = 30</th>
+<th style="text-align: center;" data-quarto-table-cell-role="th">Lower Middle Income<br>
+N = 30</th>
+<th style="text-align: center;" data-quarto-table-cell-role="th">Middle Income<br>
+N = 30</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd" data-grouplength="5">
+<td colspan="5" style="border-bottom: 1px solid"><strong>Disability-Adjusted Life Year</strong></td>
+</tr>
+<tr class="even">
+<td style="text-align: left; padding-left: 2em;" data-indentlevel="1">Depression</td>
+<td style="text-align: center;">633 (16)</td>
+<td style="text-align: center;">818 (7)</td>
+<td style="text-align: center;">654 (38)</td>
+<td style="text-align: center;">523 (13)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left; padding-left: 2em;" data-indentlevel="1">Schizophrenia</td>
+<td style="text-align: center;">210 (2)</td>
+<td style="text-align: center;">137 (0)</td>
+<td style="text-align: center;">174 (1)</td>
+<td style="text-align: center;">188 (1)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; padding-left: 2em;" data-indentlevel="1">Bipolar</td>
+<td style="text-align: center;">158 (1)</td>
+<td style="text-align: center;">117 (1)</td>
+<td style="text-align: center;">89 (0)</td>
+<td style="text-align: center;">93 (3)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left; padding-left: 2em;" data-indentlevel="1">Eating Disorder</td>
+<td style="text-align: center;">85 (3)</td>
+<td style="text-align: center;">17 (1)</td>
+<td style="text-align: center;">22 (2)</td>
+<td style="text-align: center;">28 (4)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; padding-left: 2em;" data-indentlevel="1">Anxiety</td>
+<td style="text-align: center;">462 (9)</td>
+<td style="text-align: center;">343 (4)</td>
+<td style="text-align: center;">305 (9)</td>
+<td style="text-align: center;">378 (8)</td>
+</tr>
+<tr class="odd" data-grouplength="5">
+<td colspan="5" style="border-bottom: 1px solid"><strong>Prevalence (%)</strong></td>
+</tr>
+<tr class="even">
+<td style="text-align: left; padding-left: 2em;" data-indentlevel="1">Schizophrenia</td>
+<td style="text-align: center;">0.33 (0.00)</td>
+<td style="text-align: center;">0.22 (0.00)</td>
+<td style="text-align: center;">0.27 (0.00)</td>
+<td style="text-align: center;">0.29 (0.00)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left; padding-left: 2em;" data-indentlevel="1">Depression</td>
+<td style="text-align: center;">3.60 (0.05)</td>
+<td style="text-align: center;">4.70 (0.04)</td>
+<td style="text-align: center;">3.84 (0.18)</td>
+<td style="text-align: center;">3.18 (0.06)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; padding-left: 2em;" data-indentlevel="1">Anxiety</td>
+<td style="text-align: center;">4.84 (0.10)</td>
+<td style="text-align: center;">3.62 (0.03)</td>
+<td style="text-align: center;">3.23 (0.09)</td>
+<td style="text-align: center;">3.94 (0.08)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left; padding-left: 2em;" data-indentlevel="1">Bipolar</td>
+<td style="text-align: center;">0.73 (0.00)</td>
+<td style="text-align: center;">0.55 (0.00)</td>
+<td style="text-align: center;">0.42 (0.00)</td>
+<td style="text-align: center;">0.43 (0.01)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; padding-left: 2em;" data-indentlevel="1">Eating Disorder</td>
+<td style="text-align: center;">0.40 (0.02)</td>
+<td style="text-align: center;">0.08 (0.00)</td>
+<td style="text-align: center;">0.10 (0.01)</td>
+<td style="text-align: center;">0.13 (0.02)</td>
+</tr>
+</tbody><tfoot>
+<tr class="odd">
+<td style="padding: 0"><sup>1</sup> Mean (SD)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tfoot>
+
+</table>
+
+
+</div>
+</div>
+</div>
+<figcaption class="quarto-float-caption-margin quarto-float-caption quarto-float-tbl margin-caption" id="tbl-summary-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;1: Descriptive statistics of mental health indicators from GBD dataset, adapted from <span class="citation" data-cites="owidmentalhealth">Dattani et al. (<a href="#ref-owidmentalhealth" role="doc-biblioref">2023</a>)</span>
+</figcaption>
+</figure>
+</div>
+</div>
+<div class="cell page-columns page-full">
+<div id="tbl-cor-gbd-1" class="cell quarto-float anchored page-columns page-full">
+<figure class="quarto-float quarto-float-tbl figure page-columns page-full">
+<div aria-describedby="tbl-cor-gbd-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output-display">
+<table class="do-not-create-environment cell table table-sm table-striped small">
+<colgroup>
+<col style="width: 41%">
+<col style="width: 5%">
+<col style="width: 5%">
+<col style="width: 5%">
+<col style="width: 5%">
+<col style="width: 5%">
+<col style="width: 5%">
+<col style="width: 5%">
+<col style="width: 5%">
+<col style="width: 5%">
+<col style="width: 5%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;"></th>
+<th style="text-align: left;">1</th>
+<th style="text-align: left;">2</th>
+<th style="text-align: left;">3</th>
+<th style="text-align: left;">4</th>
+<th style="text-align: left;">5</th>
+<th style="text-align: left;">6</th>
+<th style="text-align: left;">7</th>
+<th style="text-align: left;">8</th>
+<th style="text-align: left;">9</th>
+<th style="text-align: left;">10</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">DALY Depressive Disorder (1)</td>
+<td style="text-align: left;">1.00</td>
+<td style="text-align: left;">.</td>
+<td style="text-align: left;">.</td>
+<td style="text-align: left;">.</td>
+<td style="text-align: left;">.</td>
+<td style="text-align: left;">.</td>
+<td style="text-align: left;">.</td>
+<td style="text-align: left;">.</td>
+<td style="text-align: left;">.</td>
+<td style="text-align: left;">.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">DALY Schizophrenia (2)</td>
+<td style="text-align: left;">.72</td>
+<td style="text-align: left;">1.00</td>
+<td style="text-align: left;">.</td>
+<td style="text-align: left;">.</td>
+<td style="text-align: left;">.</td>
+<td style="text-align: left;">.</td>
+<td style="text-align: left;">.</td>
+<td style="text-align: left;">.</td>
+<td style="text-align: left;">.</td>
+<td style="text-align: left;">.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">DALY Bipolar Disorder (3)</td>
+<td style="text-align: left;">.65</td>
+<td style="text-align: left;">.62</td>
+<td style="text-align: left;">1.00</td>
+<td style="text-align: left;">.</td>
+<td style="text-align: left;">.</td>
+<td style="text-align: left;">.</td>
+<td style="text-align: left;">.</td>
+<td style="text-align: left;">.</td>
+<td style="text-align: left;">.</td>
+<td style="text-align: left;">.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">DALY Eating Disorder (4)</td>
+<td style="text-align: left;">.82</td>
+<td style="text-align: left;">.61</td>
+<td style="text-align: left;">.90</td>
+<td style="text-align: left;">1.00</td>
+<td style="text-align: left;">.</td>
+<td style="text-align: left;">.</td>
+<td style="text-align: left;">.</td>
+<td style="text-align: left;">.</td>
+<td style="text-align: left;">.</td>
+<td style="text-align: left;">.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">DALY Anxiety (5)</td>
+<td style="text-align: left;">.79</td>
+<td style="text-align: left;">.51</td>
+<td style="text-align: left;">.16</td>
+<td style="text-align: left;">.34</td>
+<td style="text-align: left;">1.00</td>
+<td style="text-align: left;">.</td>
+<td style="text-align: left;">.</td>
+<td style="text-align: left;">.</td>
+<td style="text-align: left;">.</td>
+<td style="text-align: left;">.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Prevalence Schizophrenia (6)</td>
+<td style="text-align: left;">.74</td>
+<td style="text-align: left;">1.00</td>
+<td style="text-align: left;">.66</td>
+<td style="text-align: left;">.65</td>
+<td style="text-align: left;">.50</td>
+<td style="text-align: left;">1.00</td>
+<td style="text-align: left;">.</td>
+<td style="text-align: left;">.</td>
+<td style="text-align: left;">.</td>
+<td style="text-align: left;">.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Prevalence Depressive Disorder (7)</td>
+<td style="text-align: left;">.99</td>
+<td style="text-align: left;">.67</td>
+<td style="text-align: left;">.63</td>
+<td style="text-align: left;">.84</td>
+<td style="text-align: left;">.76</td>
+<td style="text-align: left;">.69</td>
+<td style="text-align: left;">1.00</td>
+<td style="text-align: left;">.</td>
+<td style="text-align: left;">.</td>
+<td style="text-align: left;">.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Prevalence Anxiety (8)</td>
+<td style="text-align: left;">.77</td>
+<td style="text-align: left;">.48</td>
+<td style="text-align: left;">.13</td>
+<td style="text-align: left;">.31</td>
+<td style="text-align: left;">1.00</td>
+<td style="text-align: left;">.47</td>
+<td style="text-align: left;">.75</td>
+<td style="text-align: left;">1.00</td>
+<td style="text-align: left;">.</td>
+<td style="text-align: left;">.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Prevalence Bipolar Disorder (9)</td>
+<td style="text-align: left;">.61</td>
+<td style="text-align: left;">.55</td>
+<td style="text-align: left;">1.00</td>
+<td style="text-align: left;">.88</td>
+<td style="text-align: left;">.11</td>
+<td style="text-align: left;">.60</td>
+<td style="text-align: left;">.59</td>
+<td style="text-align: left;">.09</td>
+<td style="text-align: left;">1.00</td>
+<td style="text-align: left;">.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Prevalence Eating Disorder (10)</td>
+<td style="text-align: left;">.82</td>
+<td style="text-align: left;">.61</td>
+<td style="text-align: left;">.91</td>
+<td style="text-align: left;">1.00</td>
+<td style="text-align: left;">.33</td>
+<td style="text-align: left;">.65</td>
+<td style="text-align: left;">.83</td>
+<td style="text-align: left;">.30</td>
+<td style="text-align: left;">.89</td>
+<td style="text-align: left;">1.00</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<figcaption class="quarto-float-caption-margin quarto-float-caption quarto-float-tbl margin-caption" id="tbl-cor-gbd-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;2: Pairwise correlation of mental illnesses metrics in high-income countries
+</figcaption>
+</figure>
+</div>
+</div>
+<div class="cell page-columns page-full">
+<div id="tbl-cor-gbd-2" class="cell quarto-float anchored page-columns page-full">
+<figure class="quarto-float quarto-float-tbl figure page-columns page-full">
+<div aria-describedby="tbl-cor-gbd-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output-display">
+<table class="do-not-create-environment cell table table-sm table-striped small">
+<colgroup>
+<col style="width: 41%">
+<col style="width: 5%">
+<col style="width: 5%">
+<col style="width: 5%">
+<col style="width: 5%">
+<col style="width: 5%">
+<col style="width: 5%">
+<col style="width: 5%">
+<col style="width: 5%">
+<col style="width: 5%">
+<col style="width: 5%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;"></th>
+<th style="text-align: left;">1</th>
+<th style="text-align: left;">2</th>
+<th style="text-align: left;">3</th>
+<th style="text-align: left;">4</th>
+<th style="text-align: left;">5</th>
+<th style="text-align: left;">6</th>
+<th style="text-align: left;">7</th>
+<th style="text-align: left;">8</th>
+<th style="text-align: left;">9</th>
+<th style="text-align: left;">10</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">DALY Depressive Disorder (1)</td>
+<td style="text-align: left;">1.00</td>
+<td style="text-align: left;">.</td>
+<td style="text-align: left;">.</td>
+<td style="text-align: left;">.</td>
+<td style="text-align: left;">.</td>
+<td style="text-align: left;">.</td>
+<td style="text-align: left;">.</td>
+<td style="text-align: left;">.</td>
+<td style="text-align: left;">.</td>
+<td style="text-align: left;">.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">DALY Schizophrenia (2)</td>
+<td style="text-align: left;">-.67</td>
+<td style="text-align: left;">1.00</td>
+<td style="text-align: left;">.</td>
+<td style="text-align: left;">.</td>
+<td style="text-align: left;">.</td>
+<td style="text-align: left;">.</td>
+<td style="text-align: left;">.</td>
+<td style="text-align: left;">.</td>
+<td style="text-align: left;">.</td>
+<td style="text-align: left;">.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">DALY Bipolar Disorder (3)</td>
+<td style="text-align: left;">-.76</td>
+<td style="text-align: left;">.91</td>
+<td style="text-align: left;">1.00</td>
+<td style="text-align: left;">.</td>
+<td style="text-align: left;">.</td>
+<td style="text-align: left;">.</td>
+<td style="text-align: left;">.</td>
+<td style="text-align: left;">.</td>
+<td style="text-align: left;">.</td>
+<td style="text-align: left;">.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">DALY Eating Disorder (4)</td>
+<td style="text-align: left;">-.78</td>
+<td style="text-align: left;">.93</td>
+<td style="text-align: left;">.99</td>
+<td style="text-align: left;">1.00</td>
+<td style="text-align: left;">.</td>
+<td style="text-align: left;">.</td>
+<td style="text-align: left;">.</td>
+<td style="text-align: left;">.</td>
+<td style="text-align: left;">.</td>
+<td style="text-align: left;">.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">DALY Anxiety (5)</td>
+<td style="text-align: left;">-.44</td>
+<td style="text-align: left;">.03</td>
+<td style="text-align: left;">.20</td>
+<td style="text-align: left;">.12</td>
+<td style="text-align: left;">1.00</td>
+<td style="text-align: left;">.</td>
+<td style="text-align: left;">.</td>
+<td style="text-align: left;">.</td>
+<td style="text-align: left;">.</td>
+<td style="text-align: left;">.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Prevalence Schizophrenia (6)</td>
+<td style="text-align: left;">-.55</td>
+<td style="text-align: left;">.98</td>
+<td style="text-align: left;">.83</td>
+<td style="text-align: left;">.86</td>
+<td style="text-align: left;">-.08</td>
+<td style="text-align: left;">1.00</td>
+<td style="text-align: left;">.</td>
+<td style="text-align: left;">.</td>
+<td style="text-align: left;">.</td>
+<td style="text-align: left;">.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Prevalence Depressive Disorder (7)</td>
+<td style="text-align: left;">.99</td>
+<td style="text-align: left;">-.73</td>
+<td style="text-align: left;">-.81</td>
+<td style="text-align: left;">-.83</td>
+<td style="text-align: left;">-.35</td>
+<td style="text-align: left;">-.61</td>
+<td style="text-align: left;">1.00</td>
+<td style="text-align: left;">.</td>
+<td style="text-align: left;">.</td>
+<td style="text-align: left;">.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Prevalence Anxiety (8)</td>
+<td style="text-align: left;">-.40</td>
+<td style="text-align: left;">.00</td>
+<td style="text-align: left;">.16</td>
+<td style="text-align: left;">.08</td>
+<td style="text-align: left;">1.00</td>
+<td style="text-align: left;">-.11</td>
+<td style="text-align: left;">-.32</td>
+<td style="text-align: left;">1.00</td>
+<td style="text-align: left;">.</td>
+<td style="text-align: left;">.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Prevalence Bipolar Disorder (9)</td>
+<td style="text-align: left;">-.76</td>
+<td style="text-align: left;">.91</td>
+<td style="text-align: left;">1.00</td>
+<td style="text-align: left;">.99</td>
+<td style="text-align: left;">.20</td>
+<td style="text-align: left;">.83</td>
+<td style="text-align: left;">-.81</td>
+<td style="text-align: left;">.16</td>
+<td style="text-align: left;">1.00</td>
+<td style="text-align: left;">.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Prevalence Eating Disorder (10)</td>
+<td style="text-align: left;">-.78</td>
+<td style="text-align: left;">.93</td>
+<td style="text-align: left;">.99</td>
+<td style="text-align: left;">1.00</td>
+<td style="text-align: left;">.12</td>
+<td style="text-align: left;">.86</td>
+<td style="text-align: left;">-.83</td>
+<td style="text-align: left;">.08</td>
+<td style="text-align: left;">.99</td>
+<td style="text-align: left;">1.00</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<figcaption class="quarto-float-caption-margin quarto-float-caption quarto-float-tbl margin-caption" id="tbl-cor-gbd-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;3: Pairwise correlation of mental illnesses metrics in middle-income countries
+</figcaption>
+</figure>
+</div>
+</div>
+<div class="cell page-columns page-full">
+<div id="tbl-cor-gbd-3" class="cell quarto-float anchored page-columns page-full">
+<figure class="quarto-float quarto-float-tbl figure page-columns page-full">
+<div aria-describedby="tbl-cor-gbd-3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output-display">
+<table class="do-not-create-environment cell table table-sm table-striped small">
+<colgroup>
+<col style="width: 41%">
+<col style="width: 5%">
+<col style="width: 5%">
+<col style="width: 5%">
+<col style="width: 5%">
+<col style="width: 5%">
+<col style="width: 5%">
+<col style="width: 5%">
+<col style="width: 5%">
+<col style="width: 5%">
+<col style="width: 5%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;"></th>
+<th style="text-align: left;">1</th>
+<th style="text-align: left;">2</th>
+<th style="text-align: left;">3</th>
+<th style="text-align: left;">4</th>
+<th style="text-align: left;">5</th>
+<th style="text-align: left;">6</th>
+<th style="text-align: left;">7</th>
+<th style="text-align: left;">8</th>
+<th style="text-align: left;">9</th>
+<th style="text-align: left;">10</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">DALY Depressive Disorder (1)</td>
+<td style="text-align: left;">1.00</td>
+<td style="text-align: left;">.</td>
+<td style="text-align: left;">.</td>
+<td style="text-align: left;">.</td>
+<td style="text-align: left;">.</td>
+<td style="text-align: left;">.</td>
+<td style="text-align: left;">.</td>
+<td style="text-align: left;">.</td>
+<td style="text-align: left;">.</td>
+<td style="text-align: left;">.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">DALY Schizophrenia (2)</td>
+<td style="text-align: left;">-.83</td>
+<td style="text-align: left;">1.00</td>
+<td style="text-align: left;">.</td>
+<td style="text-align: left;">.</td>
+<td style="text-align: left;">.</td>
+<td style="text-align: left;">.</td>
+<td style="text-align: left;">.</td>
+<td style="text-align: left;">.</td>
+<td style="text-align: left;">.</td>
+<td style="text-align: left;">.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">DALY Bipolar Disorder (3)</td>
+<td style="text-align: left;">-.83</td>
+<td style="text-align: left;">.83</td>
+<td style="text-align: left;">1.00</td>
+<td style="text-align: left;">.</td>
+<td style="text-align: left;">.</td>
+<td style="text-align: left;">.</td>
+<td style="text-align: left;">.</td>
+<td style="text-align: left;">.</td>
+<td style="text-align: left;">.</td>
+<td style="text-align: left;">.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">DALY Eating Disorder (4)</td>
+<td style="text-align: left;">-.88</td>
+<td style="text-align: left;">.94</td>
+<td style="text-align: left;">.96</td>
+<td style="text-align: left;">1.00</td>
+<td style="text-align: left;">.</td>
+<td style="text-align: left;">.</td>
+<td style="text-align: left;">.</td>
+<td style="text-align: left;">.</td>
+<td style="text-align: left;">.</td>
+<td style="text-align: left;">.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">DALY Anxiety (5)</td>
+<td style="text-align: left;">-.90</td>
+<td style="text-align: left;">.81</td>
+<td style="text-align: left;">.65</td>
+<td style="text-align: left;">.77</td>
+<td style="text-align: left;">1.00</td>
+<td style="text-align: left;">.</td>
+<td style="text-align: left;">.</td>
+<td style="text-align: left;">.</td>
+<td style="text-align: left;">.</td>
+<td style="text-align: left;">.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Prevalence Schizophrenia (6)</td>
+<td style="text-align: left;">-.72</td>
+<td style="text-align: left;">.97</td>
+<td style="text-align: left;">.67</td>
+<td style="text-align: left;">.84</td>
+<td style="text-align: left;">.78</td>
+<td style="text-align: left;">1.00</td>
+<td style="text-align: left;">.</td>
+<td style="text-align: left;">.</td>
+<td style="text-align: left;">.</td>
+<td style="text-align: left;">.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Prevalence Depressive Disorder (7)</td>
+<td style="text-align: left;">1.00</td>
+<td style="text-align: left;">-.83</td>
+<td style="text-align: left;">-.82</td>
+<td style="text-align: left;">-.88</td>
+<td style="text-align: left;">-.90</td>
+<td style="text-align: left;">-.72</td>
+<td style="text-align: left;">1.00</td>
+<td style="text-align: left;">.</td>
+<td style="text-align: left;">.</td>
+<td style="text-align: left;">.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Prevalence Anxiety (8)</td>
+<td style="text-align: left;">-.89</td>
+<td style="text-align: left;">.80</td>
+<td style="text-align: left;">.61</td>
+<td style="text-align: left;">.75</td>
+<td style="text-align: left;">1.00</td>
+<td style="text-align: left;">.77</td>
+<td style="text-align: left;">-.89</td>
+<td style="text-align: left;">1.00</td>
+<td style="text-align: left;">.</td>
+<td style="text-align: left;">.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Prevalence Bipolar Disorder (9)</td>
+<td style="text-align: left;">-.80</td>
+<td style="text-align: left;">.84</td>
+<td style="text-align: left;">.99</td>
+<td style="text-align: left;">.96</td>
+<td style="text-align: left;">.64</td>
+<td style="text-align: left;">.69</td>
+<td style="text-align: left;">-.79</td>
+<td style="text-align: left;">.60</td>
+<td style="text-align: left;">1.00</td>
+<td style="text-align: left;">.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Prevalence Eating Disorder (10)</td>
+<td style="text-align: left;">-.88</td>
+<td style="text-align: left;">.95</td>
+<td style="text-align: left;">.96</td>
+<td style="text-align: left;">1.00</td>
+<td style="text-align: left;">.78</td>
+<td style="text-align: left;">.84</td>
+<td style="text-align: left;">-.88</td>
+<td style="text-align: left;">.75</td>
+<td style="text-align: left;">.96</td>
+<td style="text-align: left;">1.00</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<figcaption class="quarto-float-caption-margin quarto-float-caption quarto-float-tbl margin-caption" id="tbl-cor-gbd-3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;4: Pairwise correlation of mental illnesses metrics in lower middle-income countries
+</figcaption>
+</figure>
+</div>
+</div>
+<div class="cell page-columns page-full">
+<div id="tbl-cor-gbd-4" class="cell quarto-float anchored page-columns page-full">
+<figure class="quarto-float quarto-float-tbl figure page-columns page-full">
+<div aria-describedby="tbl-cor-gbd-4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output-display">
+<table class="do-not-create-environment cell table table-sm table-striped small">
+<colgroup>
+<col style="width: 41%">
+<col style="width: 5%">
+<col style="width: 5%">
+<col style="width: 5%">
+<col style="width: 5%">
+<col style="width: 5%">
+<col style="width: 5%">
+<col style="width: 5%">
+<col style="width: 5%">
+<col style="width: 5%">
+<col style="width: 5%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;"></th>
+<th style="text-align: left;">1</th>
+<th style="text-align: left;">2</th>
+<th style="text-align: left;">3</th>
+<th style="text-align: left;">4</th>
+<th style="text-align: left;">5</th>
+<th style="text-align: left;">6</th>
+<th style="text-align: left;">7</th>
+<th style="text-align: left;">8</th>
+<th style="text-align: left;">9</th>
+<th style="text-align: left;">10</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">DALY Depressive Disorder (1)</td>
+<td style="text-align: left;">1.00</td>
+<td style="text-align: left;">.</td>
+<td style="text-align: left;">.</td>
+<td style="text-align: left;">.</td>
+<td style="text-align: left;">.</td>
+<td style="text-align: left;">.</td>
+<td style="text-align: left;">.</td>
+<td style="text-align: left;">.</td>
+<td style="text-align: left;">.</td>
+<td style="text-align: left;">.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">DALY Schizophrenia (2)</td>
+<td style="text-align: left;">-.55</td>
+<td style="text-align: left;">1.00</td>
+<td style="text-align: left;">.</td>
+<td style="text-align: left;">.</td>
+<td style="text-align: left;">.</td>
+<td style="text-align: left;">.</td>
+<td style="text-align: left;">.</td>
+<td style="text-align: left;">.</td>
+<td style="text-align: left;">.</td>
+<td style="text-align: left;">.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">DALY Bipolar Disorder (3)</td>
+<td style="text-align: left;">-.71</td>
+<td style="text-align: left;">.01</td>
+<td style="text-align: left;">1.00</td>
+<td style="text-align: left;">.</td>
+<td style="text-align: left;">.</td>
+<td style="text-align: left;">.</td>
+<td style="text-align: left;">.</td>
+<td style="text-align: left;">.</td>
+<td style="text-align: left;">.</td>
+<td style="text-align: left;">.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">DALY Eating Disorder (4)</td>
+<td style="text-align: left;">-.88</td>
+<td style="text-align: left;">.59</td>
+<td style="text-align: left;">.75</td>
+<td style="text-align: left;">1.00</td>
+<td style="text-align: left;">.</td>
+<td style="text-align: left;">.</td>
+<td style="text-align: left;">.</td>
+<td style="text-align: left;">.</td>
+<td style="text-align: left;">.</td>
+<td style="text-align: left;">.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">DALY Anxiety (5)</td>
+<td style="text-align: left;">-.80</td>
+<td style="text-align: left;">.27</td>
+<td style="text-align: left;">.88</td>
+<td style="text-align: left;">.93</td>
+<td style="text-align: left;">1.00</td>
+<td style="text-align: left;">.</td>
+<td style="text-align: left;">.</td>
+<td style="text-align: left;">.</td>
+<td style="text-align: left;">.</td>
+<td style="text-align: left;">.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Prevalence Schizophrenia (6)</td>
+<td style="text-align: left;">.12</td>
+<td style="text-align: left;">.72</td>
+<td style="text-align: left;">-.67</td>
+<td style="text-align: left;">-.07</td>
+<td style="text-align: left;">-.38</td>
+<td style="text-align: left;">1.00</td>
+<td style="text-align: left;">.</td>
+<td style="text-align: left;">.</td>
+<td style="text-align: left;">.</td>
+<td style="text-align: left;">.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Prevalence Depressive Disorder (7)</td>
+<td style="text-align: left;">.99</td>
+<td style="text-align: left;">-.46</td>
+<td style="text-align: left;">-.81</td>
+<td style="text-align: left;">-.89</td>
+<td style="text-align: left;">-.85</td>
+<td style="text-align: left;">.25</td>
+<td style="text-align: left;">1.00</td>
+<td style="text-align: left;">.</td>
+<td style="text-align: left;">.</td>
+<td style="text-align: left;">.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Prevalence Anxiety (8)</td>
+<td style="text-align: left;">-.76</td>
+<td style="text-align: left;">.29</td>
+<td style="text-align: left;">.80</td>
+<td style="text-align: left;">.92</td>
+<td style="text-align: left;">.99</td>
+<td style="text-align: left;">-.30</td>
+<td style="text-align: left;">-.80</td>
+<td style="text-align: left;">1.00</td>
+<td style="text-align: left;">.</td>
+<td style="text-align: left;">.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Prevalence Bipolar Disorder (9)</td>
+<td style="text-align: left;">-.67</td>
+<td style="text-align: left;">-.04</td>
+<td style="text-align: left;">1.00</td>
+<td style="text-align: left;">.73</td>
+<td style="text-align: left;">.87</td>
+<td style="text-align: left;">-.69</td>
+<td style="text-align: left;">-.77</td>
+<td style="text-align: left;">.81</td>
+<td style="text-align: left;">1.00</td>
+<td style="text-align: left;">.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Prevalence Eating Disorder (10)</td>
+<td style="text-align: left;">-.87</td>
+<td style="text-align: left;">.62</td>
+<td style="text-align: left;">.72</td>
+<td style="text-align: left;">1.00</td>
+<td style="text-align: left;">.92</td>
+<td style="text-align: left;">-.03</td>
+<td style="text-align: left;">-.88</td>
+<td style="text-align: left;">.91</td>
+<td style="text-align: left;">.70</td>
+<td style="text-align: left;">1.00</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<figcaption class="quarto-float-caption-margin quarto-float-caption quarto-float-tbl margin-caption" id="tbl-cor-gbd-4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;5: Pairwise correlation of mental illnesses metrics in low-income countries
+</figcaption>
+</figure>
+</div>
+</div>
+<p><span class="citation" data-cites="who2004prevalence">WHO World Mental Health Survey Consortium (<a href="#ref-who2004prevalence" role="doc-biblioref">2004</a>)</span> highlighted that the combined global prevalence of any mental disorder is ranging from 4.3% to 26.4%, where the most reported cases are anxiety disorder (2.4%-18.2%), mood disorder (0.8%-9.6%), and substance abuse (0.1%-6.4%). While the proportion of severe cases (0.4%-7.7%) in any diagnosis is comparably lower than the prevalence of moderate (0.5%-9.4%) and mild cases (1.8%-9.7%), the impact to productivity is astounding. At least 30 productive days are lost among subjects reporting any severe mental disorder (IQR: 32.1-38.4 days), and accordingly, the number of day loss is lower in subjects with moderate (IQR: 9.2-18.8 days) or mild cases (IQR: 0.1-3.6 days). However, not all cases receives adequate treatment, where the proportion of people receiving treatment is ranging from 0.8% to 15.3% of the affected population. Even though severe cases are more likely to be diagnosed and treated, up to 50.3% of severe cases in developed countries and 85.4% of severe cases in less-developed countries receive no treatment. The proportion of untreated subjects is even higher in moderate and mild cases, ranging from 50%-90.3% and 64.8%-99.5%, respectively. In a follow-up study using WMH data, <span class="citation" data-cites="Kessler2009">Kessler et al. (<a href="#ref-Kessler2009" role="doc-biblioref">2009</a>)</span> reported that early-onset mental disorders significantly predict a wide range of physical disorders and reduced achievements in a number of role domains. Furthermore, productivity loss due to major depressive disorder in the United States alone is over five weeks of productive-day loss per year, approximated to USD 36 billion of economical loss. Similarly, data from 10 countries participating in WMH survey indicates that an average of 22 productive days loss per worker with attention deficit hyperactivity disorder. Even though the cause of mental disorder varies widely, its impact to the individual and society is apparent.</p>
+<section id="depressive-disorder" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="depressive-disorder">Depressive Disorder</h3>
+<p>This proposal shall outline two facades of depression, i.e.&nbsp;major depressive disorder and depressive symptoms. For brevity, major depressive disorder will be termed as depressive disorder, while the combination of up to four depressive symptoms excluding suicidal ideation will be termed as minor depression. In mental health domain, major depressive disorder is one of the leading cause of disability worldwide. While the prevalence of depressive disorder is only second to anxiety disorder, the impact is immensely dreadful, causing most DALYs for both sexes <span class="citation" data-cites="Rehm2019">(<a href="#ref-Rehm2019" role="doc-biblioref">Rehm and Shield 2019</a>)</span>. Worldwide, depressive disorder has affected over 300 millions people, contributing to 7.5% of years lived with disability. Depressive disorder has a markedly devastating impact from a public health perspective as well, especially taking into account its considerable economic impact. Across the globe, depressive disorder has a lifetime prevalence ranging from 2% in some Asian country to 21% in some European countries <span class="citation" data-cites="GutirrezRojas2020">(<a href="#ref-GutirrezRojas2020" role="doc-biblioref">Gutiérrez-Rojas et al. 2020</a>)</span>. While depressive disorder is the primary determinant of suicidal behavior and immensely impacting the quality of life, an adequate treatment is not well accessible to the majority of patients <span class="citation" data-cites="MorenoAgostino2021">(<a href="#ref-MorenoAgostino2021" role="doc-biblioref">Moreno-Agostino et al. 2021</a>)</span>.</p>
+<p>The hallmark of a depressive disorder is the presence of debilitating depressive episodes occurred at least once and lasting at minimum for two weeks. This episode is usually accompanied by changes in mood, perception on pleasure, and cognitive functions <span class="citation" data-cites="Otte2016">(<a href="#ref-Otte2016" role="doc-biblioref">Otte et al. 2016</a>)</span>. According to DSM-V, people with depressive disorder may present with the following symptoms:</p>
+<ul>
+<li>Depressed mood</li>
+<li>Diminished interest or pleasure in almost all activities</li>
+<li>Weight loss/gain without dieting, accompanied by decrease/increase in appetite</li>
+<li>Sleeping problem, manifesting as insomnia or hypersomnia</li>
+<li>Psychomotor agitation or retardation</li>
+<li>Loss of energy</li>
+<li>Feeling of worthlessness and inappropriate guilt which might be delusional</li>
+<li>Diminished ability to think or concentrate</li>
+<li>Suicidal ideation</li>
+</ul>
+<p>Various mechanisms contribute to the development of depressive disorder, including genetic predisposition, brain structure alteration, and changes in the stress-response system <span class="citation" data-cites="Otte2016">(<a href="#ref-Otte2016" role="doc-biblioref">Otte et al. 2016</a>)</span>. Genetic contribution is estimated to explain 35% of depressive disorder cases, with possible heritability as demonstrated in family and twin-based studies, a genetic mechanism which also has an interplay with rare mutations. By investigating the biology of depressive disorder, reduced hippocampal volume is apparent in affected subjects, alongside alteration in cognitive network control and affective-salience network. Furthermore, the presence of depressive disorder also implicates stress-response system, indicated by changes in hypothalamic-pituitary-adrenal axis, the functional state of autonomic nervous system, and the immune system <span class="citation" data-cites="Otte2016">(<a href="#ref-Otte2016" role="doc-biblioref">Otte et al. 2016</a>)</span>.</p>
+<p>Specific groups in the population is at a higher risk of diagnosed with depressive disorder <span class="citation" data-cites="Otte2016">(<a href="#ref-Otte2016" role="doc-biblioref">Otte et al. 2016</a>)</span>. The most turbulent time in life contributing to the onset of depressive disorder is between mid-to-late adolescence and early 40s, where the prevalence of depressive disorder is gradually peaking with age before early adulthood. The reported median age of onset of depressive disorder is 25 years old in both sexes, with the risk of developing depressive disorder after puberty in women is twice as high as in men <span class="citation" data-cites="Otte2016">(<a href="#ref-Otte2016" role="doc-biblioref">Otte et al. 2016</a>)</span>. The odds of being diagnosed with depressive disorder is 1.4-2.8 times higher in women than in men <span class="citation" data-cites="GutirrezRojas2020">(<a href="#ref-GutirrezRojas2020" role="doc-biblioref">Gutiérrez-Rojas et al. 2020</a>)</span>. Beside age and sex, depressive disorder is also linked to marital status, i.e.&nbsp;being separated/divorced, but the wide confidence interval of 5.0-74.4 causes the estimated effect size rather indeterminate. Though not completely explanatory, <span class="citation" data-cites="GutirrezRojas2020">Gutiérrez-Rojas et al. (<a href="#ref-GutirrezRojas2020" role="doc-biblioref">2020</a>)</span> reported other factors contributing to the development of depressive disorder, including employment status, socioeconomic status, education level, physical health, and substance uses. Furthermore, the presence of depressive disorder may also accentuate its association with other mental health-related correlates. Depressive disorder is in particular associated with general anxiety disorder, different classes of phobia, borderline personality disorder, paranoid personality disorder, and neurotic personality trait. Another risk factor to take into account is the history of receiving abusive treatments during childhood, either physical, psychological, or sexual abuse. Each form of abuse has different odds in causing depressive disorder, where adults receiving harsh treatment in early childhood might have 1.6 to 4.1 times of higher odds of diagnosed with depressive disorder <span class="citation" data-cites="GutirrezRojas2020">(<a href="#ref-GutirrezRojas2020" role="doc-biblioref">Gutiérrez-Rojas et al. 2020</a>)</span>.</p>
+<p>Physical comorbidities of depressive disorder is also frequently reported, where <span class="citation" data-cites="Otte2016">Otte et al. (<a href="#ref-Otte2016" role="doc-biblioref">2016</a>)</span> listed six somatic correlates of depressive disorder, including heart disease, diabetes mellitus, cancer, cognitive impairment, disability, and obesity. Traumatic experience also dysfunction following physical illness are the cornerstones triggering a depressive episode. Specifically in obesity, distorted body image and loss of self-esteem are highly detrimental to the susceptibility of having a depressive disorder. Moreover, biological factors such as altered inflammatory pathways also implicate the pathogenesis of depression <span class="citation" data-cites="GutirrezRojas2020">(<a href="#ref-GutirrezRojas2020" role="doc-biblioref">Gutiérrez-Rojas et al. 2020</a>)</span>. Increased circulation of pro-inflammatory cytokines and C-reactive protein also become one of the biological explanation underpinning altered inflammatory pathways in its contribution to the development of depressive disorder.</p>
+<p>Depressive disorder and its impact to the patients also poses an economic burden to the society at large. Using WMH survey data from the Netherlands, <span class="citation" data-cites="Cuijpers2007">Cuijpers et al. (<a href="#ref-Cuijpers2007" role="doc-biblioref">2007</a>)</span> estimated the direct and indirect cost of depressive disorder. Similarly reported in other countries, the prevalence of depressive disorder acquired by the WMH survey in the Netherlands was 5.8%. After adjusting to purchasing power parities from OECD, the total economical burden per capita for a year was USD 3,313 (95% CI: USD 1,234-5,390). The calculated associated cost included direct medical cost (USD 478), direct non-medical cost (USD 313), and indirect non-medical cost (USD 2,535).<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> Even without fulfilling the diagnostic criteria of a major depressive disorder, having minor depression is also associated with a significant economical cost. The resulting annual cost in people with minor depression was USD 2,141 (95% CI: 753-3,529). Even though the direct medical cost (USD 10) and direct non-medical costs (USD 29) were much lower compared to those with depressive disorder, the indirect non-medical cost was within an overlapping range, amounted to USD 2,101 (95% CI: USD 648-3,518) in minor depression and USD 2,535 (95% CI: USD 549-4,520) in depressive disorder <span class="citation" data-cites="Cuijpers2007">(<a href="#ref-Cuijpers2007" role="doc-biblioref">Cuijpers et al. 2007</a>)</span>. Also reported in the USA, the total estimated annual lost due to depressive disorder was USD 16,854 per capita, totalling USD 333.7 billion in 2019 alone. The distribution of cost estimated by <span class="citation" data-cites="Greenberg2023">Greenberg et al. (<a href="#ref-Greenberg2023" role="doc-biblioref">2023</a>)</span> is slightly different from <span class="citation" data-cites="Cuijpers2007">Cuijpers et al. (<a href="#ref-Cuijpers2007" role="doc-biblioref">2007</a>)</span> due to the difference in health system, where the total healthcare costs were USD 127.3 billion, household-related costs were USD 80.1 billion, presenteeism was USD 43.3 billion, and absenteeism was USD 38.4 billion. With the steadily increasing prevalence of depressive disorder, it is also apparent that the associated cost is proportionally growing <span class="citation" data-cites="Greenberg2021">(<a href="#ref-Greenberg2021" role="doc-biblioref">Greenberg et al. 2021</a>)</span>.</p>
+<div class="no-row-height column-margin column-container"><p><sup>2</sup>&nbsp;The calculation of the economical burden was per Dutch guideline for health economic evaluation. Overall, <span class="citation" data-cites="Cuijpers2007">Cuijpers et al. (<a href="#ref-Cuijpers2007" role="doc-biblioref">2007</a>)</span> provided a thorough and realistic cost estimation. Direct medical costs were defined as health service-related fee to access mental healthcare and medication, including professional fee paid for the general practitioners, social workers, and physiotherapists. Direct non-medical cost were accounted for occurring cost when commuting to access the mental health services, including fee for travel, parking, and time spent when accessing the mental health service. Indirect cost were calculated for productivity loss due to illness.</p></div></section>
+<section id="anxiety-disorder" class="level3">
+<h3 class="anchored" data-anchor-id="anxiety-disorder">Anxiety Disorder</h3>
+<p>Anxiety is a quite prevalent symptom being addressed in an outpatient setting, with the associated complaints of fear, nervousness, and panic. The presence of anxiety may precede physical issues presenting in the cardiovascular, gastrointestinal, respiratory, musculoskeletal, or nervous systems <span class="citation" data-cites="Martin2003">(<a href="#ref-Martin2003" role="doc-biblioref">Martin 2003</a>)</span>. The problem with anxiety and nervousness is as ancient as history, where it was first described by <span class="citation" data-cites="burton1621">Burton (<a href="#ref-burton1621" role="doc-biblioref">1621</a>)</span> in <em>The Anatomy of Melancholy</em>.</p>
+<blockquote class="blockquote">
+<p>“Many lamentable effects this fear causeth in man, as to be red, pale, tremble, sweat; it makes sudden cold and heat come over all the body, palpitation of the heart, syncope, etc. It amazeth many men that are to speak or show themselves in public.”</p>
+<p><em>— Robert Burton</em></p>
+</blockquote>
+<p>Anxiety itself poses a wide array of problems which may affect individuals since an early age of life. In a meta-analysis, <span class="citation" data-cites="Solmi2021">Solmi et al. (<a href="#ref-Solmi2021" role="doc-biblioref">2021</a>)</span> demonstrated a bimodal distribution of the age of onset for anxiety, obsessive-compulsive, and feeding/eating disorders. The peak ages of onset are 5.5 and 15.5 years old for anxiety and fear-related disorders, 14.5 and 49.5 years old for obsessive-compulsive or related disorders, and 15.5 years old for feeding or eating disorders. Evaluating the peak age of each group, it is sensible that problems related to anxiety may emerge since early childhood and re-emerge during adolescent or late adulthood. After all, these disorders share similar underlying mechanism, i.e.&nbsp;stemming from anxious feelings and nervousness. In this proposal, anxiety disorder is narrowed down to only include anxiety and fear-related disorders, comprising generalized anxiety disorder, social anxiety disorder, and separation anxiety disorder.</p>
+<p>Relying on the diagnostic criteria provided by DSM-V, anxiety disorder can be determined in case the presence of excessive worry for at least six months <span class="citation" data-cites="DeMartini2019">(<a href="#ref-DeMartini2019" role="doc-biblioref">DeMartini, Patel, and Fancher 2019</a>)</span>. Worry and nervousness in an anxiety disorder is expected to be volatile, i.e.&nbsp;one day with less worry than the others, yet it still persists that the number of days feeling worried dominates the rest. The occurring nervousness is quite difficult to control and rationalize, hence impeding the affected individuals from performing day-to-day activities. Worry and nervousness in an anxiety disorder are also associated with at least three of the following symptoms:</p>
+<ul>
+<li>Restlessness or feeling on edge</li>
+<li>Easily fatigued or feeling drained</li>
+<li>Difficulty in concentrating</li>
+<li>Being irritable</li>
+<li>Muscle tension</li>
+<li>Sleep disturbances, which could present as any form of insomnia, i.e.&nbsp;difficulty falling asleep, restless during sleep, or unsatisfying sleep</li>
+</ul>
+<p>With the recent WMH survey suggested that the prevalence of anxiety disorder is ranging from 2.4% to 18.2%, it is clear that there are several uncertainties in determining its global prevalence. Previous meta-regression model supported this claim by highlighting different odds ratio in included covariates when determining the heterogeneity of anxiety disorder prevalence. In their meta-regression model, <span class="citation" data-cites="Baxter2012">Baxter et al. (<a href="#ref-Baxter2012" role="doc-biblioref">2012</a>)</span> fitted covariates that might influence the prevalence of anxiety disorder, grouped by its substantive factors and methodological factors. Identified covariates in the substantive factors are gender, age group, conflict status, culture, economic status, and urbanicity. Meanwhile, identified covariates in the methodological factors are prevalence type, survey instrument, and number of disorders.</p>
+<p>Each covariate from the substantive factors contribute to explaining the heterogeneity of anxiety disorder prevalence <span class="citation" data-cites="Baxter2012">(<a href="#ref-Baxter2012" role="doc-biblioref">Baxter et al. 2012</a>)</span>. Consistent with findings on other mental disorders, women are at a higher risk of being diagnosed with anxiety disorder, with an adjusted OR of 2.1 (95% CI: 1.2-2.3) and predicted global prevalence of 9.9% (95% CI: 6.6%-14.8%). By using 35-54 year-old group as a reference, only older adults (55+ years old) are at a lower risk of having an anxiety disorder, with an adjusted OR of 0.8 (95% CI: 0.7-0.9) and predicted global prevalence of 6.7% (95% CI: 4.4%-10.1%). Younger adults (18-34 years old) and adolescents (3-17 years old) are at the same odds of having anxiety disorder as those aged 35-54 years old, with the predicted global prevalence ranging from 4.7% to 12.5%. The presence of conflict in daily life increases the odds of having anxiety disorder, with predicted global prevalence of 9% (95% CI: 5.9%-13.6%). Using the European and Anglosaxon group as a reference, other cultures are at a lower odds of diagnosed with anxiety disorder. Interestingly, emerging and developed countries are more likely to be affected by anxiety disorder compared to developing country, with a higher odds ratio ranging from 1.1 to 1.9. In contrast, people in urban area are less likely to be affected by anxiety disorder compared to people living in rural area, with a markedly lower predicted global prevalence of 8.4% (95% CI: 5.5%-13%).</p>
+<p>Naturally, the heterogeneity of predicted global prevalence is also affected by methodological factors, but only to a lesser degree. The identified contributing covariates to the heterogeneity are the use of past-year prevalence and the presence of multiple disorders. Contributing factors of the heterogeneity is, of course, not to be taken at its face value. These factors do not necessarily define the causality or direct inferential association. Despite uncertain estimates of the global prevalence, the predicted prevalence of 7.3% by <span class="citation" data-cites="Baxter2012">Baxter et al. (<a href="#ref-Baxter2012" role="doc-biblioref">2012</a>)</span> is highly in line with and confirming findings obtained by <span class="citation" data-cites="who2004prevalence">WHO World Mental Health Survey Consortium (<a href="#ref-who2004prevalence" role="doc-biblioref">2004</a>)</span>.</p>
+</section>
+<section id="burnout" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="burnout">Burnout</h3>
+<p>Clinicians face challenges in identifying clinical burnout as it’s not officially recognized in DSM-5 or ICD-10. Diverse labels such as work-related neuroasthenia, somatoform or adjustment disorders, severe stress reactions, and even depression are employed to define burnout, resulting in inconsistent evaluation. Solely relying on questionnaires poses a challenge in distinguishing between mild stress and clinical burnout, as short-term stress can raise burnout indicators similarly to major depression or anxiety. The distinction between short-term work-related stress and clinical burnout lies in their respective coping mechanisms and the evolution of symptoms over time. Short-term stress often emerges in response to immediate stressors like conflicts at work, increased workload, or organizational changes, prompting individuals to seek help within a few months—an indication of healthy coping strategies <span class="citation" data-cites="vanDam2021">(<a href="#ref-vanDam2021" role="doc-biblioref">Dam 2021</a>)</span>.</p>
+<p>In contrast, clinical burnout patients tend to overlook stress symptoms for extended periods, sometimes years, as living with chronic stress becomes their norm. The final collapse often stems from seemingly minor stressors, acting as the tipping point after prolonged exposure to chronic stress. Unlike those with short-term stress, individuals experiencing burnout don’t readily seek assistance during stress but persist stoically without vocalizing their distress. This perseverance characterizes their coping style, coupled with an aversion to seeking social support. While perseverance might be protective in certain situations where an individual maintains control, it becomes maladaptive without control, contributing to chronic stress maintenance. Surprisingly, burnout patients, despite experiencing fatigue, don’t tend to adjust their performance strategies by adopting less demanding approaches, contrary to what’s observed in fatigued yet healthy individuals. Instead, they exhibit a persistent drive to sustain high task performance standards <span class="citation" data-cites="vanDam2021">(<a href="#ref-vanDam2021" role="doc-biblioref">Dam 2021</a>)</span>.</p>
+<p>The transition from short-term stress to clinical burnout is marked by how individuals respond to stress, the duration of symptom neglect, and their coping strategies. While short-term stress prompts immediate seeking of help, burnout evolves silently over time, propelled by chronic stress and perseverance. The development of clinical burnout is first marked by the lack of recovery, where affected subjects tend to express aversion to spending effort in recognizing their problems. Second, physiological changes of stress-response system take place, manifesting as sleep difficulties, inability to relax, and restlessness. Third, chronic stress symptoms emerge, leading to physical, mental, emotional, and behavioral issues. During this phase, affected subjects may complain of intestinal problem, musculoskeletal pain, or fatigue. Fourth, pseudopsychopathology begins to get noticeable, signified by applying more rigid problem solving and simplified cognitive process. Fifth, the clinical burnout becomes apparent with reduced motivation, emotional breakdown, severe fatigue, and passivity <span class="citation" data-cites="vanDam2021">(<a href="#ref-vanDam2021" role="doc-biblioref">Dam 2021</a>)</span>. As outlined by <span class="citation" data-cites="Kaschka2011">Kaschka, Korczak, and Broich (<a href="#ref-Kaschka2011" role="doc-biblioref">2011</a>)</span> in figure <a href="#fig-burnout-type" class="quarto-xref">1</a>, the phases of burnout may continuously happen as an active and passive processes. The active process of burnout strongly associates with personality and internal factors, while the active process of burnout relates with external factors.</p>
+<p>Internal factors of ongoing burnout:</p>
+<ul>
+<li>Elevated personal expectations driven by idealism</li>
+<li>Intense desire for recognition and validation</li>
+<li>Consistent inclination to please other people over personal needs</li>
+<li>Reluctance to assign tasks to others</li>
+<li>Excessive dedication leading to self-overestimation</li>
+<li>Considering work as the sole meaningful pursuit, replacing social interactions</li>
+</ul>
+<p>External factors of ongoing burnout:</p>
+<ul>
+<li>High work demands</li>
+<li>Leadership and collaboration issues</li>
+<li>Conflicting instructions</li>
+<li>Time constraints and urgency</li>
+<li>Hostile work environment, including bullying</li>
+<li>Limited decision-making freedom</li>
+<li>Inadequate influence on work organization</li>
+<li>Limited participation opportunities</li>
+<li>Restricted autonomy in expressing opinions</li>
+<li>Hierarchy-related challenges</li>
+<li>Ineffective internal communication between employers and employees</li>
+<li>Administrative limitations</li>
+<li>Pressure exerted by superiors</li>
+<li>Escalating responsibilities</li>
+<li>Inefficient work organization</li>
+<li>Scarcity of resources (staff, funding)</li>
+<li>Dysfunctional institutional regulations</li>
+<li>Perceived absence of promotion at work</li>
+<li>Unclear job roles</li>
+<li>Deficient positive reinforcement</li>
+<li>Inadequate team synergy</li>
+<li>Lack of social support</li>
+</ul>
+<div class="cell page-columns page-full">
+<div class="cell-output-display page-columns page-full">
+<div id="fig-burnout-type" class="quarto-figure quarto-figure-center quarto-float anchored page-columns page-full">
+<figure class="quarto-float quarto-float-fig figure page-columns page-full">
+<div aria-describedby="fig-burnout-type-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../../fig/type-burnout.png" class="img-fluid figure-img" style="width:60.0%">
+</div>
+<figcaption class="quarto-float-caption-margin quarto-float-caption quarto-float-fig margin-caption" id="fig-burnout-type-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: The type of burnout, as outlined by <span class="citation" data-cites="Kaschka2011">Kaschka, Korczak, and Broich (<a href="#ref-Kaschka2011" role="doc-biblioref">2011</a>)</span>
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>Suggested by <span class="citation" data-cites="moss2019burnout">Moss et al. (<a href="#ref-moss2019burnout" role="doc-biblioref">2019</a>)</span> in the Harvard Business Review, burnout is a workplace-related issue, not merely individual problems. Annually, the United States spend approximately USD 190 billion due to workplace stress, nearly 8% of their national healthcare expenditure. Beyond economic cost, workplace stress also poses an imminent danger, contributing to 120,000 deaths each year <span class="citation" data-cites="Goh2016">(<a href="#ref-Goh2016" role="doc-biblioref">Goh, Pfeffer, and Zenios 2016</a>)</span>. A study involving 375 stressed employees from the Australian mining sector revealed that 23.4% had missed work due to health issues, and 6.7% struggled to focus at work because of health problems in the past month. On average, stressed employees’ work efficiency decreased by 33.6%, resulting in an average cost of USD 45,000 per employee. Notably, persistent work-related stress significantly escalated costs, far surpassing those with occasional or moderate stress, emphasizing the substantial impact of stress on productivity <span class="citation" data-cites="Street2018">(<a href="#ref-Street2018" role="doc-biblioref">Street, Lacey, and Somoray 2018</a>)</span>. Insufficient social support leads to heightened stress, while higher job performance correlates with reduced stress levels. Work-life conflict significantly contributes to workplace stress, which may increase the perceived stress level. This underscores the challenge organizations face in balancing flexible work setups and optimal performance, where prolonged exposure to work-related stress negatively affects performance and well-being. Conversely, fostering a supportive work environment and promoting social interaction and organizational support can alleviate stress. Leaders focusing on the work environment and encouraging social support play a crucial role in diminishing employee stress levels <span class="citation" data-cites="Foy2019">(<a href="#ref-Foy2019" role="doc-biblioref">Foy et al. 2019</a>)</span>.</p>
+</section>
+</section>
+<section id="sec-attachment" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="sec-attachment">Attachment Theory</h2>
+<p>Attachment Theory, as proposed by <span class="citation" data-cites="bowlby1973attachment">Bowlby (<a href="#ref-bowlby1973attachment" role="doc-biblioref">1973</a>)</span>, revolves around the importance of attachment-based strategies in managing emotions. It explores how various interactions with important individuals mold these strategies. Bowlby suggested that infants possess inherent attachment behaviors geared toward seeking closeness to supportive figures, serving as a primary strategy to alleviate distress and foster a feeling of security. The theory highlights the evolutionary significance of this attachment system, aiding the survival of infants reliant on caregivers due to their limitations. Bowlby stressed that this system operates across an individual’s lifespan, shaping behaviors related to seeking support. He outlined three key roles for an attachment figure: maintaining proximity, offering a secure haven for comfort during distress, and providing a secure base for exploration and growth.</p>
+<p>Bowlby also emphasized individual differences in attachment functioning, noting that responsive and available interactions foster a sense of security, while unavailability leads to negative self-perceptions and alternative strategies for managing emotions beyond seeking closeness. These variations give rise to attachment styles, initially categorized as secure, anxious, and avoidant in infancy, which later evolve into a two-dimensional space based on attachment anxiety and avoidance in adult relationships. The secure style reflects low levels of anxiety and avoidance, indicating comfort with intimacy and assurance in relationships. Anxious attachment indicates high anxiety and low avoidance, displaying a strong need for closeness coupled with fear of rejection. Conversely, the avoidant style represents high avoidance, signaling a preference for independence and emotional distance.</p>
+<p>Both anxious and avoidant styles signify the failure of seeking closeness to ease distress, leading to secondary strategies for managing emotions. Bowlby’s theory suggests that seeking closeness serves as the primary strategy for regulating emotions, with attachment experiences shaping additional strategies. This comprehension illuminates the complexities of emotional regulation and its influence on relationships, stemming from early interactions and impacting behavior throughout an individual’s life <span class="citation" data-cites="mikulincer2003attachment">(<a href="#ref-mikulincer2003attachment" role="doc-biblioref">Mikulincer, Shaver, and Pereg 2003</a>)</span>. Activation of the attachment style in adult corresponds to the imminent threat and perceived danger, as shown by figure <a href="#fig-attach-activ" class="quarto-xref">2</a></p>
+<div class="cell page-columns page-full">
+<div class="cell-output-display page-columns page-full">
+<div id="fig-attach-activ" class="quarto-figure quarto-figure-center quarto-float anchored page-columns page-full">
+<figure class="quarto-float quarto-float-fig figure page-columns page-full">
+<div aria-describedby="fig-attach-activ-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../../fig/attachment-activation-mikulincer.png" class="img-fluid figure-img" style="width:60.0%">
+</div>
+<figcaption class="quarto-float-caption-margin quarto-float-caption quarto-float-fig margin-caption" id="fig-attach-activ-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: Activation and dynamics of the attachment system proposed by <span class="citation" data-cites="mikulincer2002activation">Mikulincer, Gillath, and Shaver (<a href="#ref-mikulincer2002activation" role="doc-biblioref">2002</a>)</span>
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>In a general context, eliciting negative affect will produce different behaviors among people with secure and insecure attachment styles, specifically for sociotropic and autonomous stressors. Sociotropic stressors are those related to interpersonal loss and social rejection, while autonomous stressors are those emerging from the violation of one’s internal standards. Though no strong justification in drawing a clear boundary between sociotropic and autonomous stressors, especially due to their interrelatedness, different patterns emerge when the stressors are perceived by subjects with different attachment styles. People exhibiting insecure attachment styles, whether dismissive or anxious, showed greater susceptibility to sociotropic events. Dismissive individuals, owing to their detached and emotionally distant behavior, faced increased vulnerability to future sociotropic events, resulting in interpersonal difficulties. Conversely, anxious individuals might undergo heightened distress levels because they interpret conflicts as signs of emotional connection, leading to strain in their interpersonal relationships <span class="citation" data-cites="Bottonari2007">(<a href="#ref-Bottonari2007" role="doc-biblioref">Bottonari et al. 2007</a>)</span>.</p>
+</section>
+<section id="sec-resilience" class="level2">
+<h2 class="anchored" data-anchor-id="sec-resilience">Resilience as an Indicator of Mental Immunity </h2>
+<p>Resilience can be seen as a trait or a state of a human psyche, where resilience as a trait covers contributing internal factors that help the individual to overcome adversities. As a state, resilience is best defined as a dynamic adaptive behavior that emerges due to circumstantial changes. Several constituents of resilience as a trait includes habitual effective coping mechanism and positive emotions, both act as a buffer against negative life events <span class="citation" data-cites="davydov2010resilience">(<a href="#ref-davydov2010resilience" role="doc-biblioref">Davydov et al. 2010</a>)</span>. Meanwhile, as a state, resilience is a dynamic capacity to adapt supported by the interaction of internal and external factors, including biological, psychological, social, and ecological systems <span class="citation" data-cites="ungar2020resilience">(<a href="#ref-ungar2020resilience" role="doc-biblioref">Ungar and Theron 2020</a>)</span>. Resilience as a trait is observable as a non-adaptive countermeasures, where the individual will act against the stressful events, i.e.&nbsp;being resistant to adversities. On the other hand, resilience as state is an adaptive transformation to prevent persistent dysfunction or psychopathology <span class="citation" data-cites="davydov2010resilience">(<a href="#ref-davydov2010resilience" role="doc-biblioref">Davydov et al. 2010</a>)</span>, thus, will be better suited for any modelling and policy-directed research.</p>
+<p>The intertwining facade of the trait and state of resilience is explainable as an inherent activities of neurocircuitries <span class="citation" data-cites="rutten2013resilience">(<a href="#ref-rutten2013resilience" role="doc-biblioref">Rutten et al. 2013</a>)</span>, where gene-environmental interactions play a role in determining individual susceptibility to psychiatric illness (resilience as a trait) <span class="citation" data-cites="amstadter2014psychiatric">(<a href="#ref-amstadter2014psychiatric" role="doc-biblioref">Amstadter, Myers, and Kendler 2014</a>)</span>. Also, there exists biological mechanism that allow experience-dependant plasticity and fuel up adaptability (resilience as a state) <span class="citation" data-cites="derakhshan2020attentional rutten2013resilience">(<a href="#ref-derakhshan2020attentional" role="doc-biblioref">Derakhshan 2020</a>; <a href="#ref-rutten2013resilience" role="doc-biblioref">Rutten et al. 2013</a>)</span>. By considering both sides of resilience, This research is concerned with the latter aspect, where maintaining an adaptive behavior is of essence to abate the development of mental disorder.</p>
+</section>
+<section id="sec-neurobio-resilience" class="level2">
+<h2 class="anchored" data-anchor-id="sec-neurobio-resilience">The Neurobiology of Resilience</h2>
+<p>The mechanisms underlying the neurobiology of resilience involve intricate neural circuits governing stress response and reward experiences. Feedback mechanisms within the brain and body regulate stress reactions, pivotal for sustained health and reducing mental health disturbances post-severe adversities. Major neural systems controlling stress response include the hypothalamus–pituitary–adrenal (HPA) axis, sympathetic nervous system, and dopaminergic and serotonergic pathways. Activation of the HPA axis triggers the release of hormones like corticotrophin releasing hormone and adrenocorticotropic hormone, leading to the production of glucocorticoids. While short-term elevation of cortisol aids adaptive behavior, prolonged high cortisol levels can impede neurogenesis. The neurocircuitry governing reward experiences centers on mesolimbic dopaminergic pathways from the Ventral Tegmental Area (VTA) to the nucleus accumbens (NAc). This system integrates sensory input and cognitive control, regulating dopamine release in the VTA. Connections with other brain regions contribute to the activity of this circuitry <span class="citation" data-cites="rutten2013resilience">(<a href="#ref-rutten2013resilience" role="doc-biblioref">Rutten et al. 2013</a>)</span>.</p>
+<p>Together with HPA axis, the medial prefrontal cortex (mPFC) plays a key role in stress response, where hyperactive mPFC generate depression-like behavior. The hippocampus, crucial for regulating the stress response, demonstrates vulnerability to stress; its dysfunction is associated with depression, and circuits from the hippocampus to other brain areas influence resilience to stress. GABAergic receptors in the hippocampus and dopaminergic pathways from the VTA to the NAc impact stress resilience, where impaired GABAergic neurons in the NAc elicits depression-like behaviors. Stress during early life can have lasting effects on mental health, yet mild stress exposure early on might enhance resilience. As such, adverse childhood experiences correlate with increased risk for psychological and physical diseases later in life, while stress inoculation during childhood may improve resilience <span class="citation" data-cites="liu2018biological">(<a href="#ref-liu2018biological" role="doc-biblioref">Liu et al. 2018</a>)</span>.</p>
+<p>Furthermore, an aberrant regulation within cellular and molecular levels can influence resilience or stress response, emphasizing the role of genetic and environmental factors. Genetic moderation of environmental sensitivity explains individual responses to similar environments, revealing interactions between genes and environment as critical for outcomes. Stressful events can heighten psychiatric risk in individuals carrying specific gene variants like 5HTT, FKBP5, and CRH1. Epigenetics, regulating gene transcription independent of DNA sequence, profoundly influences adaptation to external stimuli. Mechanisms like DNA methylation and chromatin structure changes impact brain development, neurogenesis, and cognitive functions like memory and learning, implying its role in individual stress responses. Epigenetic mechanisms underpin individual variation in response to environmental exposures, influencing neurobiological processes during development and aging <span class="citation" data-cites="rutten2013resilience">(<a href="#ref-rutten2013resilience" role="doc-biblioref">Rutten et al. 2013</a>)</span>.</p>
+<p>A healthy response to stress is crucial for long-term well-being and reduced mental health issues following exposure to severe adversity. Critical neural systems governing stress responses, including the HPA axis, the sympathetic nervous system, and neurotransmitter systems like dopamine and serotonin, play pivotal roles. Genetic factors contribute significantly to how individuals respond to stress in the same environment, illustrating the interplay between genetics and the environment. Mechanisms influenced by experiences at cellular, subcellular, and molecular levels shape the way experiences are imprinted, impacting neural adaptability and sensitivity. While human studies emphasize the importance of social networks and positive experiences in resilience, replicating these in animal models remains a challenge. Resilience isn’t just an absence of risk; it comprises distinct biological and psychological traits that aid successful adaptation or swift recovery from adversity-induced mental health issues. Exposure to multiple adverse events during development can sensitize an individual’s behavior and central nervous system, potentially leading to susceptibility to psychiatric disorders <span class="citation" data-cites="vella2019theoretical">(<a href="#ref-vella2019theoretical" role="doc-biblioref">Vella, Pai, et al. 2019</a>)</span>.</p>
+</section>
+<section id="sec-stressor" class="level2">
+<h2 class="anchored" data-anchor-id="sec-stressor">Stressors Precipitating the Development of Mental Issues </h2>
+<p>Resilience is the moderator between risk factors and psychological disorders, therefore, a clear definition of included stressors will aid in developing an explainable and generalizable study design <span class="citation" data-cites="ungar2020resilience">(<a href="#ref-ungar2020resilience" role="doc-biblioref">Ungar and Theron 2020</a>)</span>. Defining the stressors also allow us to measure resilience using a reactivity approach, where resilience is evaluated as growing tolerance to regular stress <span class="citation" data-cites="davydov2010resilience">(<a href="#ref-davydov2010resilience" role="doc-biblioref">Davydov et al. 2010</a>)</span>. This way we can partly assess the dynamic process in developing an adaptive behavior.</p>
+<p>The presence of stressors disrupts physiological function to a lower utility state <span class="citation" data-cites="oken2015systems">(<a href="#ref-oken2015systems" role="doc-biblioref">Oken, Chamine, and Wakeland 2015</a>)</span>. Following the methods proposed by <span class="citation" data-cites="veer2021psycho">Veer et al. (<a href="#ref-veer2021psycho" role="doc-biblioref">2021</a>)</span>, our research evaluates two distinct groups of stressor, namely the general daily stressor and health-related stressor. The general stressor is an instrument comprising ten items of daily hassles and life events, while the health-related stressor consists of items reflecting adversity related to general health concern in self, families, and close relatives. Any item rated as <code>"TRUE"</code> is then weighted for the severity, ranging from <em>not burdensome</em> (0) to <em>substantially burdensome</em> (5). Below is the excerpt of the general stressor items:</p>
+<ul>
+<li>Negative political events</li>
+<li>Conflicts with relatives or colleagues</li>
+<li>Financial problems</li>
+<li>Physical health problems</li>
+<li>Mental health problems</li>
+<li>Burdensome experiences with family</li>
+<li>Burdensome experiences in workplace</li>
+<li>Conflicts with strangers</li>
+<li>Separation from a loved one, which triggers reduced social contact and loneliness</li>
+<li>Death of a loved one</li>
+</ul>
+<p>The health-related stressor in <span class="citation" data-cites="veer2021psycho">Veer et al. (<a href="#ref-veer2021psycho" role="doc-biblioref">2021</a>)</span> was particularly narrating distress caused by the COVID-19 pandemic. In brief, these items are comprised of trepidation or perceived burden due to a disease, thus adaptable for a more general research context.</p>
+</section>
+<section id="sec-psych" class="level2">
+<h2 class="anchored" data-anchor-id="sec-psych">Psychological Outcomes </h2>
+<p>Depression, anxiety, and burnout are selected as outcomes of interest due to the relatedness between burnout <span class="math inline">\(\rightleftharpoons\)</span> depression and burnout <span class="math inline">\(\rightleftharpoons\)</span> anxiety <span class="citation" data-cites="koutsimani2019relationship">(<a href="#ref-koutsimani2019relationship" role="doc-biblioref">Koutsimani, Montgomery, and Georganta 2019</a>)</span>. The partial correlations have a moderate effect size, signifying the boundary between burnout and depression also burnout and anxiety. Therefore, statistically, each of depression, anxiety, and burnout does not share similar latent construct even though they have closely-related manifests. This is interpretable as distinctive remarks to differentiate three of such outcomes and the clinical importance of examining the others when one is present.</p>
+<p>Burnout is a condition of increasing depersonalization and emotional exhaustion, leading to reduced personal accomplishment in the workplace (sense of inefficacy). Burnout often happens due to a long-term ongoing stressor, where the inability to cope with external issues decreases work engagement <span class="citation" data-cites="Schaufeli2017">(<a href="#ref-Schaufeli2017" role="doc-biblioref">Schaufeli 2017</a>)</span>. The incidence of burnout overlaps with psychological distress, marked by depressive symptoms or anxiety.</p>
+<p>In a recent finding, burnout is partially explainable by depression and anxiety. Depression symptoms pose similar characteristics to exhaustion and depersonalization, while anxiety is related to the sense of personal inefficacy <span class="citation" data-cites="golonka2019occupational">(<a href="#ref-golonka2019occupational" role="doc-biblioref">Golonka et al. 2019</a>)</span>. In theory, depression is marked by the loss of energy (fatigue) and anxiety is marked by being excessively worried; but a study suggested the presence of anxious depression <span class="citation" data-cites="gaspersz2018patients">(<a href="#ref-gaspersz2018patients" role="doc-biblioref">Gaspersz et al. 2018</a>)</span>, which in turn also implies a pathophysiological overlap between depression and anxiety. Moreover, lower brain connectivity in the default mode network is a curious co-occurrence between depression <span class="citation" data-cites="jacob2020neural">(<a href="#ref-jacob2020neural" role="doc-biblioref">Jacob et al. 2020</a>)</span>, anxiety <span class="citation" data-cites="imperatori2019default">(<a href="#ref-imperatori2019default" role="doc-biblioref">Imperatori et al. 2019</a>)</span>, and burnout <span class="citation" data-cites="shang2022aberrant">(<a href="#ref-shang2022aberrant" role="doc-biblioref">Shang et al. 2022</a>)</span>. Neurobiological, clinical, and contextual overlaps between depression, anxiety, and burnout necessitate the inclusion of these outcomes to infer a more general impact of associated stressors.</p>
+<p>Several policies have been implemented to alleviate the mental health burden in Indonesia, mainly highlighted in the Mental Health Act in 2014 <span class="citation" data-cites="tampubolon2021covid">(<a href="#ref-tampubolon2021covid" role="doc-biblioref">Tampubolon, Silalahi, and Siagian 2021</a>)</span>, and further defined in the Indonesian Minister of Health Regulation Number 77 of 2015 and Indonesian Minister of Health Regulation Number 54 of 2017 <span class="citation" data-cites="hartono2018tracking">(<a href="#ref-hartono2018tracking" role="doc-biblioref">Hartono, Mandowen, and Asmorowati 2018</a>)</span>. During the pandemic, the government of Indonesia has stipulated a Presidential Decree R1 No.&nbsp;7 of 2020 to promptly respond the pandemic; however, the practical implementation has not addressed mental health issues. Though, several ongoing initiatives led by the government has been realized as a regulation on managing a digital counselling platform <span class="citation" data-cites="tampubolon2021covid">(<a href="#ref-tampubolon2021covid" role="doc-biblioref">Tampubolon, Silalahi, and Siagian 2021</a>)</span>. The digital platform, conducted through various chat-based and video call-based application, helps the general population to get in touch with therapists, psychologists, counselors, and educational practitioners <span class="citation" data-cites="ifdil2020online">(<a href="#ref-ifdil2020online" role="doc-biblioref">Ifdil et al. 2020</a>)</span>. Tele-consulting, either through chat or video call, enables practitioners to provide psychological first aid to address elevated distress during the pandemic, depression, and anxiety <span class="citation" data-cites="ifdil2020online">(<a href="#ref-ifdil2020online" role="doc-biblioref">Ifdil et al. 2020</a>)</span>.</p>
+</section>
+</section>
+<section id="references" class="level1 unnumbered">
+<h1 class="unnumbered">References</h1>
+
+
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-ainsworth1979infant" class="csl-entry" role="listitem">
+Ainsworth, Mary S. 1979. <span>“Infant–Mother Attachment.”</span> <em>American Psychologist</em> 34 (10): 932.
+</div>
+<div id="ref-amstadter2014psychiatric" class="csl-entry" role="listitem">
+Amstadter, Ananda B, John M Myers, and Kenneth S Kendler. 2014. <span>“Psychiatric Resilience: Longitudinal Twin Study.”</span> <em>The British Journal of Psychiatry</em> 205 (4): 275–80.
+</div>
+<div id="ref-Baxter2012" class="csl-entry" role="listitem">
+Baxter, A. J., K. M. Scott, T. Vos, and H. A. Whiteford. 2012. <span>“Global Prevalence of Anxiety Disorders: A Systematic Review and Meta-Regression.”</span> <em>Psychological Medicine</em> 43 (5): 897–910.
+</div>
+<div id="ref-Bottonari2007" class="csl-entry" role="listitem">
+Bottonari, Kathryn A., John E. Roberts, Morgen A. R. Kelly, Todd B. Kashdan, and Jeffrey A. Ciesla. 2007. <span>“A Prospective Investigation of the Impact of Attachment Style on Stress Generation Among Clinically Depressed Individuals.”</span> <em>Behaviour Research and Therapy</em> 45 (1): 179–88.
+</div>
+<div id="ref-bowlby1973attachment" class="csl-entry" role="listitem">
+Bowlby, John. 1973. <span>“Attachment and Loss. Volume II. Separation, Anxiety and Anger.”</span> In <em>Attachment and Loss. Volume II. Separation, Anxiety and Anger</em>, 429–p.
+</div>
+<div id="ref-burton1621" class="csl-entry" role="listitem">
+Burton, Robert. 1621. <em>The Anatomy of Melancholy</em>. JW Moore.
+</div>
+<div id="ref-Cuijpers2007" class="csl-entry" role="listitem">
+Cuijpers, P., F. Smit, J. Oostenbrink, R. De Graaf, M. Ten Have, and A. Beekman. 2007. <span>“Economic Costs of Minor Depression: A Population-Based Study.”</span> <em>Acta Psychiatrica Scandinavica</em> 115 (3): 229–36.
+</div>
+<div id="ref-vanDam2021" class="csl-entry" role="listitem">
+Dam, Arno van. 2021. <span>“A Clinical Perspective on Burnout: Diagnosis, Classification, and Treatment of Clinical Burnout.”</span> <em>European Journal of Work and Organizational Psychology</em> 30 (5): 732–41.
+</div>
+<div id="ref-owidmentalhealth" class="csl-entry" role="listitem">
+Dattani, Saloni, Lucas Rodés-Guirao, Hannah Ritchie, and Max Roser. 2023. <span>“Mental Health.”</span> <em>Our World in Data</em>.
+</div>
+<div id="ref-davydov2010resilience" class="csl-entry" role="listitem">
+Davydov, Dmitry M, Robert Stewart, Karen Ritchie, and Isabelle Chaudieu. 2010. <span>“Resilience and Mental Health.”</span> <em>Clinical Psychology Review</em> 30 (5): 479–95.
+</div>
+<div id="ref-DeMartini2019" class="csl-entry" role="listitem">
+DeMartini, Jeremy, Gayatri Patel, and Tonya L. Fancher. 2019. <span>“Generalized Anxiety Disorder.”</span> <em>Annals of Internal Medicine</em> 170 (7): ITC49.
+</div>
+<div id="ref-derakhshan2020attentional" class="csl-entry" role="listitem">
+Derakhshan, Nazanin. 2020. <span>“Attentional Control and Cognitive Biases as Determinants of Vulnerability and Resilience in Anxiety and Depression.”</span> In <em>Cognitive Biases in Health and Psychiatric Disorders</em>, 261–74. Elsevier.
+</div>
+<div id="ref-Foy2019" class="csl-entry" role="listitem">
+Foy, Tommy, Rocky J. Dwyer, Roy Nafarrete, Mohamad Saleh Saleh Hammoud, and Pat Rockett. 2019. <span>“Managing Job Performance, Social Support and Work-Life Conflict to Reduce Workplace Stress.”</span> <em>International Journal of Productivity and Performance Management</em> 68 (6): 1018–41.
+</div>
+<div id="ref-gaspersz2018patients" class="csl-entry" role="listitem">
+Gaspersz, Roxanne, Laura Nawijn, Femke Lamers, and Brenda WJH Penninx. 2018. <span>“Patients with Anxious Depression: Overview of Prevalence, Pathophysiology and Impact on Course and Treatment Outcome.”</span> <em>Current Opinion in Psychiatry</em> 31 (1): 17–25.
+</div>
+<div id="ref-Goh2016" class="csl-entry" role="listitem">
+Goh, Joel, Jeffrey Pfeffer, and Stefanos A. Zenios. 2016. <span>“The Relationship Between Workplace Stressors and Mortality and Health Costs in the United States.”</span> <em>Management Science</em> 62 (2): 608–28.
+</div>
+<div id="ref-golonka2019occupational" class="csl-entry" role="listitem">
+Golonka, Krystyna, Justyna Mojsa-Kaja, Mateusz Blukacz, Magda Gawłowska, and Tadeusz Marek. 2019. <span>“Occupational Burnout and Its Overlapping Effect with Depression and Anxiety.”</span> <em>International Journal of Occupational Medicine and Environmental Health</em> 19 (2).
+</div>
+<div id="ref-Greenberg2023" class="csl-entry" role="listitem">
+Greenberg, Paul, Abhishek Chitnis, Derek Louie, Ellison Suthoff, Shih-Yin Chen, Jessica Maitland, Patrick Gagnon-Sanschagrin, Andree-Anne Fournier, and Ronald C. Kessler. 2023. <span>“The Economic Burden of Adults with Major Depressive Disorder in the United States (2019).”</span> <em>Advances in Therapy</em> 40 (10): 4460–79.
+</div>
+<div id="ref-Greenberg2021" class="csl-entry" role="listitem">
+Greenberg, Paul, Andree-Anne Fournier, Tammy Sisitsky, Mark Simes, Richard Berman, Sarah H. Koenigsberg, and Ronald C. Kessler. 2021. <span>“The Economic Burden of Adults with Major Depressive Disorder in the United States (2010 and 2018).”</span> <em><span>PharmacoEconomics</span></em> 39 (6): 653–65.
+</div>
+<div id="ref-GutirrezRojas2020" class="csl-entry" role="listitem">
+Gutiérrez-Rojas, Luis, Alejandro Porras-Segovia, Henry Dunne, Nelson Andrade-González, and Jorge A. Cervilla. 2020. <span>“Prevalence and Correlates of Major Depressive Disorder: A Systematic Review.”</span> <em>Brazilian Journal of Psychiatry</em> 42 (6): 657–72.
+</div>
+<div id="ref-hartono2018tracking" class="csl-entry" role="listitem">
+Hartono, Alina Sari, Jitzhac Andrew Rafel Mandowen, and Sulikah Asmorowati. 2018. <span>“Tracking the Backwardness of Mental Health Policy in Indonesia (Analysis of the Stagnation of the Implementation of Law Number 18/2014 on Mental Health).”</span> In <em>The 3 Rd International Symposium of Public Health (the 3 Rd ISoPH)<span>“challenging Public Health Roles Towards Global Health Issues”</span></em>, 33.
+</div>
+<div id="ref-ifdil2020online" class="csl-entry" role="listitem">
+Ifdil, Ifdil, Rima Pratiwi Fadli, Kadek Suranata, Nilma Zola, and Zadrian Ardi. 2020. <span>“Online Mental Health Services in Indonesia During the COVID-19 Outbreak.”</span> <em>Asian Journal of Psychiatry</em> 51: 102153.
+</div>
+<div id="ref-imperatori2019default" class="csl-entry" role="listitem">
+Imperatori, Claudio, Benedetto Farina, Mauro Adenzato, Enrico Maria Valenti, Cristina Murgia, Giacomo Della Marca, Riccardo Brunetti, Elena Fontana, and Rita B Ardito. 2019. <span>“Default Mode Network Alterations in Individuals with High-Trait-Anxiety: An EEG Functional Connectivity Study.”</span> <em>Journal of Affective Disorders</em> 246: 611–18.
+</div>
+<div id="ref-jacob2020neural" class="csl-entry" role="listitem">
+Jacob, Yael, Laurel S Morris, Kuang-Han Huang, Molly Schneider, Sarah Rutter, Gaurav Verma, James W Murrough, and Priti Balchandani. 2020. <span>“Neural Correlates of Rumination in Major Depressive Disorder: A Brain Network Analysis.”</span> <em>NeuroImage: Clinical</em> 25: 102142.
+</div>
+<div id="ref-Kaschka2011" class="csl-entry" role="listitem">
+Kaschka, Wolfgang P., Dieter Korczak, and Karl Broich. 2011. <span>“Burnout.”</span> <em>Deutsches Ärzteblatt International</em>, November.
+</div>
+<div id="ref-Kessler2009" class="csl-entry" role="listitem">
+Kessler, Ronald C., Sergio Aguilar-Gaxiola, Jordi Alonso, Somnath Chatterji, Sing Lee, Johan Ormel, T. Bedirhan Üstün, and Philip S. Wang. 2009. <span>“The Global Burden of Mental Disorders: An Update from the <span>WHO</span> World Mental Health (<span>WMH</span>) Surveys.”</span> <em>Epidemiologia e Psichiatria Sociale</em> 18 (1): 23–33.
+</div>
+<div id="ref-Kessler2006" class="csl-entry" role="listitem">
+Kessler, Ronald C., Josep Maria Haro, Steven G. Heeringa, Beth-Ellen Pennell, and T. Bedirhan Üstün. 2006. <span>“The World Health Organization World Mental Health Survey Initiative.”</span> <em>Epidemiologia e Psichiatria Sociale</em> 15 (3): 161–66.
+</div>
+<div id="ref-koutsimani2019relationship" class="csl-entry" role="listitem">
+Koutsimani, Panagiota, Anthony Montgomery, and Katerina Georganta. 2019. <span>“The Relationship Between Burnout, Depression, and Anxiety: A Systematic Review and Meta-Analysis.”</span> <em>Frontiers in Psychology</em> 10: 284.
+</div>
+<div id="ref-liu2018biological" class="csl-entry" role="listitem">
+Liu, Haoran, Chenfeng Zhang, Yannan Ji, and Li Yang. 2018. <span>“Biological and Psychological Perspectives of Resilience: Is It Possible to Improve Stress Resistance?”</span> <em>Frontiers in Human Neuroscience</em> 12: 326.
+</div>
+<div id="ref-Martin2003" class="csl-entry" role="listitem">
+Martin, Patrick. 2003. <span>“The Epidemiology of Anxiety Disorders: A Review.”</span> <em>Dialogues in Clinical Neuroscience</em> 5 (3): 281–98.
+</div>
+<div id="ref-mikulincer2002activation" class="csl-entry" role="listitem">
+Mikulincer, Mario, Omri Gillath, and Phillip R Shaver. 2002. <span>“Activation of the Attachment System in Adulthood: Threat-Related Primes Increase the Accessibility of Mental Representations of Attachment Figures.”</span> <em>Journal of Personality and Social Psychology</em> 83 (4): 881.
+</div>
+<div id="ref-mikulincer2003attachment" class="csl-entry" role="listitem">
+Mikulincer, Mario, Phillip R Shaver, and Dana Pereg. 2003. <span>“Attachment Theory and Affect Regulation: The Dynamics, Development, and Cognitive Consequences of Attachment-Related Strategies.”</span> <em>Motivation and Emotion</em> 27: 77–102.
+</div>
+<div id="ref-MorenoAgostino2021" class="csl-entry" role="listitem">
+Moreno-Agostino, Darı́o, Yu-Tzu Wu, Christina Daskalopoulou, M. Tasdik Hasan, Martijn Huisman, and Matthew Prina. 2021. <span>“Global Trends in the Prevalence and Incidence of Depression:a Systematic Review and Meta-Analysis.”</span> <em>Journal of Affective Disorders</em> 281 (February): 235–43.
+</div>
+<div id="ref-moss2019burnout" class="csl-entry" role="listitem">
+Moss, Jennifer et al. 2019. <span>“Burnout Is about Your Workplace, Not Your People.”</span> <em>Harvard Business Review</em> 1 (1): 1–10.
+</div>
+<div id="ref-oken2015systems" class="csl-entry" role="listitem">
+Oken, Barry S, Irina Chamine, and Wayne Wakeland. 2015. <span>“A Systems Approach to Stress, Stressors and Resilience in Humans.”</span> <em>Behavioural Brain Research</em> 282: 144–54.
+</div>
+<div id="ref-Otte2016" class="csl-entry" role="listitem">
+Otte, Christian, Stefan M. Gold, Brenda W. Penninx, Carmine M. Pariante, Amit Etkin, Maurizio Fava, David C. Mohr, and Alan F. Schatzberg. 2016. <span>“Major Depressive Disorder.”</span> <em>Nature Reviews Disease Primers</em> 2 (1).
+</div>
+<div id="ref-Rehm2019" class="csl-entry" role="listitem">
+Rehm, Jürgen, and Kevin D. Shield. 2019. <span>“Global Burden of Disease and the Impact of Mental and Addictive Disorders.”</span> <em>Current Psychiatry Reports</em> 21 (2).
+</div>
+<div id="ref-rutten2013resilience" class="csl-entry" role="listitem">
+Rutten, Bart PF, Caroline Hammels, Nicole Geschwind, Claudia Menne-Lothmann, Ehsan Pishva, Koen Schruers, D Van Den Hove, G Kenis, Jim van Os, and Marieke Wichers. 2013. <span>“Resilience in Mental Health: Linking Psychological and Neurobiological Perspectives.”</span> <em>Acta Psychiatrica Scandinavica</em> 128 (1): 3–20.
+</div>
+<div id="ref-Schaufeli2017" class="csl-entry" role="listitem">
+Schaufeli, Wilmar B. 2017. <span>“Burnout: A Short Socio-Cultural History.”</span> In <em>Burnout, Fatigue, Exhaustion</em>, 105–27. Springer.
+</div>
+<div id="ref-shang2022aberrant" class="csl-entry" role="listitem">
+Shang, Yingying, Yunfang Yang, Guowei Zheng, Ziyang Zhao, Yin Wang, Lin Yang, Lin Han, Zhijun Yao, and Bin Hu. 2022. <span>“Aberrant Functional Network Topology and Effective Connectivity in Burnout Syndrome.”</span> <em>Clinical Neurophysiology</em> 138: 163–72.
+</div>
+<div id="ref-Solmi2021" class="csl-entry" role="listitem">
+Solmi, Marco, Joaquim Radua, Miriam Olivola, Enrico Croce, Livia Soardo, Gonzalo Salazar de Pablo, Jae Il Shin, et al. 2021. <span>“Age at Onset of Mental Disorders Worldwide: Large-Scale Meta-Analysis of&nbsp;192 Epidemiological Studies.”</span> <em>Molecular Psychiatry</em> 27 (1): 281–95.
+</div>
+<div id="ref-Street2018" class="csl-entry" role="listitem">
+Street, Tamara, Sarah Lacey, and Klaire Somoray. 2018. <span>“Employee Stress, Reduced Productivity, and Interest in a Workplace Health Program: A Case Study from the Australian Mining Industry.”</span> <em>International Journal of Environmental Research and Public Health</em> 16 (1): 94.
+</div>
+<div id="ref-tampubolon2021covid" class="csl-entry" role="listitem">
+Tampubolon, Manotar, Fernando Silalahi, and Riduan Siagian. 2021. <span>“COVID-19 and Mental Health Policy in Indonesia.”</span> <em>Asean Journal of Psychiatry</em> 22 (1): 1–12.
+</div>
+<div id="ref-ungar2020resilience" class="csl-entry" role="listitem">
+Ungar, Michael, and Linda Theron. 2020. <span>“Resilience and Mental Health: How Multisystemic Processes Contribute to Positive Outcomes.”</span> <em>The Lancet Psychiatry</em> 7 (5): 441–48.
+</div>
+<div id="ref-veer2021psycho" class="csl-entry" role="listitem">
+Veer, Ilya M, Antje Riepenhausen, Matthias Zerban, Carolin Wackerhagen, Lara Puhlmann, Haakon Engen, Goran Kober, et al. 2021. <span>“Psycho-Social Factors Associated with Mental Resilience in the Corona Lockdown.”</span> <em>Translational Psychiatry</em> 11 (1): 1–11.
+</div>
+<div id="ref-vella2019theoretical" class="csl-entry" role="listitem">
+Vella, Shae-Leigh Cynthia, Nagesh B Pai, et al. 2019. <span>“A Theoretical Review of Psychological Resilience: Defining Resilience and Resilience Research over the Decades.”</span> <em>Archives of Medicine and Health Sciences</em> 7 (2): 233.
+</div>
+<div id="ref-who2004prevalence" class="csl-entry" role="listitem">
+WHO World Mental Health Survey Consortium. 2004. <span>“Prevalence, Severity, and Unmet Need for Treatment of Mental Disorders in the World Health Organization World Mental Health Surveys.”</span> <em>JAMA</em> 291 (21): 2581–90.
+</div>
+</div>
+</section>
+
+
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<script src="https://giscus.app/client.js" data-repo="namakala/namakala.github.io" data-repo-id="R_kgDOJ_Pzvg" data-category="General" data-category-id="DIC_kwDOLhl_9s4CeCPH" data-mapping="title" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="noborder_light" data-lang="en" crossorigin="anonymous" async="">
+</script>
+<input type="hidden" id="giscus-base-theme" value="noborder_light">
+<input type="hidden" id="giscus-alt-theme" value="noborder_light">
+</div> <!-- /content -->
+
+
+
+
+</body></html>
