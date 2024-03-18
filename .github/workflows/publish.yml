@@ -1,52 +1,26 @@
-# Workflow for rendering and deploying quarto site to GitHub Pages
-# Based on the GitHub example static content deploy action
-# Adapted from https://www.iantaylor.org/posts/2022/deploy-quarto-to-github-pages/index.html
-name: Deploy Quarto site to Pages
-
+# Adapted from https://quarto.org/docs/publishing/github-pages.html
 on:
-  # Runs on pushes targeting the default branch
-  push:
-    branches: "master"
-  # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
+  push:
+    branches: main
 
-# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
-permissions:
-  contents: read
-  pages: write
-  id-token: write
-
-# Allow one concurrent deployment
-concurrency:
-  group: "pages"
-  cancel-in-progress: true
+name: Quarto Publish
 
 jobs:
-  # Single deploy job since we're just deploying
-  render-deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+  build-deploy:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
-      - name: Checkout repository
+      - name: Check out repository
         uses: actions/checkout@v4
 
       - name: Set up Quarto
         uses: quarto-dev/quarto-actions/setup@v2
 
-      - name: Render
-        run: quarto render --to html --profile site
-        
-      - name: Setup Pages
-        uses: actions/configure-pages@v4
-        
-      - name: Upload rendered site
-        uses: actions/upload-pages-artifact@v3
+      - name: Render and Publish
+        uses: quarto-dev/quarto-actions/publish@v2
         with:
-          # Upload quarto render output directory
-          path: "_render/site"
-          
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+          target: gh-pages
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
