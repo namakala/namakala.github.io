@@ -16,8 +16,6 @@ website:
         href: index.qmd
       - text: "About"
         href: about.qmd
-      - text: "Proposal"
-        href: docs/proposal/index.qmd
       - text: "Learning Space"
         href: docs/learning-space/index.qmd
   sidebar:
@@ -27,5 +25,5 @@ website:
     contents:
       - text: About
         href: about.qmd
-      - text: Learning Space
-        href: docs/learning-space/index.qmd
+      - text: Bibliography
+        href: docs/proposal/references.qmd
