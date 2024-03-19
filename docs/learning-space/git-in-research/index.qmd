@@ -1,12 +1,19 @@
 ---
-title: Using `git` in Research
+title: Using git in Research
 author: Aly Lamuri
 format:
   html: default
   revealjs:
+    theme: simple
     smaller: true
     scrollable: true
     output-file: slide.html
 ---
+
+# Version control in research
+
+## Have you ever...
+
+# Basics of `git`
 
 ## What is `git`?

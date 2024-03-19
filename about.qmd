@@ -16,7 +16,7 @@ format:
     toc: false
 about:
   template: trestles
-  image: ../fig/profile.jpeg
+  image: fig/profile.jpeg
   image-shape: round
   links:
     - icon: twitter

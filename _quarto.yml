@@ -42,7 +42,7 @@ website:
 
 format:
   html:
-    theme: flatly
+    theme: cosmo
     toc-title: Contents
     page-layout: article
     grid:

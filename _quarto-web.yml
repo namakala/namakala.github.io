@@ -5,25 +5,41 @@ project:
     port: 1810
 
 website:
+  repo-url: https://github.com/namakala/namakala.github.io/
+  repo-actions: [edit, issue]
   search:
-    type: textbox
+    type: "textbox"
     copy-button: true
-    location: sidebar
+    location: "sidebar"
   navbar:
-    title: false
-    left:
-      - text: "Home"
-        href: index.qmd
+    title: Nama Kala
+    logo: fig/namakala.png
+    tools:
+      - icon: github
+        menu:
+          - text: Source Code
+            href: https://github.com/namakala/namakala.github.io/
+          - text: Report a Bug
+            href: https://github.com/namakala/namakala.github.io/issues/new
+          - text: "Repository"
+            href: https://github.com/namakala/repositories
+  sidebar:
+    style: "docked"
+    contents:
       - text: "About"
         href: about.qmd
-      - text: "Learning Space"
-        href: docs/learning-space/index.qmd
-  sidebar:
-    title: "Policy and Resilience"
-    style: docked
-    alignment: right
-    contents:
-      - text: About
-        href: about.qmd
-      - text: Bibliography
-        href: docs/proposal/references.qmd
+      - section: "Learning Space"
+        icon: journal-bookmark
+        contents:
+          - auto: "docs/learning-space/**/*.qmd"
+      - section: "Research"
+        icon: journal-text
+        contents:
+          - docs/proposal/intro.qmd
+          - docs/proposal/litrev.qmd
+          - docs/proposal/research-framework.qmd
+          - docs/proposal/methods.qmd
+          - docs/proposal/summary.qmd
+      - text: "Journey Log"
+        href: https://namakala.github.io/journey-log
+        icon: journal-plus
