@@ -1,5 +1,5 @@
 ---
-title: "AL"
+title: "About the Author"
 comments: false
 author:
   - name: "Aly Lamuri"
@@ -15,7 +15,7 @@ format:
       body-width: 950px
     toc: false
 about:
-  template: trestles
+  template: jolla
   image: fig/profile.jpeg
   image-shape: round
   links:
@@ -27,6 +27,4 @@ about:
       href: https://linkedin.com/in/lamurian
 ---
 
-:::{.content-hidden}
-Aly Lamuri is a PhD candidate at Rijksuniversiteit Groningen (RUG) / University Medical Center Groningen (UMCG).
-:::
+MSc of Computational Neuroscience and Neuroinformatics. Currently pursuing a doctoral degree in Universitas Indonesia and Rijksuniversiteit Groningen. Proficient in scripting with R also comfortable in scripting with python and Google script. Highly interested in researching psychology and medicine.

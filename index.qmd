@@ -23,11 +23,11 @@ citation:
 
 :::{.content-hidden unless-format="html"}
 
-## What am I doing here? {-}
+# What am I doing here? {-}
 
 This website is a makeshift of a book and blog describing my journey as a PhD candidate. I wish to narrate all my joy and effort in science, because I believe that academic endeavor relies on honesty. In this page, and the following pages to come, I am sharing the essence of what I learned throughout the years as I hope to entice the readers with the beauty and bluntness in research. I hope to encourage the readers to see what I saw, feel what I felt, and think what I thought. You will find several resources I neatly arranged in the [learning space](docs/learning-space/index.qmd), where I note down topics that enriched my research.
 
-## What are *you* doing here? {-}
+# What are *you* doing here? {-}
 
 I will leave the answer to this question at your discretion. Though, if you are ~~un~~happy with my work, I would always warmly welcome any critique, thought, and suggestion. This site is equipped with [Giscus](https://giscus.app/) and [hypothes.is](https://hypothes.is/), so anyone should be able to jot their ideas down in any place they deem fitting.  To annotate or highlight using hypothes.is, you simply need to block a text with the cursor, as shown below.
 

@@ -5,8 +5,12 @@ project:
     port: 1810
 
 website:
+  title: "Nama Kala"
   repo-url: https://github.com/namakala/namakala.github.io/
   repo-actions: [edit, issue]
+  favicon: fig/namakala.png
+  reader-mode: true
+  bread-crumbs: true
   search:
     type: "textbox"
     copy-button: true
@@ -26,20 +30,22 @@ website:
   sidebar:
     style: "docked"
     contents:
-      - text: "About"
-        href: about.qmd
+      - section: "Research"
+        icon: journal-text
+        contents:
+          - section: "Mental Health Survey"
+            contents:
+              - docs/proposal/intro.qmd
+              - docs/proposal/litrev.qmd
+              - docs/proposal/research-framework.qmd
+              - docs/proposal/methods.qmd
+              - docs/proposal/summary.qmd
       - section: "Learning Space"
         icon: journal-bookmark
         contents:
           - auto: "docs/learning-space/**/*.qmd"
-      - section: "Research"
-        icon: journal-text
-        contents:
-          - docs/proposal/intro.qmd
-          - docs/proposal/litrev.qmd
-          - docs/proposal/research-framework.qmd
-          - docs/proposal/methods.qmd
-          - docs/proposal/summary.qmd
       - text: "Journey Log"
         href: https://namakala.github.io/journey-log
         icon: journal-plus
+      - text: "About"
+        href: about.qmd
