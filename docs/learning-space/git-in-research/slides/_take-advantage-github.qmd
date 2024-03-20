@@ -1,0 +1,66 @@
+10 rules by @PerezRiverol2016
+
+::: {.panel-tabset}
+
+### Rule 1
+
+**Use GitHub to track your project**
+
+> The backbone of GitHub is the distributed version control system Git. Every change, from fixing a typo to a complete redesign of the software, is tracked and uniquely identified. Although Git has a complex set of commands and can be used for rather complex operations, learning to apply the basics requires only a handful of new concepts and commands and will provide a solid ground to efficiently track code and related content for research projects.
+
+### Rule 2
+
+**Manage permission for repository access**
+
+> Public projects on GitHub are visible to everyone, but write permission, i.e., the ability to directly modify the content of a repository, needs to be granted explicitly. As a repository owner, you can grant this right to other GitHub users. In addition to being owned by users, repositories can also be created and managed as part of teams and organizations.
+
+### Rule 3
+
+**Create SOP for branching and forking**
+
+> Anyone with a GitHub account can fork any repository they have access to. This will create a complete copy of the content of the repository, while retaining a link to the original “upstream” version. It allows anyone to develop and test novel features with existing code and offers the possibility of contributing novel features, bug fixes, and improvements to documentation back into the original upstream project (requested by opening an pull request) repository and becoming a contributor.
+
+### Rule 4
+
+**Use tags and semantic versions**
+
+> Tags can be used to label versions during the development process. Version numbering should follow “semantic versioning” practice, with the format X.Y.Z., with X being the major, Y the minor, and Z the patch version of the release, including possible meta information. Correct labeling allows developers and users to easily recover older versions, compare them, or simply use them to reproduce results described in publications.
+
+### Rule 5
+
+**Continuous integration and automated code testing**
+
+> Code testing is necessary to detect possible bugs introduced by new features or changes in the code or dependencies, as well as detecting wrong results, often known as logic errors, in which the source code produces a different result than what was intended. Continuous integration provides a way to automatically and systematically run a series of tests to check integrity and performance of code, a task that can be automated through GitHub.
+
+### Rule 6
+
+**Automate more tasks via webhooks and GitHub actions**
+
+> More than just code compilation and testing can be integrated into your software project: GitHub hooks can be used to automate numerous tasks to help improve the overall quality of your project. You might consider generating the documentation upon code/documentation modification, i.e. by using Quarto for `R` script or Sphinx for `python` code.
+
+### Rule 7
+
+**Openly and Collaboratively Discuss, Address, and Close Issues**
+
+> GitHub issues are a great way to keep track of bugs, tasks, feature requests, and enhancements. While classical issue trackers are primarily intended to be used as bug trackers, in contrast, GitHub issue trackers follow a different philosophy: each tracker has its own section in every repository and can be used to trace bugs, new ideas, and enhancements by using a powerful tagging system. The main objective of issues in GitHub is promoting collaboration and providing context by using cross-references.
+
+### Rule 8
+
+**Make your code easily citable**
+
+> GitHub now integrates with archiving services such as Zenodo and Figshare, enabling DOIs to be assigned to code repositories. By default, Zenodo creates an archive of a repository each time a new release is created in GitHub, ensuring the cited code remains up to date. Once the DOI has been assigned, it can be added to literature information resources such as Europe PubMed Central.
+
+### Rule 9
+
+**Promote and discuss your project**
+
+> GitHub Pages are simple websites freely hosted by GitHub. Users can create and host blog websites, help pages, manuals, tutorials, and websites related to specific projects.
+
+### Rule 10
+
+**Social feature in GitHub: follow and watch**
+
+> In the same way researchers are following developments in their field, scientific programmers could follow publicly available projects that might benefit their research. GitHub enables this functionality by following other GitHub users (see also Rule 2) or watching the activity of projects, which is a common feature in many social media platforms.
+
+:::
+

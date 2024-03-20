@@ -1,0 +1,38 @@
+:::: {.columns}
+
+::: {.column}
+### Download `git`
+
+![[https://git-scm.com/downloads](https://git-scm.com/downloads)](fig/download-git.png){fig-align="left" height="600"}
+:::
+
+::: {.column}
+### Configure `git` for the *first time*
+
+```{.bash code-line-numbers="|1|2" filename="Terminal"}
+$ git config --global user.name "Your Name"
+$ git config --global user.email any.email.you.use@mail.com
+```
+
+::: {.fragment}
+You can check you configuration by issuing:
+
+```{.bash filename="Terminal"}
+$ git config --list
+```
+:::
+
+::: {.fragment}
+Which will give you:
+
+```{.bash filename="Output" code-line-numbers="1,2"}
+user.email=any.email.you.use@mail.com
+user.name="Your Name"
+init.defaultbranch=master
+merge.tool=vimdiff
+credential.helper=cache
+```
+:::
+:::
+
+::::

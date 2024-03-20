@@ -1,0 +1,51 @@
+::::: {.panel-tabset}
+
+### Article 1
+
+:::: {.columns}
+
+::: {.column}
+![@Ram2013](fig/article-1)
+:::
+
+::: {.column}
+
+> Version control systems (VCS), which have long been used to maintain code repositories in the software industry, are now finding new applications in science. One such open source VCS, Git, provides a lightweight yet robust framework that is **ideal for managing the full suite of research outputs** such as datasets, statistical code, figures, lab notes, and manuscripts. For individual researchers, Git provides a powerful way to *track and compare versions, retrace errors, explore new approaches in a structured manner*, while maintaining a full audit trail. For larger **collaborative efforts**, Git and Git hosting services make it possible for everyone to **work asynchronously and merge their contributions at any time, all the while maintaining a complete authorship trail**. In this paper I provide an overview of Git along with use-cases that highlight how this tool can be leveraged to make science more reproducible and transparent, foster new collaborations, and support novel uses.
+
+:::
+
+::::
+
+### Article 2
+
+:::: {.columns}
+
+::: {.column}
+![@Peikert2021](fig/article-2)
+:::
+
+::: {.column}
+
+> Computational reproducibility is the ability to obtain identical results from the same data with the same computer code. It is a building block for transparent and cumulative science because it enables the originator and other researchers, on other computers and later in time, to reproduce and thus understand how results came about, while avoiding a variety of errors that may lead to erroneous reporting of statistical and computational results. In this tutorial, we demonstrate how the R package `repro` supports researchers in creating fully computationally reproducible research projects with tools from the software engineering community. Building upon this notion of fully automated reproducibility, we present several applications including the preregistration of research plans with code (Preregistration as Code, PAC). PAC eschews all ambiguity of traditional preregistration and offers several more advantages. Making technical advancements that serve reproducibility more widely accessible for researchers holds the potential to innovate the research process and to help it become more productive, credible, and reliable.
+
+:::
+
+::::
+
+### Article 3
+
+:::: {.columns}
+
+::: {.column}
+![@Braga2023](fig/article-3)
+:::
+
+::: {.column}
+
+> Researchers in ecology and evolutionary biology are increasingly dependent on computational code to conduct research. Hence, the use of efficient methods to share, reproduce, and collaborate on code as well as document research is fundamental. GitHub is an online, cloud-based service that can help researchers track, organize, discuss, share, and collaborate on software and other materials related to research production, including data, code for analyses, and protocols. Despite these benefits, the use of GitHub in ecology and evolution is not widespread. We outline features ranging from low to high technical difficulty, including storing code, managing projects, coding collaboratively, conducting peer review, writing a manuscript, and using automated and continuous integration to streamline analyses. Given that members of a research team may have different technical skills and responsibilities, we describe how the optimal use of GitHub features may vary among members of a research collaboration.
+
+:::
+
+::::
+
+:::::

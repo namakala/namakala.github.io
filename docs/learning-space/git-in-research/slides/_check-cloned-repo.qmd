@@ -1,0 +1,57 @@
+Open your terminal application, then go to the cloned directory
+
+:::: {.panel-tabset}
+### Linux/MacOS
+
+```{.bash filename="Terminal" code-line-numbers="1,2"}
+$ cd /path/to/Spoon-Knife # Change directory
+$ ls -lah                 # List all the contents
+```
+
+### Windows
+
+```{.bash filename="CMD" code-line-numbers="1,2"}
+C:\Users\Username>"C:\path\to\Spoon-Knife" # Change directory
+C:\path\to\Spoon-Knife>dir /s /b /o:gn     # List all the contents
+```
+::::
+
+::::: {.fragment}
+:::: {.columns}
+
+::: {.column}
+You will find the following files listed:
+
+```{.bash filename="Output"}
+total 24K
+drwxr-xr-x 3 lam lam 4.0K Mar 20 07:33 .
+drwxr-xr-x 3 lam lam 4.0K Mar 20 07:37 ..
+drwxr-xr-x 7 lam lam 4.0K Mar 20 07:33 .git
+-rw-r--r-- 1 lam lam  355 Mar 20 07:33 index.html
+-rw-r--r-- 1 lam lam  780 Mar 20 07:33 README.md
+-rw-r--r-- 1 lam lam  256 Mar 20 07:33 styles.css
+```
+:::
+
+::: {.column}
+We can check on the log history
+
+```{.bash filename="Terminal"}
+$ git log --oneline --graph --decorate --all
+```
+
+::: {.fragment}
+```{.bash filename="Output" code-line-numbers="|6|5|4|3,2|3,1"}
+* f439fc5 (origin/change-the-title) Update README.md
+| * 5806070 (origin/test-branch) Create test.md
+|/
+* d0dd1f6 (HEAD -> main, origin/main, origin/HEAD) Pointing to the guide for forking
+* bb4cc8d Create styles.css and updated README
+* a30c19e Created index page for future collaborative edits
+```
+:::
+
+:::
+
+::::
+:::::

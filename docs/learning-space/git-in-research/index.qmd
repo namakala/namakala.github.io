@@ -2,18 +2,185 @@
 title: Using git in Research
 author: Aly Lamuri
 format:
-  html: default
   revealjs:
     theme: simple
-    smaller: true
     scrollable: true
     output-file: slide.html
+    reference-location: block
+    width: 1920
+    height: 900
+    fig-align: left
+    cap-location: margin
+    footer: https://namakala.github.io/
+    logo: ../../../fig/namakala.png
+bibliography: ref.bib
 ---
 
 # Version control in research
 
-## Have you ever...
+::: {.content-visible when-format=revealjs}
+. . .
+:::
+
+Objectives:
+
+- Overview how a research project takes place
+- Understand why version control matters in a research project
+- Know how to implement the basic idea of version control system
+
+## What our research looks like {.smaller}
+
+:::: {.columns}
+
+::: {.column}
+![How we want it to be](https://gatewaynmra.org/wp-content/uploads/1999/01/railroad-track.jpg){height="500"}
+:::
+
+::: {.column}
+![How it actually is](https://i.pinimg.com/originals/a6/04/2c/a6042c1e63cc3dc35cdfb202aff42b8a.jpg){height="500"}
+:::
+
+::::
+
+::: {.content-visible when-format=revealjs}
+. . .
+:::
+
+- We always make a linear plan
+- Along the way, other great ideas pop up
+- Sometimes, it is overwhelming to keep up with the changes
+
+## We have been here, done that
+
+:::: {.columns}
+
+::: {.column width="60%"}
+![](fig/revision.png){height="750"}
+:::
+
+::: {.column width="40%"}
+- We start with a simple draft
+- Then we go with rounds of revisions
+- We end up with multiple drafts
+:::
+
+::::
+
+## Version control system (VCS)
+
+- It does versioning on your behalf
+- You can revisit the older "version" of your research
+- A lean approach for multiple collaboration
+
+::: {.content-visible when-format=revealjs}
+. . .
+:::
+
+**"We can do that with MS Office / Google Docs / *{other software}*, right?"**
+
+::: {.content-visible when-format=revealjs}
+. . .
+:::
+
+:::: {.columns}
+
+::: {.column width="25%"}
+![](fig/vcs-gdocs.png)
+:::
+
+::: {.column}
+- Office suite offers a centralized VCS
+- All changes are recorded only when it is online
+- It tracks changes of the whole document
+- Limited scope of document version management
+- Not applicable for code/script
+:::
+
+::::
+
+## An ideal VCS for researcher
+
+- [ ] Speed
+- [ ] Simple design, extensible by nature
+- [ ] Strong support for non-linear changes, with multiple parallel revisions
+- [ ] Fully distributed, does not require internet connection
+- [ ] Able to handle large projects
+
+## An ideal VCS for researcher
+
+:::: {.columns}
+
+::: {.column width="80%"}
+- [x] Speed
+- [x] Simple design, extensible by nature
+- [x] Strong support for non-linear changes, with multiple parallel revisions
+- [x] Fully distributed, does not require internet connection
+- [x] Able to handle large projects
+:::
+
+::: {.column width="20%"}
+![`git` does this](https://www.pinclipart.com/picdir/big/564-5648062_meme-clipart-rage-troll-face-thumbs-up-png.png)
+:::
+
+::::
 
 # Basics of `git`
 
+::: {.content-visible when-format=revealjs}
+. . .
+:::
+
+Objectives:
+
+- Able to install and use `git` in a local machine
+- Know how to configure `git` for the first time
+- Understand 5 most-used commands in `git`: `add`, `commit`, `clone`, `push`, and `pull`
+
 ## What is `git`?
+
+## Getting started with `git`
+
+{{< include slides/_get-started-with-git.qmd >}}
+
+## Cloning a repository {.smaller}
+
+:::: {.columns}
+
+::: {.column width="60%"}
+![[https://github.com/octocat/Spoon-Knife](https://github.com/octocat/Spoon-Knife)](fig/git-repo.png){height="620"}
+:::
+
+:::: {.column width="40%"}
+```{.bash filename="Terminal"}
+$ git clone https://github.com/octocat/Spoon-Knife
+```
+
+:::{.fragment}
+- The command above will `clone` a GitHub repository into your local machine
+- You may notice that now you have a folder `Spoon-Knife` created in your directory
+
+![](fig/git-repo-cloned.png)
+:::
+
+::::
+
+::::
+
+## Checking on the cloned repository
+
+{{< include slides/_check-cloned-repo.qmd >}}
+
+## Create a file and make some changes {.smaller}
+
+{{< include slides/_create-file-make-changes.qmd >}}
+
+## Take advantage of `git` and GitHub
+
+{{< include slides/_take-advantage-github.qmd >}}
+
+## Other articles to read {.smaller}
+
+{{< include slides/_articles-to-read.qmd >}}
+
+# Reference {.smaller}
+

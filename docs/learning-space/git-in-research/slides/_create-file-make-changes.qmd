@@ -1,0 +1,97 @@
+::::: {.columns}
+
+:::: {.column}
+- Let's make a new file: `myfile.txt`
+- We can put some *lorem ipsum* in our new file
+- Now, our directory should contain:
+
+```{.bash filename="Terminal"}
+$ ls -lah
+```
+
+```{.bash filename="Output" code-line-numbers="|6"}
+total 28K
+drwxr-xr-x 3 lam lam 4.0K Mar 20 08:13 .
+drwxr-xr-x 3 lam lam 4.0K Mar 20 07:37 ..
+drwxr-xr-x 7 lam lam 4.0K Mar 20 08:10 .git
+-rw-r--r-- 1 lam lam  355 Mar 20 07:33 index.html
+-rw-r--r-- 1 lam lam   10 Mar 20 08:13 myfile.txt
+-rw-r--r-- 1 lam lam  780 Mar 20 07:33 README.md
+-rw-r--r-- 1 lam lam  256 Mar 20 07:33 styles.css
+```
+
+::: {.fragment}
+Let's check our repository `status`
+
+```{.bash filename="Terminal"}
+$ git status
+```
+
+```{.bash filename="Output" code-line-numbers="|4,6,8"}
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        myfile.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+```
+:::
+::::
+
+:::: {.column}
+::: {.fragment}
+We can track `myfile.txt` to our repository then recheck the status
+
+```{.bash filename="Terminal"}
+$ git add myfile.txt
+$ git status
+```
+
+```{.bash filename="Output" code-line-numbers="|4,6"}
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   myfile.txt
+```
+:::
+
+:::{.fragment}
+We need to `commit` for the changes to be tracked
+
+```{.bash filename="Terminal"}
+$ git commit myfile.txt -m "Add a new file to describe lorem ipsum"
+```
+
+```{.bash filename="Output"}
+[main 67802c8] Add a new file to describe lorem ipsum
+ 1 file changed, 3 insertions(+)
+ create mode 100644 myfile.txt
+```
+
+:::
+
+:::{.fragment}
+Checking on the `log`
+
+```{.bash code-line-numbers="|1,3"}
+$ git log --all --decorate --oneline --graph
+
+* 67802c8 (HEAD -> main) Add a new file to describe lorem ipsum
+| * f439fc5 (origin/change-the-title) Update README.md
+|/
+| * 5806070 (origin/test-branch) Create test.md
+|/
+* d0dd1f6 (origin/main, origin/HEAD) Pointing to the guide for forking
+* bb4cc8d Create styles.css and updated README
+* a30c19e Created index page for future collaborative edits
+```
+
+:::
+
+::::
+
+:::::
