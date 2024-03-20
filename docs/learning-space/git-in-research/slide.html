@@ -30,7 +30,92 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
-  </style>
+    /* CSS for syntax highlighting */
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      { color: #003b4f; background-color: #f1f3f5; }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #003b4f; } /* Normal */
+    code span.al { color: #ad0000; } /* Alert */
+    code span.an { color: #5e5e5e; } /* Annotation */
+    code span.at { color: #657422; } /* Attribute */
+    code span.bn { color: #ad0000; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #003b4f; } /* ControlFlow */
+    code span.ch { color: #20794d; } /* Char */
+    code span.cn { color: #8f5902; } /* Constant */
+    code span.co { color: #5e5e5e; } /* Comment */
+    code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
+    code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
+    code span.dt { color: #ad0000; } /* DataType */
+    code span.dv { color: #ad0000; } /* DecVal */
+    code span.er { color: #ad0000; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #ad0000; } /* Float */
+    code span.fu { color: #4758ab; } /* Function */
+    code span.im { color: #00769e; } /* Import */
+    code span.in { color: #5e5e5e; } /* Information */
+    code span.kw { color: #003b4f; } /* Keyword */
+    code span.op { color: #5e5e5e; } /* Operator */
+    code span.ot { color: #003b4f; } /* Other */
+    code span.pp { color: #ad0000; } /* Preprocessor */
+    code span.sc { color: #5e5e5e; } /* SpecialChar */
+    code span.ss { color: #20794d; } /* SpecialString */
+    code span.st { color: #20794d; } /* String */
+    code span.va { color: #111111; } /* Variable */
+    code span.vs { color: #20794d; } /* VerbatimString */
+    code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
+    /* CSS for citations */
+    div.csl-bib-body { }
+    div.csl-entry {
+      clear: both;
+      margin-bottom: 0em;
+    }
+    .hanging-indent div.csl-entry {
+      margin-left:2em;
+      text-indent:-2em;
+    }
+    div.csl-left-margin {
+      min-width:2em;
+      float:left;
+    }
+    div.csl-right-inline {
+      margin-left:2em;
+      padding-left:1em;
+    }
+    div.csl-indent {
+      margin-left: 2em;
+    }  </style>
   <link rel="stylesheet" href="../../../site_libs/revealjs/dist/theme/quarto.css">
   <link href="../../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../../../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
@@ -356,25 +441,521 @@ Aly Lamuri
 <section>
 <section id="version-control-in-research" class="title-slide slide level1 center">
 <h1>Version control in research</h1>
-
+<div class="fragment">
+<p>Objectives:</p>
+<ul>
+<li>Overview how a research project takes place</li>
+<li>Understand why version control matters in a research project</li>
+<li>Know how to implement the basic idea of version control system</li>
+</ul>
+</div>
 </section>
-<section id="have-you-ever" class="slide level2">
-<h2>Have you ever…</h2>
+<section id="what-our-research-looks-like" class="slide level2 smaller">
+<h2>What our research looks like</h2>
+<div class="columns">
+<div class="column">
+<div class="quarto-figure quarto-figure-left margin-caption">
+<figure>
+<p><img data-src="https://gatewaynmra.org/wp-content/uploads/1999/01/railroad-track.jpg" class="margin-caption" height="500"></p>
+<figcaption>How we want it to be</figcaption>
+</figure>
+</div>
+</div><div class="column">
+<div class="quarto-figure quarto-figure-left margin-caption">
+<figure>
+<p><img data-src="https://i.pinimg.com/originals/a6/04/2c/a6042c1e63cc3dc35cdfb202aff42b8a.jpg" class="margin-caption" height="500"></p>
+<figcaption>How it actually is</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div class="fragment">
+<ul>
+<li>We always make a linear plan</li>
+<li>Along the way, other great ideas pop up</li>
+<li>Sometimes, it is overwhelming to keep up with the changes</li>
+</ul>
+</div>
+</section>
+<section id="we-have-been-here-done-that" class="slide level2">
+<h2>We have been here, done that</h2>
+<div class="columns">
+<div class="column" style="width:60%;">
+<p><img data-src="fig/revision.png" class="margin-caption" height="750"></p>
+</div><div class="column" style="width:40%;">
+<ul>
+<li>We start with a simple draft</li>
+<li>Then we go with rounds of revisions</li>
+<li>We end up with multiple drafts</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="version-control-system-vcs" class="slide level2">
+<h2>Version control system (VCS)</h2>
+<ul>
+<li>It does versioning on your behalf</li>
+<li>You can revisit the older “version” of your research</li>
+<li>A lean approach for multiple collaboration</li>
+</ul>
+<div class="fragment">
+<p><strong>“We can do that with MS Office / Google Docs / <em>{other software}</em>, right?”</strong></p>
+</div>
+<div class="fragment">
+<div class="columns">
+<div class="column" style="width:25%;">
+<p><img data-src="fig/vcs-gdocs.png" class="margin-caption"></p>
+</div><div class="column">
+<ul>
+<li>Office suite offers a centralized VCS</li>
+<li>All changes are recorded only when it is online</li>
+<li>It tracks changes of the whole document</li>
+<li>Limited scope of document version management</li>
+<li>Not applicable for code/script</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section id="an-ideal-vcs-for-researcher" class="slide level2">
+<h2>An ideal VCS for researcher</h2>
+<ul class="task-list">
+<li><label><input type="checkbox">Speed</label></li>
+<li><label><input type="checkbox">Simple design, extensible by nature</label></li>
+<li><label><input type="checkbox">Strong support for non-linear changes, with multiple parallel revisions</label></li>
+<li><label><input type="checkbox">Fully distributed, does not require internet connection</label></li>
+<li><label><input type="checkbox">Able to handle large projects</label></li>
+</ul>
+</section>
+<section id="an-ideal-vcs-for-researcher-1" class="slide level2">
+<h2>An ideal VCS for researcher</h2>
+<div class="columns">
+<div class="column" style="width:80%;">
+<ul class="task-list">
+<li><label><input type="checkbox" checked="">Speed</label></li>
+<li><label><input type="checkbox" checked="">Simple design, extensible by nature</label></li>
+<li><label><input type="checkbox" checked="">Strong support for non-linear changes, with multiple parallel revisions</label></li>
+<li><label><input type="checkbox" checked="">Fully distributed, does not require internet connection</label></li>
+<li><label><input type="checkbox" checked="">Able to handle large projects</label></li>
+</ul>
+</div><div class="column" style="width:20%;">
+<div class="quarto-figure quarto-figure-left margin-caption">
+<figure>
+<p><img data-src="https://www.pinclipart.com/picdir/big/564-5648062_meme-clipart-rage-troll-face-thumbs-up-png.png" class="margin-caption"></p>
+<figcaption><code>git</code> does this</figcaption>
+</figure>
+</div>
+</div>
+</div>
 </section></section>
 <section>
 <section id="basics-of-git" class="title-slide slide level1 center">
 <h1>Basics of <code>git</code></h1>
-
+<div class="fragment">
+<p>Objectives:</p>
+<ul>
+<li>Able to install and use <code>git</code> in a local machine</li>
+<li>Know how to configure <code>git</code> for the first time</li>
+<li>Understand 5 most-used commands in <code>git</code>: <code>add</code>, <code>commit</code>, <code>clone</code>, <code>push</code>, and <code>pull</code></li>
+</ul>
+</div>
 </section>
 <section id="what-is-git" class="slide level2">
 <h2>What is <code>git</code>?</h2>
-
-<div class="quarto-auto-generated-content">
-<div class="footer footer-default">
-
+</section>
+<section id="getting-started-with-git" class="slide level2">
+<h2>Getting started with <code>git</code></h2>
+<div class="columns">
+<div class="column">
+<h3 id="download-git">Download <code>git</code></h3>
+<div class="quarto-figure quarto-figure-left margin-caption">
+<figure>
+<p><img data-src="fig/download-git.png" class="margin-caption" height="600"></p>
+<figcaption><a href="https://git-scm.com/downloads">https://git-scm.com/downloads</a></figcaption>
+</figure>
+</div>
+</div><div class="column">
+<h3 id="configure-git-for-the-first-time">Configure <code>git</code> for the <em>first time</em></h3>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>Terminal</strong></pre>
+</div>
+<div class="sourceCode" id="cb1" data-filename="Terminal" data-code-line-numbers="|1|2"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a></a><span class="ex">$</span> git config <span class="at">--global</span> user.name <span class="st">"Your Name"</span></span>
+<span id="cb1-2"><a></a><span class="ex">$</span> git config <span class="at">--global</span> user.email any.email.you.use@mail.com</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="fragment">
+<p>You can check you configuration by issuing:</p>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>Terminal</strong></pre>
+</div>
+<div class="sourceCode" id="cb2" data-filename="Terminal"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a></a><span class="ex">$</span> git config <span class="at">--list</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+<div class="fragment">
+<p>Which will give you:</p>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>Output</strong></pre>
+</div>
+<div class="sourceCode" id="cb3" data-filename="Output" data-code-line-numbers="1,2"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a></a><span class="ex">user.email=any.email.you.use@mail.com</span></span>
+<span id="cb3-2"><a></a><span class="ex">user.name=</span><span class="st">"Your Name"</span></span>
+<span id="cb3-3"><a></a><span class="ex">init.defaultbranch=master</span></span>
+<span id="cb3-4"><a></a><span class="ex">merge.tool=vimdiff</span></span>
+<span id="cb3-5"><a></a><span class="ex">credential.helper=cache</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="cloning-a-repository" class="slide level2 smaller">
+<h2>Cloning a repository</h2>
+<div class="columns">
+<div class="column" style="width:60%;">
+<div class="quarto-figure quarto-figure-left margin-caption">
+<figure>
+<p><img data-src="fig/git-repo.png" class="margin-caption" height="620"></p>
+<figcaption><a href="https://github.com/octocat/Spoon-Knife">https://github.com/octocat/Spoon-Knife</a></figcaption>
+</figure>
+</div>
+</div><div class="column" style="width:40%;">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>Terminal</strong></pre>
+</div>
+<div class="sourceCode" id="cb4" data-filename="Terminal"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a></a><span class="ex">$</span> git clone https://github.com/octocat/Spoon-Knife</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="fragment">
+<ul>
+<li>The command above will <code>clone</code> a GitHub repository into your local machine</li>
+<li>You may notice that now you have a folder <code>Spoon-Knife</code> created in your directory</li>
+</ul>
+<p><img data-src="fig/git-repo-cloned.png" class="margin-caption"></p>
+</div>
+</div>
+</div>
+</section>
+<section id="checking-on-the-cloned-repository" class="slide level2">
+<h2>Checking on the cloned repository</h2>
+<p>Open your terminal application, then go to the cloned directory</p>
+<div class="panel-tabset">
+<ul id="tabset-1" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-1-1">Linux/MacOS</a></li><li><a href="#tabset-1-2">Windows</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>Terminal</strong></pre>
+</div>
+<div class="sourceCode" id="cb5" data-filename="Terminal" data-code-line-numbers="1,2"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a></a><span class="ex">$</span> cd /path/to/Spoon-Knife <span class="co"># Change directory</span></span>
+<span id="cb5-2"><a></a><span class="ex">$</span> ls <span class="at">-lah</span>                 <span class="co"># List all the contents</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+<div id="tabset-1-2">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>CMD</strong></pre>
+</div>
+<div class="sourceCode" id="cb6" data-filename="CMD" data-code-line-numbers="1,2"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a></a><span class="ex">C:\Users\Username</span><span class="op">&gt;</span><span class="st">"C:\path\to\Spoon-Knife"</span> <span class="co"># Change directory</span></span>
+<span id="cb6-2"><a></a><span class="ex">C:\path\to\Spoon-Knife</span><span class="op">&gt;</span>dir /s /b /o:gn     <span class="co"># List all the contents</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="fragment">
+<div class="columns">
+<div class="column">
+<p>You will find the following files listed:</p>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>Output</strong></pre>
+</div>
+<div class="sourceCode" id="cb7" data-filename="Output"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a></a><span class="ex">total</span> 24K</span>
+<span id="cb7-2"><a></a><span class="ex">drwxr-xr-x</span> 3 lam lam 4.0K Mar 20 07:33 .</span>
+<span id="cb7-3"><a></a><span class="ex">drwxr-xr-x</span> 3 lam lam 4.0K Mar 20 07:37 ..</span>
+<span id="cb7-4"><a></a><span class="ex">drwxr-xr-x</span> 7 lam lam 4.0K Mar 20 07:33 .git</span>
+<span id="cb7-5"><a></a><span class="ex">-rw-r--r--</span> 1 lam lam  355 Mar 20 07:33 index.html</span>
+<span id="cb7-6"><a></a><span class="ex">-rw-r--r--</span> 1 lam lam  780 Mar 20 07:33 README.md</span>
+<span id="cb7-7"><a></a><span class="ex">-rw-r--r--</span> 1 lam lam  256 Mar 20 07:33 styles.css</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div><div class="column">
+<p>We can check on the log history</p>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>Terminal</strong></pre>
+</div>
+<div class="sourceCode" id="cb8" data-filename="Terminal"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a></a><span class="ex">$</span> git log <span class="at">--oneline</span> <span class="at">--graph</span> <span class="at">--decorate</span> <span class="at">--all</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="fragment">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>Output</strong></pre>
+</div>
+<div class="sourceCode" id="cb9" data-filename="Output" data-code-line-numbers="|6|5|4|3,2|3,1"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><a></a><span class="ex">*</span> f439fc5 <span class="er">(</span><span class="ex">origin/change-the-title</span><span class="kw">)</span> <span class="ex">Update</span> README.md</span>
+<span id="cb9-2"><a></a><span class="kw">|</span> <span class="ex">*</span> 5806070 <span class="er">(</span><span class="ex">origin/test-branch</span><span class="kw">)</span> <span class="ex">Create</span> test.md</span>
+<span id="cb9-3"><a></a><span class="kw">|</span><span class="ex">/</span></span>
+<span id="cb9-4"><a></a><span class="ex">*</span> d0dd1f6 <span class="er">(</span><span class="ex">HEAD</span> <span class="at">-</span><span class="op">&gt;</span> main, origin/main, origin/HEAD<span class="kw">)</span> <span class="ex">Pointing</span> to the guide for forking</span>
+<span id="cb9-5"><a></a><span class="ex">*</span> bb4cc8d Create styles.css and updated README</span>
+<span id="cb9-6"><a></a><span class="ex">*</span> a30c19e Created index page for future collaborative edits</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="create-a-file-and-make-some-changes" class="slide level2 smaller">
+<h2>Create a file and make some changes</h2>
+<div class="columns">
+<div class="column">
+<ul>
+<li>Let’s make a new file: <code>myfile.txt</code></li>
+<li>We can put some <em>lorem ipsum</em> in our new file</li>
+<li>Now, our directory should contain:</li>
+</ul>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>Terminal</strong></pre>
+</div>
+<div class="sourceCode" id="cb10" data-filename="Terminal"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb10-1"><a></a><span class="ex">$</span> ls <span class="at">-lah</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>Output</strong></pre>
+</div>
+<div class="sourceCode" id="cb11" data-filename="Output" data-code-line-numbers="|6"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb11-1"><a></a><span class="ex">total</span> 28K</span>
+<span id="cb11-2"><a></a><span class="ex">drwxr-xr-x</span> 3 lam lam 4.0K Mar 20 08:13 .</span>
+<span id="cb11-3"><a></a><span class="ex">drwxr-xr-x</span> 3 lam lam 4.0K Mar 20 07:37 ..</span>
+<span id="cb11-4"><a></a><span class="ex">drwxr-xr-x</span> 7 lam lam 4.0K Mar 20 08:10 .git</span>
+<span id="cb11-5"><a></a><span class="ex">-rw-r--r--</span> 1 lam lam  355 Mar 20 07:33 index.html</span>
+<span id="cb11-6"><a></a><span class="ex">-rw-r--r--</span> 1 lam lam   10 Mar 20 08:13 myfile.txt</span>
+<span id="cb11-7"><a></a><span class="ex">-rw-r--r--</span> 1 lam lam  780 Mar 20 07:33 README.md</span>
+<span id="cb11-8"><a></a><span class="ex">-rw-r--r--</span> 1 lam lam  256 Mar 20 07:33 styles.css</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="fragment">
+<p>Let’s check our repository <code>status</code></p>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>Terminal</strong></pre>
+</div>
+<div class="sourceCode" id="cb12" data-filename="Terminal"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb12-1"><a></a><span class="ex">$</span> git status</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>Output</strong></pre>
+</div>
+<div class="sourceCode" id="cb13" data-filename="Output" data-code-line-numbers="|4,6,8"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb13-1"><a></a><span class="ex">On</span> branch main</span>
+<span id="cb13-2"><a></a><span class="ex">Your</span> branch is up to date with <span class="st">'origin/main'</span>.</span>
+<span id="cb13-3"><a></a></span>
+<span id="cb13-4"><a></a><span class="ex">Untracked</span> files:</span>
+<span id="cb13-5"><a></a>  <span class="kw">(</span><span class="ex">use</span> <span class="st">"git add &lt;file&gt;..."</span> to include in what will be committed<span class="kw">)</span></span>
+<span id="cb13-6"><a></a>        <span class="ex">myfile.txt</span></span>
+<span id="cb13-7"><a></a></span>
+<span id="cb13-8"><a></a><span class="ex">nothing</span> added to commit but untracked files present <span class="er">(</span><span class="ex">use</span> <span class="st">"git add"</span> to track<span class="kw">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div><div class="column">
+<div class="fragment">
+<p>We can track <code>myfile.txt</code> to our repository then recheck the status</p>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>Terminal</strong></pre>
+</div>
+<div class="sourceCode" id="cb14" data-filename="Terminal"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb14-1"><a></a><span class="ex">$</span> git add myfile.txt</span>
+<span id="cb14-2"><a></a><span class="ex">$</span> git status</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>Output</strong></pre>
+</div>
+<div class="sourceCode" id="cb15" data-filename="Output" data-code-line-numbers="|4,6"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb15-1"><a></a><span class="ex">On</span> branch main</span>
+<span id="cb15-2"><a></a><span class="ex">Your</span> branch is up to date with <span class="st">'origin/main'</span>.</span>
+<span id="cb15-3"><a></a></span>
+<span id="cb15-4"><a></a><span class="ex">Changes</span> to be committed:</span>
+<span id="cb15-5"><a></a>  <span class="kw">(</span><span class="ex">use</span> <span class="st">"git restore --staged &lt;file&gt;..."</span> to unstage<span class="kw">)</span></span>
+<span id="cb15-6"><a></a>        <span class="ex">new</span> file:   myfile.txt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+<div class="fragment">
+<p>We need to <code>commit</code> for the changes to be tracked</p>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>Terminal</strong></pre>
+</div>
+<div class="sourceCode" id="cb16" data-filename="Terminal"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb16-1"><a></a><span class="ex">$</span> git commit myfile.txt <span class="at">-m</span> <span class="st">"Add a new file to describe lorem ipsum"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>Output</strong></pre>
+</div>
+<div class="sourceCode" id="cb17" data-filename="Output"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb17-1"><a></a><span class="ex">[main</span> 67802c8] Add a new file to describe lorem ipsum</span>
+<span id="cb17-2"><a></a> <span class="ex">1</span> file changed, 3 insertions<span class="er">(</span><span class="ex">+</span><span class="kw">)</span></span>
+<span id="cb17-3"><a></a> <span class="ex">create</span> mode 100644 myfile.txt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+<div class="fragment">
+<p>Checking on the <code>log</code></p>
+<div class="sourceCode" id="cb18" data-code-line-numbers="|1,3"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb18-1"><a></a><span class="ex">$</span> git log <span class="at">--all</span> <span class="at">--decorate</span> <span class="at">--oneline</span> <span class="at">--graph</span></span>
+<span id="cb18-2"><a></a></span>
+<span id="cb18-3"><a></a><span class="ex">*</span> 67802c8 <span class="er">(</span><span class="ex">HEAD</span> <span class="at">-</span><span class="op">&gt;</span> main<span class="kw">)</span> <span class="ex">Add</span> a new file to describe lorem ipsum</span>
+<span id="cb18-4"><a></a><span class="kw">|</span> <span class="ex">*</span> f439fc5 <span class="er">(</span><span class="ex">origin/change-the-title</span><span class="kw">)</span> <span class="ex">Update</span> README.md</span>
+<span id="cb18-5"><a></a><span class="kw">|</span><span class="ex">/</span></span>
+<span id="cb18-6"><a></a><span class="kw">|</span> <span class="ex">*</span> 5806070 <span class="er">(</span><span class="ex">origin/test-branch</span><span class="kw">)</span> <span class="ex">Create</span> test.md</span>
+<span id="cb18-7"><a></a><span class="kw">|</span><span class="ex">/</span></span>
+<span id="cb18-8"><a></a><span class="ex">*</span> d0dd1f6 <span class="er">(</span><span class="ex">origin/main,</span> origin/HEAD<span class="kw">)</span> <span class="ex">Pointing</span> to the guide for forking</span>
+<span id="cb18-9"><a></a><span class="ex">*</span> bb4cc8d Create styles.css and updated README</span>
+<span id="cb18-10"><a></a><span class="ex">*</span> a30c19e Created index page for future collaborative edits</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="take-advantage-of-git-and-github" class="slide level2">
+<h2>Take advantage of <code>git</code> and GitHub</h2>
+<p>10 rules by <span class="citation" data-cites="PerezRiverol2016">Perez-Riverol et al. (<a href="#/reference" role="doc-biblioref" onclick="">2016</a>)</span></p>
+<div class="panel-tabset">
+<ul id="tabset-2" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-2-1">Rule 1</a></li><li><a href="#tabset-2-2">Rule 2</a></li><li><a href="#tabset-2-3">Rule 3</a></li><li><a href="#tabset-2-4">Rule 4</a></li><li><a href="#tabset-2-5">Rule 5</a></li><li><a href="#tabset-2-6">Rule 6</a></li><li><a href="#tabset-2-7">Rule 7</a></li><li><a href="#tabset-2-8">Rule 8</a></li><li><a href="#tabset-2-9">Rule 9</a></li><li><a href="#tabset-2-10">Rule 10</a></li></ul>
+<div class="tab-content">
+<div id="tabset-2-1">
+<p><strong>Use GitHub to track your project</strong></p>
+<blockquote>
+<p>The backbone of GitHub is the distributed version control system Git. Every change, from fixing a typo to a complete redesign of the software, is tracked and uniquely identified. Although Git has a complex set of commands and can be used for rather complex operations, learning to apply the basics requires only a handful of new concepts and commands and will provide a solid ground to efficiently track code and related content for research projects.</p>
+</blockquote>
+</div>
+<div id="tabset-2-2">
+<p><strong>Manage permission for repository access</strong></p>
+<blockquote>
+<p>Public projects on GitHub are visible to everyone, but write permission, i.e., the ability to directly modify the content of a repository, needs to be granted explicitly. As a repository owner, you can grant this right to other GitHub users. In addition to being owned by users, repositories can also be created and managed as part of teams and organizations.</p>
+</blockquote>
+</div>
+<div id="tabset-2-3">
+<p><strong>Create SOP for branching and forking</strong></p>
+<blockquote>
+<p>Anyone with a GitHub account can fork any repository they have access to. This will create a complete copy of the content of the repository, while retaining a link to the original “upstream” version. It allows anyone to develop and test novel features with existing code and offers the possibility of contributing novel features, bug fixes, and improvements to documentation back into the original upstream project (requested by opening an pull request) repository and becoming a contributor.</p>
+</blockquote>
+</div>
+<div id="tabset-2-4">
+<p><strong>Use tags and semantic versions</strong></p>
+<blockquote>
+<p>Tags can be used to label versions during the development process. Version numbering should follow “semantic versioning” practice, with the format X.Y.Z., with X being the major, Y the minor, and Z the patch version of the release, including possible meta information. Correct labeling allows developers and users to easily recover older versions, compare them, or simply use them to reproduce results described in publications.</p>
+</blockquote>
+</div>
+<div id="tabset-2-5">
+<p><strong>Continuous integration and automated code testing</strong></p>
+<blockquote>
+<p>Code testing is necessary to detect possible bugs introduced by new features or changes in the code or dependencies, as well as detecting wrong results, often known as logic errors, in which the source code produces a different result than what was intended. Continuous integration provides a way to automatically and systematically run a series of tests to check integrity and performance of code, a task that can be automated through GitHub.</p>
+</blockquote>
+</div>
+<div id="tabset-2-6">
+<p><strong>Automate more tasks via webhooks and GitHub actions</strong></p>
+<blockquote>
+<p>More than just code compilation and testing can be integrated into your software project: GitHub hooks can be used to automate numerous tasks to help improve the overall quality of your project. You might consider generating the documentation upon code/documentation modification, i.e.&nbsp;by using Quarto for <code>R</code> script or Sphinx for <code>python</code> code.</p>
+</blockquote>
+</div>
+<div id="tabset-2-7">
+<p><strong>Openly and Collaboratively Discuss, Address, and Close Issues</strong></p>
+<blockquote>
+<p>GitHub issues are a great way to keep track of bugs, tasks, feature requests, and enhancements. While classical issue trackers are primarily intended to be used as bug trackers, in contrast, GitHub issue trackers follow a different philosophy: each tracker has its own section in every repository and can be used to trace bugs, new ideas, and enhancements by using a powerful tagging system. The main objective of issues in GitHub is promoting collaboration and providing context by using cross-references.</p>
+</blockquote>
+</div>
+<div id="tabset-2-8">
+<p><strong>Make your code easily citable</strong></p>
+<blockquote>
+<p>GitHub now integrates with archiving services such as Zenodo and Figshare, enabling DOIs to be assigned to code repositories. By default, Zenodo creates an archive of a repository each time a new release is created in GitHub, ensuring the cited code remains up to date. Once the DOI has been assigned, it can be added to literature information resources such as Europe PubMed Central.</p>
+</blockquote>
+</div>
+<div id="tabset-2-9">
+<p><strong>Promote and discuss your project</strong></p>
+<blockquote>
+<p>GitHub Pages are simple websites freely hosted by GitHub. Users can create and host blog websites, help pages, manuals, tutorials, and websites related to specific projects.</p>
+</blockquote>
+</div>
+<div id="tabset-2-10">
+<p><strong>Social feature in GitHub: follow and watch</strong></p>
+<blockquote>
+<p>In the same way researchers are following developments in their field, scientific programmers could follow publicly available projects that might benefit their research. GitHub enables this functionality by following other GitHub users (see also Rule 2) or watching the activity of projects, which is a common feature in many social media platforms.</p>
+</blockquote>
+</div>
+</div>
+</div>
+</section>
+<section id="other-articles-to-read" class="slide level2 smaller">
+<h2>Other articles to read</h2>
+<div class="panel-tabset">
+<ul id="tabset-3" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-3-1">Article 1</a></li><li><a href="#tabset-3-2">Article 2</a></li><li><a href="#tabset-3-3">Article 3</a></li></ul>
+<div class="tab-content">
+<div id="tabset-3-1">
+<div class="columns">
+<div class="column">
+<div class="quarto-figure quarto-figure-left margin-caption">
+<figure>
+<p><img data-src="fig/article-1.png" class="margin-caption"></p>
+<figcaption><span class="citation" data-cites="Ram2013">Ram (<a href="#/reference" role="doc-biblioref" onclick="">2013</a>)</span></figcaption>
+</figure>
+</div>
+</div><div class="column">
+<blockquote>
+<p>Version control systems (VCS), which have long been used to maintain code repositories in the software industry, are now finding new applications in science. One such open source VCS, Git, provides a lightweight yet robust framework that is <strong>ideal for managing the full suite of research outputs</strong> such as datasets, statistical code, figures, lab notes, and manuscripts. For individual researchers, Git provides a powerful way to <em>track and compare versions, retrace errors, explore new approaches in a structured manner</em>, while maintaining a full audit trail. For larger <strong>collaborative efforts</strong>, Git and Git hosting services make it possible for everyone to <strong>work asynchronously and merge their contributions at any time, all the while maintaining a complete authorship trail</strong>. In this paper I provide an overview of Git along with use-cases that highlight how this tool can be leveraged to make science more reproducible and transparent, foster new collaborations, and support novel uses.</p>
+</blockquote>
+</div>
+</div>
+</div>
+<div id="tabset-3-2">
+<div class="columns">
+<div class="column">
+<div class="quarto-figure quarto-figure-left margin-caption">
+<figure>
+<p><img data-src="fig/article-2.png" class="margin-caption"></p>
+<figcaption><span class="citation" data-cites="Peikert2021">Peikert, Lissa, and Brandmaier (<a href="#/reference" role="doc-biblioref" onclick="">2021</a>)</span></figcaption>
+</figure>
+</div>
+</div><div class="column">
+<blockquote>
+<p>Computational reproducibility is the ability to obtain identical results from the same data with the same computer code. It is a building block for transparent and cumulative science because it enables the originator and other researchers, on other computers and later in time, to reproduce and thus understand how results came about, while avoiding a variety of errors that may lead to erroneous reporting of statistical and computational results. In this tutorial, we demonstrate how the R package <code>repro</code> supports researchers in creating fully computationally reproducible research projects with tools from the software engineering community. Building upon this notion of fully automated reproducibility, we present several applications including the preregistration of research plans with code (Preregistration as Code, PAC). PAC eschews all ambiguity of traditional preregistration and offers several more advantages. Making technical advancements that serve reproducibility more widely accessible for researchers holds the potential to innovate the research process and to help it become more productive, credible, and reliable.</p>
+</blockquote>
+</div>
+</div>
+</div>
+<div id="tabset-3-3">
+<div class="columns">
+<div class="column">
+<div class="quarto-figure quarto-figure-left margin-caption">
+<figure>
+<p><img data-src="fig/article-3.png" class="margin-caption"></p>
+<figcaption><span class="citation" data-cites="Braga2023">Braga et al. (<a href="#/reference" role="doc-biblioref" onclick="">2023</a>)</span></figcaption>
+</figure>
+</div>
+</div><div class="column">
+<blockquote>
+<p>Researchers in ecology and evolutionary biology are increasingly dependent on computational code to conduct research. Hence, the use of efficient methods to share, reproduce, and collaborate on code as well as document research is fundamental. GitHub is an online, cloud-based service that can help researchers track, organize, discuss, share, and collaborate on software and other materials related to research production, including data, code for analyses, and protocols. Despite these benefits, the use of GitHub in ecology and evolution is not widespread. We outline features ranging from low to high technical difficulty, including storing code, managing projects, coding collaboratively, conducting peer review, writing a manuscript, and using automated and continuous integration to streamline analyses. Given that members of a research team may have different technical skills and responsibilities, we describe how the optimal use of GitHub features may vary among members of a research collaboration.</p>
+</blockquote>
+</div>
+</div>
+</div>
 </div>
 </div>
 </section></section>
+<section id="reference" class="title-slide slide level1 smaller scrollable">
+<h1>Reference</h1>
+
+<div class="quarto-auto-generated-content">
+<p><img src="../../../fig/namakala.png" class="slide-logo"></p>
+<div class="footer footer-default">
+<p>https://namakala.github.io/</p>
+</div>
+</div>
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-Braga2023" class="csl-entry" role="listitem">
+Braga, Pedro Henrique Pereira, Katherine Hébert, Emma J. Hudgins, Eric R. Scott, Brandon P. M. Edwards, Luna L. Sánchez Reyes, Matthew J. Grainger, et al. 2023. <span>“Not Just for Programmers: How &lt;Scp&gt;GitHub&lt;/Scp&gt; Can Accelerate Collaborative and Reproducible Research in Ecology and Evolution.”</span> <em>Methods in Ecology and Evolution</em> 14 (6): 1364–80. <a href="https://doi.org/10.1111/2041-210x.14108">https://doi.org/10.1111/2041-210x.14108</a>.
+</div>
+<div id="ref-Peikert2021" class="csl-entry" role="listitem">
+Peikert, Aaron, Caspar J. van Lissa, and Andreas M. Brandmaier. 2021. <span>“Reproducible Research in r: A Tutorial on How to Do the Same Thing More Than Once.”</span> <em>Psych</em> 3 (4): 836–67. <a href="https://doi.org/10.3390/psych3040053">https://doi.org/10.3390/psych3040053</a>.
+</div>
+<div id="ref-PerezRiverol2016" class="csl-entry" role="listitem">
+Perez-Riverol, Yasset, Laurent Gatto, Rui Wang, Timo Sachsenberg, Julian Uszkoreit, Felipe da Veiga Leprevost, Christian Fufezan, et al. 2016. <span>“Ten Simple Rules for Taking Advantage of Git and GitHub.”</span> Edited by Scott Markel. <em>PLOS Computational Biology</em> 12 (7): e1004947. <a href="https://doi.org/10.1371/journal.pcbi.1004947">https://doi.org/10.1371/journal.pcbi.1004947</a>.
+</div>
+<div id="ref-Ram2013" class="csl-entry" role="listitem">
+Ram, Karthik. 2013. <span>“Git Can Facilitate Greater Reproducibility and Increased Transparency in Science.”</span> <em>Source Code for Biology and Medicine</em> 8 (1). <a href="https://doi.org/10.1186/1751-0473-8-7">https://doi.org/10.1186/1751-0473-8-7</a>.
+</div>
+</div>
+</section>
     </div>
   </div>
 
@@ -406,7 +987,7 @@ Aly Lamuri
 'autoAnimateDuration': 1,
 'autoAnimateUnmatched': true,
 'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
-'smaller': true,
+'smaller': false,
  
         // Display controls in the bottom right corner
         controls: false,
@@ -551,9 +1132,9 @@ Aly Lamuri
         // The "normal" size of the presentation, aspect ratio will be preserved
         // when the presentation is scaled to fit different resolutions. Can be
         // specified using percentage units.
-        width: 1050,
+        width: 1920,
 
-        height: 700,
+        height: 900,
 
         // Factor of the display size that should remain empty around the content
         margin: 0.1,

@@ -10,8 +10,63 @@
     ]
   },
   {
-    "objectID": "docs/learning-space/git-in-research/index.html#what-is-git",
-    "href": "docs/learning-space/git-in-research/index.html#what-is-git",
+    "objectID": "docs/learning-space/git-in-research/slide.html#what-our-research-looks-like",
+    "href": "docs/learning-space/git-in-research/slide.html#what-our-research-looks-like",
+    "title": "Using git in Research",
+    "section": "What our research looks like",
+    "text": "What our research looks like\n\n\n\n\n\nHow we want it to be\n\n\n\n\n\n\nHow it actually is\n\n\n\n\n\n\nWe always make a linear plan\nAlong the way, other great ideas pop up\nSometimes, it is overwhelming to keep up with the changes",
+    "crumbs": [
+      "Learning Space",
+      "Using git in Research"
+    ]
+  },
+  {
+    "objectID": "docs/learning-space/git-in-research/slide.html#we-have-been-here-done-that",
+    "href": "docs/learning-space/git-in-research/slide.html#we-have-been-here-done-that",
+    "title": "Using git in Research",
+    "section": "We have been here, done that",
+    "text": "We have been here, done that\n\n\n\n\n\nWe start with a simple draft\nThen we go with rounds of revisions\nWe end up with multiple drafts",
+    "crumbs": [
+      "Learning Space",
+      "Using git in Research"
+    ]
+  },
+  {
+    "objectID": "docs/learning-space/git-in-research/slide.html#version-control-system-vcs",
+    "href": "docs/learning-space/git-in-research/slide.html#version-control-system-vcs",
+    "title": "Using git in Research",
+    "section": "Version control system (VCS)",
+    "text": "Version control system (VCS)\n\nIt does versioning on your behalf\nYou can revisit the older “version” of your research\nA lean approach for multiple collaboration\n\n\n“We can do that with MS Office / Google Docs / {other software}, right?”\n\n\n\n\n\n\n\nOffice suite offers a centralized VCS\nAll changes are recorded only when it is online\nIt tracks changes of the whole document\nLimited scope of document version management\nNot applicable for code/script",
+    "crumbs": [
+      "Learning Space",
+      "Using git in Research"
+    ]
+  },
+  {
+    "objectID": "docs/learning-space/git-in-research/slide.html#an-ideal-vcs-for-researcher",
+    "href": "docs/learning-space/git-in-research/slide.html#an-ideal-vcs-for-researcher",
+    "title": "Using git in Research",
+    "section": "An ideal VCS for researcher",
+    "text": "An ideal VCS for researcher\n\nSpeed\nSimple design, extensible by nature\nStrong support for non-linear changes, with multiple parallel revisions\nFully distributed, does not require internet connection\nAble to handle large projects",
+    "crumbs": [
+      "Learning Space",
+      "Using git in Research"
+    ]
+  },
+  {
+    "objectID": "docs/learning-space/git-in-research/slide.html#an-ideal-vcs-for-researcher-1",
+    "href": "docs/learning-space/git-in-research/slide.html#an-ideal-vcs-for-researcher-1",
+    "title": "Using git in Research",
+    "section": "An ideal VCS for researcher",
+    "text": "An ideal VCS for researcher\n\n\n\nSpeed\nSimple design, extensible by nature\nStrong support for non-linear changes, with multiple parallel revisions\nFully distributed, does not require internet connection\nAble to handle large projects\n\n\n\n\n\ngit does this",
+    "crumbs": [
+      "Learning Space",
+      "Using git in Research"
+    ]
+  },
+  {
+    "objectID": "docs/learning-space/git-in-research/slide.html#what-is-git",
+    "href": "docs/learning-space/git-in-research/slide.html#what-is-git",
     "title": "Using git in Research",
     "section": "What is git?",
     "text": "What is git?",
@@ -21,18 +76,70 @@
     ]
   },
   {
-    "objectID": "docs/learning-space/git-in-research/slide.html#have-you-ever",
-    "href": "docs/learning-space/git-in-research/slide.html#have-you-ever",
+    "objectID": "docs/learning-space/git-in-research/slide.html#getting-started-with-git",
+    "href": "docs/learning-space/git-in-research/slide.html#getting-started-with-git",
     "title": "Using git in Research",
-    "section": "Have you ever…",
-    "text": "Have you ever…"
+    "section": "Getting started with git",
+    "text": "Getting started with git\n\n\nDownload git\n\n\n\nhttps://git-scm.com/downloads\n\n\n\nConfigure git for the first time\n\n\nTerminal\n\n$ git config --global user.name \"Your Name\"\n$ git config --global user.email any.email.you.use@mail.com\n\n\nYou can check you configuration by issuing:\n\n\nTerminal\n\n$ git config --list\n\n\n\nWhich will give you:\n\n\nOutput\n\nuser.email=any.email.you.use@mail.com\nuser.name=\"Your Name\"\ninit.defaultbranch=master\nmerge.tool=vimdiff\ncredential.helper=cache",
+    "crumbs": [
+      "Learning Space",
+      "Using git in Research"
+    ]
   },
   {
-    "objectID": "docs/learning-space/git-in-research/slide.html#what-is-git",
-    "href": "docs/learning-space/git-in-research/slide.html#what-is-git",
+    "objectID": "docs/learning-space/git-in-research/slide.html#cloning-a-repository",
+    "href": "docs/learning-space/git-in-research/slide.html#cloning-a-repository",
     "title": "Using git in Research",
-    "section": "What is git?",
-    "text": "What is git?"
+    "section": "Cloning a repository",
+    "text": "Cloning a repository\n\n\n\n\n\nhttps://github.com/octocat/Spoon-Knife\n\n\n\n\n\nTerminal\n\n$ git clone https://github.com/octocat/Spoon-Knife\n\n\n\nThe command above will clone a GitHub repository into your local machine\nYou may notice that now you have a folder Spoon-Knife created in your directory",
+    "crumbs": [
+      "Learning Space",
+      "Using git in Research"
+    ]
+  },
+  {
+    "objectID": "docs/learning-space/git-in-research/slide.html#checking-on-the-cloned-repository",
+    "href": "docs/learning-space/git-in-research/slide.html#checking-on-the-cloned-repository",
+    "title": "Using git in Research",
+    "section": "Checking on the cloned repository",
+    "text": "Checking on the cloned repository\nOpen your terminal application, then go to the cloned directory\n\nLinux/MacOSWindows\n\n\n\n\nTerminal\n\n$ cd /path/to/Spoon-Knife # Change directory\n$ ls -lah                 # List all the contents\n\n\n\n\n\nCMD\n\nC:\\Users\\Username&gt;\"C:\\path\\to\\Spoon-Knife\" # Change directory\nC:\\path\\to\\Spoon-Knife&gt;dir /s /b /o:gn     # List all the contents\n\n\n\n\n\n\n\nYou will find the following files listed:\n\n\nOutput\n\ntotal 24K\ndrwxr-xr-x 3 lam lam 4.0K Mar 20 07:33 .\ndrwxr-xr-x 3 lam lam 4.0K Mar 20 07:37 ..\ndrwxr-xr-x 7 lam lam 4.0K Mar 20 07:33 .git\n-rw-r--r-- 1 lam lam  355 Mar 20 07:33 index.html\n-rw-r--r-- 1 lam lam  780 Mar 20 07:33 README.md\n-rw-r--r-- 1 lam lam  256 Mar 20 07:33 styles.css\n\n\nWe can check on the log history\n\n\nTerminal\n\n$ git log --oneline --graph --decorate --all\n\n\n\n\nOutput\n\n* f439fc5 (origin/change-the-title) Update README.md\n| * 5806070 (origin/test-branch) Create test.md\n|/\n* d0dd1f6 (HEAD -&gt; main, origin/main, origin/HEAD) Pointing to the guide for forking\n* bb4cc8d Create styles.css and updated README\n* a30c19e Created index page for future collaborative edits",
+    "crumbs": [
+      "Learning Space",
+      "Using git in Research"
+    ]
+  },
+  {
+    "objectID": "docs/learning-space/git-in-research/slide.html#create-a-file-and-make-some-changes",
+    "href": "docs/learning-space/git-in-research/slide.html#create-a-file-and-make-some-changes",
+    "title": "Using git in Research",
+    "section": "Create a file and make some changes",
+    "text": "Create a file and make some changes\n\n\n\nLet’s make a new file: myfile.txt\nWe can put some lorem ipsum in our new file\nNow, our directory should contain:\n\n\n\nTerminal\n\n$ ls -lah\n\n\n\nOutput\n\ntotal 28K\ndrwxr-xr-x 3 lam lam 4.0K Mar 20 08:13 .\ndrwxr-xr-x 3 lam lam 4.0K Mar 20 07:37 ..\ndrwxr-xr-x 7 lam lam 4.0K Mar 20 08:10 .git\n-rw-r--r-- 1 lam lam  355 Mar 20 07:33 index.html\n-rw-r--r-- 1 lam lam   10 Mar 20 08:13 myfile.txt\n-rw-r--r-- 1 lam lam  780 Mar 20 07:33 README.md\n-rw-r--r-- 1 lam lam  256 Mar 20 07:33 styles.css\n\n\nLet’s check our repository status\n\n\nTerminal\n\n$ git status\n\n\n\nOutput\n\nOn branch main\nYour branch is up to date with 'origin/main'.\n\nUntracked files:\n  (use \"git add &lt;file&gt;...\" to include in what will be committed)\n        myfile.txt\n\nnothing added to commit but untracked files present (use \"git add\" to track)\n\n\n\n\nWe can track myfile.txt to our repository then recheck the status\n\n\nTerminal\n\n$ git add myfile.txt\n$ git status\n\n\n\nOutput\n\nOn branch main\nYour branch is up to date with 'origin/main'.\n\nChanges to be committed:\n  (use \"git restore --staged &lt;file&gt;...\" to unstage)\n        new file:   myfile.txt\n\n\n\nWe need to commit for the changes to be tracked\n\n\nTerminal\n\n$ git commit myfile.txt -m \"Add a new file to describe lorem ipsum\"\n\n\n\nOutput\n\n[main 67802c8] Add a new file to describe lorem ipsum\n 1 file changed, 3 insertions(+)\n create mode 100644 myfile.txt\n\n\n\nChecking on the log\n$ git log --all --decorate --oneline --graph\n\n* 67802c8 (HEAD -&gt; main) Add a new file to describe lorem ipsum\n| * f439fc5 (origin/change-the-title) Update README.md\n|/\n| * 5806070 (origin/test-branch) Create test.md\n|/\n* d0dd1f6 (origin/main, origin/HEAD) Pointing to the guide for forking\n* bb4cc8d Create styles.css and updated README\n* a30c19e Created index page for future collaborative edits",
+    "crumbs": [
+      "Learning Space",
+      "Using git in Research"
+    ]
+  },
+  {
+    "objectID": "docs/learning-space/git-in-research/slide.html#take-advantage-of-git-and-github",
+    "href": "docs/learning-space/git-in-research/slide.html#take-advantage-of-git-and-github",
+    "title": "Using git in Research",
+    "section": "Take advantage of git and GitHub",
+    "text": "Take advantage of git and GitHub\n10 rules by Perez-Riverol et al. (2016)\n\nRule 1Rule 2Rule 3Rule 4Rule 5Rule 6Rule 7Rule 8Rule 9Rule 10\n\n\nUse GitHub to track your project\n\nThe backbone of GitHub is the distributed version control system Git. Every change, from fixing a typo to a complete redesign of the software, is tracked and uniquely identified. Although Git has a complex set of commands and can be used for rather complex operations, learning to apply the basics requires only a handful of new concepts and commands and will provide a solid ground to efficiently track code and related content for research projects.\n\n\n\nManage permission for repository access\n\nPublic projects on GitHub are visible to everyone, but write permission, i.e., the ability to directly modify the content of a repository, needs to be granted explicitly. As a repository owner, you can grant this right to other GitHub users. In addition to being owned by users, repositories can also be created and managed as part of teams and organizations.\n\n\n\nCreate SOP for branching and forking\n\nAnyone with a GitHub account can fork any repository they have access to. This will create a complete copy of the content of the repository, while retaining a link to the original “upstream” version. It allows anyone to develop and test novel features with existing code and offers the possibility of contributing novel features, bug fixes, and improvements to documentation back into the original upstream project (requested by opening an pull request) repository and becoming a contributor.\n\n\n\nUse tags and semantic versions\n\nTags can be used to label versions during the development process. Version numbering should follow “semantic versioning” practice, with the format X.Y.Z., with X being the major, Y the minor, and Z the patch version of the release, including possible meta information. Correct labeling allows developers and users to easily recover older versions, compare them, or simply use them to reproduce results described in publications.\n\n\n\nContinuous integration and automated code testing\n\nCode testing is necessary to detect possible bugs introduced by new features or changes in the code or dependencies, as well as detecting wrong results, often known as logic errors, in which the source code produces a different result than what was intended. Continuous integration provides a way to automatically and systematically run a series of tests to check integrity and performance of code, a task that can be automated through GitHub.\n\n\n\nAutomate more tasks via webhooks and GitHub actions\n\nMore than just code compilation and testing can be integrated into your software project: GitHub hooks can be used to automate numerous tasks to help improve the overall quality of your project. You might consider generating the documentation upon code/documentation modification, i.e. by using Quarto for R script or Sphinx for python code.\n\n\n\nOpenly and Collaboratively Discuss, Address, and Close Issues\n\nGitHub issues are a great way to keep track of bugs, tasks, feature requests, and enhancements. While classical issue trackers are primarily intended to be used as bug trackers, in contrast, GitHub issue trackers follow a different philosophy: each tracker has its own section in every repository and can be used to trace bugs, new ideas, and enhancements by using a powerful tagging system. The main objective of issues in GitHub is promoting collaboration and providing context by using cross-references.\n\n\n\nMake your code easily citable\n\nGitHub now integrates with archiving services such as Zenodo and Figshare, enabling DOIs to be assigned to code repositories. By default, Zenodo creates an archive of a repository each time a new release is created in GitHub, ensuring the cited code remains up to date. Once the DOI has been assigned, it can be added to literature information resources such as Europe PubMed Central.\n\n\n\nPromote and discuss your project\n\nGitHub Pages are simple websites freely hosted by GitHub. Users can create and host blog websites, help pages, manuals, tutorials, and websites related to specific projects.\n\n\n\nSocial feature in GitHub: follow and watch\n\nIn the same way researchers are following developments in their field, scientific programmers could follow publicly available projects that might benefit their research. GitHub enables this functionality by following other GitHub users (see also Rule 2) or watching the activity of projects, which is a common feature in many social media platforms.",
+    "crumbs": [
+      "Learning Space",
+      "Using git in Research"
+    ]
+  },
+  {
+    "objectID": "docs/learning-space/git-in-research/slide.html#other-articles-to-read",
+    "href": "docs/learning-space/git-in-research/slide.html#other-articles-to-read",
+    "title": "Using git in Research",
+    "section": "Other articles to read",
+    "text": "Other articles to read\n\nArticle 1Article 2Article 3\n\n\n\n\n\n\n\nRam (2013)\n\n\n\n\nVersion control systems (VCS), which have long been used to maintain code repositories in the software industry, are now finding new applications in science. One such open source VCS, Git, provides a lightweight yet robust framework that is ideal for managing the full suite of research outputs such as datasets, statistical code, figures, lab notes, and manuscripts. For individual researchers, Git provides a powerful way to track and compare versions, retrace errors, explore new approaches in a structured manner, while maintaining a full audit trail. For larger collaborative efforts, Git and Git hosting services make it possible for everyone to work asynchronously and merge their contributions at any time, all the while maintaining a complete authorship trail. In this paper I provide an overview of Git along with use-cases that highlight how this tool can be leveraged to make science more reproducible and transparent, foster new collaborations, and support novel uses.\n\n\n\n\n\n\n\n\n\n\nPeikert, Lissa, and Brandmaier (2021)\n\n\n\n\nComputational reproducibility is the ability to obtain identical results from the same data with the same computer code. It is a building block for transparent and cumulative science because it enables the originator and other researchers, on other computers and later in time, to reproduce and thus understand how results came about, while avoiding a variety of errors that may lead to erroneous reporting of statistical and computational results. In this tutorial, we demonstrate how the R package repro supports researchers in creating fully computationally reproducible research projects with tools from the software engineering community. Building upon this notion of fully automated reproducibility, we present several applications including the preregistration of research plans with code (Preregistration as Code, PAC). PAC eschews all ambiguity of traditional preregistration and offers several more advantages. Making technical advancements that serve reproducibility more widely accessible for researchers holds the potential to innovate the research process and to help it become more productive, credible, and reliable.\n\n\n\n\n\n\n\n\n\n\nBraga et al. (2023)\n\n\n\n\nResearchers in ecology and evolutionary biology are increasingly dependent on computational code to conduct research. Hence, the use of efficient methods to share, reproduce, and collaborate on code as well as document research is fundamental. GitHub is an online, cloud-based service that can help researchers track, organize, discuss, share, and collaborate on software and other materials related to research production, including data, code for analyses, and protocols. Despite these benefits, the use of GitHub in ecology and evolution is not widespread. We outline features ranging from low to high technical difficulty, including storing code, managing projects, coding collaboratively, conducting peer review, writing a manuscript, and using automated and continuous integration to streamline analyses. Given that members of a research team may have different technical skills and responsibilities, we describe how the optimal use of GitHub features may vary among members of a research collaboration.",
+    "crumbs": [
+      "Learning Space",
+      "Using git in Research"
+    ]
   },
   {
     "objectID": "docs/proposal/intro.html",
@@ -343,7 +450,7 @@
     "href": "docs/proposal/index.html",
     "title": "Proposal",
     "section": "",
-    "text": "Proposal\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nIntroduction\n\n\n\n\n\n\n\n\n\n\n\nMar 19, 2024\n\n\n\n\n\n\n\n\n\n\n\n\nLiterature Review\n\n\n\n\n\n\n\n\n\n\n\nMar 19, 2024\n\n\n\n\n\n\n\n\n\n\n\n\nMethods\n\n\n\n\n\n\n\n\n\n\n\nMar 19, 2024\n\n\n\n\n\n\n\n\n\n\n\n\nResearch Framework\n\n\n\n\n\n\n\n\n\n\n\nMar 19, 2024\n\n\n\n\n\n\n\n\n\n\n\n\nSummary\n\n\n\n\n\n\n\n\n\n\n\nMar 19, 2024\n\n\n\n\n\n\nNo matching items\n\n Back to top"
+    "text": "Proposal\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nIntroduction\n\n\n\n\n\n\n\n\n\n\n\nMar 20, 2024\n\n\n\n\n\n\n\n\n\n\n\n\nLiterature Review\n\n\n\n\n\n\n\n\n\n\n\nMar 20, 2024\n\n\n\n\n\n\n\n\n\n\n\n\nMethods\n\n\n\n\n\n\n\n\n\n\n\nMar 20, 2024\n\n\n\n\n\n\n\n\n\n\n\n\nResearch Framework\n\n\n\n\n\n\n\n\n\n\n\nMar 20, 2024\n\n\n\n\n\n\n\n\n\n\n\n\nSummary\n\n\n\n\n\n\n\n\n\n\n\nMar 20, 2024\n\n\n\n\n\n\nNo matching items\n\n Back to top"
   },
   {
     "objectID": "docs/learning-space/graph-theory/index.html",
