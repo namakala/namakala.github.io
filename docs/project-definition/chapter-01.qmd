@@ -1,0 +1,10 @@
+# The scoping review of psychological resilience
+
+{{< include _chapter-01.qmd >}}
+
+:::: {.content-visible when-profile="web"}
+# References
+
+::: {#refs}
+:::
+::::

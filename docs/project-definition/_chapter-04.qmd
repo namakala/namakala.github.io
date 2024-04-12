@@ -1,0 +1,20 @@
+**Project introduction:** Resilience is the capacity to buffer adverse, traumatic, or stressful events in preventing mental disorders.
+
+**Research question:** How do we measure resilience as a residual of Long-Term Difficulties Inventory and Mini International Neuropsychiatric Interview?
+
+**Project impetus:** The lack of gold standard in measuring psychological resilience makes assessing resilience on a population level difficult. Several resilience instruments provide no psychometric information, which poses a challenge to evaluate its quality [@Windle2011]. Residual approach in quantifying resilience was first reported in children with socioeconomic deprivation [@KimCohen2004]. Since then, residual approach has been used in many other research settings investigating psychological resilience, and briefly summarized in the table 1 reported by @Hltge2022.
+
+**Project objective:** This project aims to measure resilience as a residual of Long-Term Difficulties Inventory (LDI) and Mini International Neuropsychiatric Interview (MINI) available from the Lifelines data. This project will also investigate the latent profile of resilience in the population.
+
+**Project results:** A scientific manuscript outlining resilience profile in the population.
+
+**Outside scope of the project:** This project will not use psychometric instrument to measure resilience.
+
+**Effects:** Evaluate the latent resilience profile in the general Netherlands population participating in Lifelines.
+
+**Users:** Using a residual approach will provide additional metrics for researchers utilizing mental health variables from Lifelines.
+
+**Constraints:** The presence of outliers when measuring the residual will be the main obstacle. @KimCohen2004 has proposed several methods to handle outliers and provide a better measure of resilience.
+
+**Relation with other projects:** Nothing to disclose.
+

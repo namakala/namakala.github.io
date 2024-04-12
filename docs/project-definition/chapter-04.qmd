@@ -1,0 +1,10 @@
+# Measure resilience using the residual approach using data from Lifelines
+
+{{< include _chapter-04.qmd >}}
+
+:::: {.content-visible when-profile="web"}
+# References
+
+::: {#refs}
+:::
+::::

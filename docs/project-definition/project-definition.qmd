@@ -1,0 +1,48 @@
+---
+title: Project Definition
+author: Aly Lamuri
+format:
+  pdf:
+    geometry:
+      - top=2cm
+      - bottom=4cm
+      - left=2.5cm
+      - right=2.5cm
+---
+
+# The scoping review of psychological resilience
+
+{{< include _chapter-01.qmd >}}
+
+{{< pagebreak >}}
+
+# Concurrent psychopharmaca analysis using IADB data
+
+{{< include _chapter-02.qmd >}}
+
+{{< pagebreak >}}
+
+# Trend in psychopharmaca uses
+
+{{< include _chapter-03.qmd >}}
+
+{{< pagebreak >}}
+
+# Measure resilience using the residual approach using data from Lifelines
+
+{{< include _chapter-04.qmd >}}
+
+{{< pagebreak >}}
+
+# The agent-based model of psychological resilience
+
+{{< include _chapter-05.qmd >}}
+
+{{< pagebreak >}}
+
+# Reference
+
+:::: {.content-visible when-profile="web"}
+::: {#refs}
+:::
+::::

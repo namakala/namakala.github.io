@@ -1,0 +1,10 @@
+# Trend in psychopharmaca uses
+
+{{< include _chapter-03.qmd >}}
+
+:::: {.content-visible when-profile="web"}
+# References
+
+::: {#refs}
+:::
+::::

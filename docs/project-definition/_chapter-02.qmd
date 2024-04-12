@@ -1,0 +1,20 @@
+**Project introduction:** One of the main challenge in monitoring polypharmacy is the lack of precise quantitative measure defining the property of concurrent medication uses [@Sirois2016]. Drug-prescription network (DPN) has been previously proposed for analyzing concurrent medication uses [@Cavallo2012]. By implementing a network analysis approach, we can attribute quantitative properties for each medication.
+
+**Research question:** How do we implement a network analysis approach to quantitatively characterize polypharmacy?
+
+**Project impetus:** With the advancement of graph theory, network analysis has made its way to model relationships between any entity. Polypharmacy is the presence of multiple relationships of one medication to another, and can be measured as a graph metrics. Transforming medication registry into a DPN allows for characterizing medication classes with a score that reflects concurrent medication uses.
+
+**Project objective:** Transform medication claim registry into a DPN, then calculate graph metrics as a score reflecting concurrent medication uses in the population.
+
+**Project results:** The output of this project is a score for each medication class to reflect concurrent medication uses, which will be reported as a manuscript.
+
+**Outside scope of the project:** This project only focus on characterizing medication classes on a population level. As such, sub-group analysis, e.g. by demographic features, are not explored.
+
+**Effects:** Generate scores as a weighting for included medication classes.
+
+**Users:** Researchers in epidemiology and subject matter experts in health economics who intend to apply population-based weight for particular medication classes. The weight is complementary to the number of prescribed medications, which are often used as a crude indicator of polypharmacy.
+
+**Constraints:** Constructing a DPN is computationally expensive, which potentially leads to a long-running analysis pipeline. We can reduce the complexity by limiting the number of medication classes to include.
+
+**Relation with other projects:** Nothing to disclose.
+

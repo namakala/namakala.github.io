@@ -1,0 +1,10 @@
+# The agent-based model of psychological resilience
+
+{{< include _chapter-05.qmd >}}
+
+:::: {.content-visible when-profile="web"}
+# References
+
+::: {#refs}
+:::
+::::

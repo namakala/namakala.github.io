@@ -3,17 +3,18 @@ project:
 
 book:
   title: >
-    Mental Resilience as a Determinant of Burnout, Depression, and Anxiety amidst
-    Adversity
+    "Project Definition: Mental Resilience as a Determinant of Mental Disorders amidst Adversity"
   sidebar:
     title: Policy and Resilience
     style: docked
-  output-file: introductory-essay
+  output-file: project-definition
   doi: 10.53962/jn77-mprt
   chapters:
     - index.qmd
     - text: Introduction
       href: docs/rug-essay/intro.qmd
+    - text: "Project Definition"
+      href: docs/project-definition/project-definition.qmd
     - text: Bibliography
       href: docs/proposal/references.qmd
 

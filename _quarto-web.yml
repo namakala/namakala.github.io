@@ -40,6 +40,26 @@ website:
               - docs/proposal/research-framework.qmd
               - docs/proposal/methods.qmd
               - docs/proposal/summary.qmd
+          - section: "Scoping review"
+            contents:
+              - text: "Project definition"
+                href: docs/project-definition/chapter-01.qmd
+          - section: "Drug Prescription Network"
+            contents:
+              - text: "Project definition"
+                href: docs/project-definition/chapter-02.qmd
+          - section: "IADB analysis"
+            contents:
+              - text: "Project definition"
+                href: docs/project-definition/chapter-03.qmd
+          - section: "Lifelines analysis"
+            contents:
+              - text: "Project definition"
+                href: docs/project-definition/chapter-04.qmd
+          - section: "Agent-Based Model"
+            contents:
+              - text: "Project definition"
+                href: docs/project-definition/chapter-05.qmd
       - section: "Learning Space"
         icon: journal-bookmark
         contents:

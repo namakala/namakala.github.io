@@ -1,0 +1,10 @@
+# Concurrent psychopharmaca analysis using IADB data
+
+{{< include _chapter-02.qmd >}}
+
+:::: {.content-visible when-profile="web"}
+# References
+
+::: {#refs}
+:::
+::::
