@@ -6,7 +6,6 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2024-04-12">
 
 <title>Nama Kala</title>
 <style>
@@ -25,6 +24,7 @@ ul.task-list li input[type="checkbox"] {
 div.csl-bib-body { }
 div.csl-entry {
   clear: both;
+  margin-bottom: 0em;
 }
 .hanging-indent div.csl-entry {
   margin-left:2em;
@@ -152,7 +152,7 @@ div.csl-indent {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Research</li><li class="breadcrumb-item"><a href="../../docs/project-definition/chapter-02.html">Drug Prescription Network</a></li><li class="breadcrumb-item"><a href="../../docs/project-definition/chapter-02.html">Project definition</a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -242,16 +242,16 @@ div.csl-indent {
   </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true">
  <span class="menu-text">Drug Prescription Network</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth2 ">  
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth2 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../docs/project-definition/chapter-02.html" class="sidebar-item-text sidebar-link">
+  <a href="../../docs/project-definition/chapter-02.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Project definition</span></a>
   </div>
 </li>
@@ -357,41 +357,39 @@ div.csl-indent {
     <h2 id="toc-title">Contents</h2>
    
   <ul>
-  <li><a href="#references" id="toc-references" class="nav-link active" data-scroll-target="#references">REFERENCES</a></li>
+  <li><a href="#concurrent-psychopharmaca-analysis-using-iadb-data" id="toc-concurrent-psychopharmaca-analysis-using-iadb-data" class="nav-link active" data-scroll-target="#concurrent-psychopharmaca-analysis-using-iadb-data">Concurrent psychopharmaca analysis using IADB data</a></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/namakala/namakala.github.io/edit/main/docs/proposal/references.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/namakala/namakala.github.io/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/namakala/namakala.github.io/edit/main/docs/project-definition/chapter-02.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/namakala/namakala.github.io/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
+
+
+
+<section id="concurrent-psychopharmaca-analysis-using-iadb-data" class="level1">
+<h1>Concurrent psychopharmaca analysis using IADB data</h1>
+<p><strong>Project introduction:</strong> One of the main challenge in monitoring polypharmacy is the lack of precise quantitative measure defining the property of concurrent medication uses <span class="citation" data-cites="Sirois2016">(<a href="#ref-Sirois2016" role="doc-biblioref">Sirois et al. 2016</a>)</span>. Drug-prescription network (DPN) has been previously proposed for analyzing concurrent medication uses <span class="citation" data-cites="Cavallo2012">(<a href="#ref-Cavallo2012" role="doc-biblioref">Cavallo et al. 2012</a>)</span>. By implementing a network analysis approach, we can attribute quantitative properties for each medication.</p>
+<p><strong>Research question:</strong> How do we implement a network analysis approach to quantitatively characterize polypharmacy?</p>
+<p><strong>Project impetus:</strong> With the advancement of graph theory, network analysis has made its way to model relationships between any entity. Polypharmacy is the presence of multiple relationships of one medication to another, and can be measured as a graph metrics. Transforming medication registry into a DPN allows for characterizing medication classes with a score that reflects concurrent medication uses.</p>
+<p><strong>Project objective:</strong> Transform medication claim registry into a DPN, then calculate graph metrics as a score reflecting concurrent medication uses in the population.</p>
+<p><strong>Project results:</strong> The output of this project is a score for each medication class to reflect concurrent medication uses, which will be reported as a manuscript.</p>
+<p><strong>Outside scope of the project:</strong> This project only focus on characterizing medication classes on a population level. As such, sub-group analysis, e.g.&nbsp;by demographic features, are not explored.</p>
+<p><strong>Effects:</strong> Generate scores as a weighting for included medication classes.</p>
+<p><strong>Users:</strong> Researchers in epidemiology and subject matter experts in health economics who intend to apply population-based weight for particular medication classes. The weight is complementary to the number of prescribed medications, which are often used as a crude indicator of polypharmacy.</p>
+<p><strong>Constraints:</strong> Constructing a DPN is computationally expensive, which potentially leads to a long-running analysis pipeline. We can reduce the complexity by limiting the number of medication classes to include.</p>
+<p><strong>Relation with other projects:</strong> Nothing to disclose.</p>
+</section>
+<section id="references" class="level1">
+<h1>References</h1>
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-Cavallo2012" class="csl-entry" role="listitem">
+Cavallo, Pierpaolo, Sergio Pagano, Giovanni Boccia, Francesco De Caro, Mario De Santis, and Mario Capunzo. 2012. <span>“Network Analysis of Drug Prescriptions.”</span> <em>Pharmacoepidemiology and Drug Safety</em> 22 (2): 130–37. <a href="https://doi.org/10.1002/pds.3384">https://doi.org/10.1002/pds.3384</a>.
 </div>
-
-
-
-<div class="quarto-title-meta">
-
-    
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">April 12, 2024</p>
-    </div>
-  </div>
-  
-    
-  </div>
-  
-
-
-</header>
-
-
-<section id="references" class="level1 unnumbered">
-<h1 class="unnumbered">REFERENCES</h1>
-<div id="refs" role="list">
-
+<div id="ref-Sirois2016" class="csl-entry" role="listitem">
+Sirois, Caroline, Cara Tannenbaum, Marie-Eve Gagnon, Daniel Milhomme, and Valérie Émond. 2016. <span>“Monitoring Polypharmacy at the Population Level Entails Complex Decisions: Results of a Survey of Experts in Geriatrics and Pharmacotherapy.”</span> <em>Drugs &amp; Therapy Perspectives</em> 32 (6): 257–64. <a href="https://doi.org/10.1007/s40267-016-0299-0">https://doi.org/10.1007/s40267-016-0299-0</a>.
+</div>
 </div>
 
 
@@ -816,4 +814,4 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/namakala/namakala.github.io/edit/main/docs/proposal/references.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/namakala/namakala.github.io/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/namakala/namakala.github.io/edit/main/docs/project-definition/chapter-02.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/namakala/namakala.github.io/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>
