@@ -1,16 +1,16 @@
 **Project introduction:** Polypharmacy remains a major concern in treating mental disorders, especially considering the presence of multimorbidity [@Doos2014; @CaldernLarraaga2018]. When treating a specific condition, physicians may opt for polypharmacy regimens without exploring the optimal dose range of a medication [@Tsutsumi2011]. The switch from monotherapy to polypharmacy is not always beneficial for the patients, and in some cases, the use of polypharmacy is not evidently recommended [@Kok2017; @Kim2021].
 
-**Research question:** (1) How is the trend of switching from a monotherapy to polypharmacy regimens in patients receiving psychopharmaca? (2) What is the duration of taking a monotherapy before switching to polypharmacy regimens?
+**Research question:** (1) How is the trend of switching from a monotherapy to polypharmacy regimens in patients receiving anxiolytics and antidepressants? (2) What is the duration of taking a monotherapy before switching to polypharmacy regimens?
 
-**Project impetus:** Research on polypharmacy regimens in mental disorders mostly revolve around schizophrenia spectrum disorders. This might outshine polypharmacy in other mental disorders, including anxiety, mood, behavioral, and personality disorders. In the previous research, three psychopharmaca classes are likely a part of polypharmacy regimens, warranting the need of further evaluations.
+**Project impetus:** Research on polypharmacy regimens in mental disorders mostly revolve around schizophrenia spectrum disorders. This might overshadow polypharmacy in other mental disorders, including anxiety, mood, behavioral, and personality disorders. In the previous research, three anxiolytic and antidepressant classes are likely a part of polypharmacy regimens, warranting the need of further evaluations.
 
 **Project objective:** This project aims to investigate prescription registry to evaluate the observed duration before a patient has their prescription switched from a monotherapy to polypharmacy regimens.
 
-**Project results:** The output of this project is a scientific manuscript reporting the trend of medications for people taking psychopharmaca.
+**Project results:** The output of this project is a scientific manuscript reporting the trend of medications for people taking anxiolytics and antidepressants.
 
-**Outside scope of the project:** This project will only consider evaluating a five-year trend from 2018 to 2022 using data from IADB. Asides from total polypharmacy, other types of psychopharmaca polypharmacy is not further investigated.
+**Outside scope of the project:** This project will only consider evaluating a five-year trend from 2018 to 2022 using data from IADB. Asides from total polypharmacy, other types of psychopharmaca polypharmacy is not further investigated. Psychopharmaca included in this analysis are limited to antidepressants and anxiolytics.
 
-**Effects:** Evaluate the trend of polypharmacy in the general population prescribed for psychopharmaca.
+**Effects:** Evaluate the trend of polypharmacy in the general population prescribed for psychopharmaca. The prevalence of anxiolytics and antidepressants claims will be used as a base parameter in the agent-based model project.
 
 **Users:** Researcher and subject matter experts in health economics and outcome research.
 

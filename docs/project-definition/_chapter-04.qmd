@@ -8,13 +8,13 @@
 
 **Project results:** A scientific manuscript outlining resilience profile in the population.
 
-**Outside scope of the project:** This project will not use psychometric instrument to measure resilience.
+**Outside scope of the project:** This project will not use psychometric instrument to measure resilience. MINI modules are limited to major depressive disorder and anxiety disorder.
 
-**Effects:** Evaluate the latent resilience profile in the general Netherlands population participating in Lifelines.
+**Effects:** Evaluate the latent resilience profile in the Netherlands general population participating in Lifelines study. Resilience, anxiety, and depressive disorder prevalences are used to parameterize the baseline scenario in the agent-based model project.
 
-**Users:** Using a residual approach will provide additional metrics for researchers utilizing mental health variables from Lifelines.
+**Users:** Researchers utilizing mental health variables from Lifelines who need a derived measure of psychological resilience from the existing data.
 
-**Constraints:** The presence of outliers when measuring the residual will be the main obstacle. @KimCohen2004 has proposed several methods to handle outliers and provide a better measure of resilience.
+**Constraints:** The presence of outliers when measuring the residual will be the main obstacle. @Hltge2022 has proposed several methods to handle outliers and provide a better measure of resilience.
 
 **Relation with other projects:** Nothing to disclose.
 

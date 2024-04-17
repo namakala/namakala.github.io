@@ -10,7 +10,7 @@
 
 **Outside scope of the project:** This project only focus on characterizing medication classes on a population level. As such, sub-group analysis, e.g. by demographic features, are not explored.
 
-**Effects:** Generate scores as a weighting for included medication classes.
+**Effects:** Generate scores as a weighting for included medication classes. The eigenvector centrality and number of claim ratio will be used to validate the base scenario in the agent-based model project.
 
 **Users:** Researchers in epidemiology and subject matter experts in health economics who intend to apply population-based weight for particular medication classes. The weight is complementary to the number of prescribed medications, which are often used as a crude indicator of polypharmacy.
 

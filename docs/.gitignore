@@ -1,0 +1,15 @@
+# Blacklist everything
+*
+
+# Whitelist directory contents
+!*/*
+
+# Track specific file formats
+!*md
+!*yml
+!*json
+!*ignore
+!*.bib
+!*.png
+!*.jpeg
+!*.jpg

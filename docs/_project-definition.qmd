@@ -9,6 +9,8 @@ format:
       - bottom=4cm
       - left=2.5cm
       - right=2.5cm
+  docx:
+    output-file: project-definition
 bibliography: ../ref.bib
 ---
 
@@ -16,25 +18,17 @@ bibliography: ../ref.bib
 
 {{< include project-definition/_chapter-01.qmd >}}
 
-{{< pagebreak >}}
-
 # Concurrent psychopharmaca analysis using IADB data
 
 {{< include project-definition/_chapter-02.qmd >}}
-
-{{< pagebreak >}}
 
 # Trend in psychopharmaca uses
 
 {{< include project-definition/_chapter-03.qmd >}}
 
-{{< pagebreak >}}
-
 # Measure resilience using the residual approach using data from Lifelines
 
 {{< include project-definition/_chapter-04.qmd >}}
-
-{{< pagebreak >}}
 
 # The agent-based model of psychological resilience
 

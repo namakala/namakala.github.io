@@ -1,18 +1,18 @@
 **Project introduction:** Mental health promotion programmes are categorized into universal, selective, and indicated based on their intended audiences. A universal programme is intended to engage all the general audiences. A selective programme is indicated for groups at a higher risk of having mental health disorders. An indicated programme is reserved for patients with specific health conditions [@Miguel2023]. Physical activity, psychosocial intervention, and lifestyle modification had small to moderate effect in promoting mental health [@Miguel2023; @SalazardePablo2020].
 
-**Research question:** How cost-effective are universal, selective, and indicated mental health promotion programmes on the community level?
+**Research question:** How cost-effective is the workplace-based universal mental health promotion programmes on the community level?
 
 **Project impetus:** Mental health public intervention programmes have been widely investigated, mainly as school-based and workplace-based mental health promotion programmes. Due to quality and methodological differences of the programmes, health-economics evaluation of universal, selective, and indicated mental health promotion programmes remains a controversial affair [@Le2021].
 
-**Project objective:** This project aim to implement an agent-based model to evaluate the comparison of cost-effectiveness in the universal, selective, and indicated mental health promotion programmes. To resolve programme differences and provide better generalisability, our model will consider several common scenarios when evaluating the cost-effectiveness. Scenarios will be based on intervention approaches, intervention types, baseline mental disorder prevalence, baseline stressor indicators, and baseline psychopharmaca uses.
+**Project objective:** This project aim to implement an agent-based model to evaluate the comparison of cost-effectiveness in the universal, selective, and indicated mental health promotion programmes. To resolve programme differences and provide better generalisability, our model will consider several common scenarios when evaluating the cost-effectiveness. Scenarios will be based on intervention approaches, baseline mental disorder prevalence, baseline stressor indicators, and baseline psychopharmaca uses.
 
 **Project results:** The output of this project is a protocol document and a scientific manuscript. The protocol document will highlight model conceptualization, parameterization, and validation. The scientific manuscript will provide a comparison of three mental health promotion approaches by detailing cost and benefit associated with reaching a certain level of resilience.
 
-**Outside scope of the project:** This model will only consider resilience as a residual between stressor and mental health outcome. We limit the scope of stressor to Long-term Difficulties Inventory, and the scope of mental disorders to Mini International Neuropsychiatric Interview.
+**Outside scope of the project:** This model will only consider resilience as a residual between stressor and mental health outcome. We limit the scope of stressor to Long-term Difficulties Inventory, and the scope of mental disorders to major depressive disorder and anxiety disorder detected with Mini International Neuropsychiatric Interview.
 
-**Effects:** Unify the cost-effectiveness comparison of mental health promotion approaches on the population level.
+**Effects:** Compare the cost-effectiveness of workplace-based universal mental health promotion programmes in improving resilience and reducing the prevalence of major depressive disorder and anxiety disorder.
 
-**Users:** Subject matter experts in outcome research, health economics researchers, stakeholders in public health interventions.
+**Users:** Subject matter experts in outcome research, health economics researchers, and stakeholders in public health interventions.
 
 **Constraints:** Designing a generalisable scenario-based model is challenging.
 

@@ -1,16 +1,16 @@
 **Project introduction:** Fifty years of research in psychological resilience resulted in various frameworks of how resilience works. In different frameworks, resilience is defined as a moderator and mediator of stressors and psychological disorders, which introduces duality in conceptualizing resilience.
 
-**Research question:** What is the mechanism of action of psychological resilience in relation to stressors and psychological disorders?
+**Research question:** How does resilience act as a moderator in relation with long-term difficulties, i.e., stress, and mental disorders?
 
-**Project impetus:** Psychological resilience has been a hot potato for half a century, and no clear-cut mechanistic framework has been thoroughly developed to encompass all the differences and similarities. A holistic map of psychological resilience is necessary to guide future research.
+**Project impetus:** Psychological resilience has been a hot potato for half a century, and no clear-cut mechanistic framework has been thoroughly developed to encompass all the differences and similarities. A holistic map of how psychological resilience act as a moderator is necessary to guide future research.
 
-**Project objective:** This project aims to provide a scoping review of the mechanism underlying psychological resilience to highlight differences and similarities from various established frameworks.
+**Project objective:** This project aims to provide a scoping review of the mechanism underlying psychological resilience as a moderator between long-term difficulties and mental disorders.
 
-**Project results:** The output of this scoping review is a protocol document and academic manuscript. The protocol document shall describe the procedure of conducting the scoping review to ensure reproducibility. The academic manuscript will highlight scoped conceptual frameworks on resilience in relation to psychological stressors and disorders. Additionally, the academic manuscript will also contain a generalized conceptual framework of psychological resilience research from the past 50 years.
+**Project results:** The output of this scoping review is a protocol document and an academic manuscript. The protocol document shall describe the procedure of conducting the scoping review to ensure reproducibility. The academic manuscript will highlight scoped conceptual frameworks on resilience as a moderator in relation to long-term difficulties and mental disorders.
 
-**Outside scope of the project:** This project will not dive further into psychometric instruments measuring resilience. Any grey literature or academic manuscript without recorded peer review will be discarded.
+**Outside scope of the project:** This project will not dive further into psychometric instruments measuring resilience or the neurobiology of resilience. Any grey literature or academic manuscript without recorded peer review will be discarded.
 
-**Effects:** Clarify controversies in defining psychological resilience mechanism of action.
+**Effects:** Clarify controversies in defining psychological resilience mechanism of moderation. The moderating mechanism of resilience is used as a buffer function in the agent-based model project.
 
 **Users:** Researchers and subject matter experts in social psychology, clinical psychology, and psychiatry who need to determine the scope of psychological resilience they are researching.
 
