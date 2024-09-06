@@ -9,10 +9,10 @@
 <link href="../../../site_libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="../../../site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="../../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.4.553">
+  <meta name="generator" content="quarto-1.5.57">
 
   <meta name="author" content="Aly Lamuri">
-  <title>Nama Kala - Using git in Research</title>
+  <title>Nama Kala – Using git in Research</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -43,7 +43,7 @@
     }
     @media print {
     pre > code.sourceCode { white-space: pre-wrap; }
-    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
     }
     pre.numberSource code
       { counter-reset: source-line 0; }
@@ -71,7 +71,7 @@
     code span.at { color: #657422; } /* Attribute */
     code span.bn { color: #ad0000; } /* BaseN */
     code span.bu { } /* BuiltIn */
-    code span.cf { color: #003b4f; } /* ControlFlow */
+    code span.cf { color: #003b4f; font-weight: bold; } /* ControlFlow */
     code span.ch { color: #20794d; } /* Char */
     code span.cn { color: #8f5902; } /* Constant */
     code span.co { color: #5e5e5e; } /* Comment */
@@ -85,7 +85,7 @@
     code span.fu { color: #4758ab; } /* Function */
     code span.im { color: #00769e; } /* Import */
     code span.in { color: #5e5e5e; } /* Information */
-    code span.kw { color: #003b4f; } /* Keyword */
+    code span.kw { color: #003b4f; font-weight: bold; } /* Keyword */
     code span.op { color: #5e5e5e; } /* Operator */
     code span.ot { color: #003b4f; } /* Other */
     code span.pp { color: #ad0000; } /* Preprocessor */
@@ -467,8 +467,7 @@ Aly Lamuri
 <figcaption>How it actually is</figcaption>
 </figure>
 </div>
-</div>
-</div>
+</div></div>
 <div class="fragment">
 <ul>
 <li>We always make a linear plan</li>
@@ -488,8 +487,7 @@ Aly Lamuri
 <li>Then we go with rounds of revisions</li>
 <li>We end up with multiple drafts</li>
 </ul>
-</div>
-</div>
+</div></div>
 </section>
 <section id="version-control-system-vcs" class="slide level2">
 <h2>Version control system (VCS)</h2>
@@ -513,8 +511,7 @@ Aly Lamuri
 <li>Limited scope of document version management</li>
 <li>Not applicable for code/script</li>
 </ul>
-</div>
-</div>
+</div></div>
 </div>
 </section>
 <section id="an-ideal-vcs-for-researcher" class="slide level2">
@@ -545,8 +542,7 @@ Aly Lamuri
 <figcaption><code>git</code> does this</figcaption>
 </figure>
 </div>
-</div>
-</div>
+</div></div>
 </section></section>
 <section>
 <section id="basics-of-git" class="title-slide slide level1 center">
@@ -605,8 +601,7 @@ Aly Lamuri
 <span id="cb3-5"><a></a><span class="ex">credential.helper=cache</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
-</div>
-</div>
+</div></div>
 </section>
 <section id="cloning-a-repository" class="slide level2 smaller">
 <h2>Cloning a repository</h2>
@@ -632,8 +627,7 @@ Aly Lamuri
 </ul>
 <p><img data-src="fig/git-repo-cloned.png" class="margin-caption"></p>
 </div>
-</div>
-</div>
+</div></div>
 </section>
 <section id="checking-on-the-cloned-repository" class="slide level2">
 <h2>Checking on the cloned repository</h2>
@@ -698,8 +692,7 @@ Aly Lamuri
 <span id="cb9-6"><a></a><span class="ex">*</span> a30c19e Created index page for future collaborative edits</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
-</div>
-</div>
+</div></div>
 </div>
 </section>
 <section id="create-a-file-and-make-some-changes" class="slide level2 smaller">
@@ -804,8 +797,7 @@ Aly Lamuri
 <span id="cb18-9"><a></a><span class="ex">*</span> bb4cc8d Create styles.css and updated README</span>
 <span id="cb18-10"><a></a><span class="ex">*</span> a30c19e Created index page for future collaborative edits</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-</div>
-</div>
+</div></div>
 </section>
 <section id="take-advantage-of-git-and-github" class="slide level2">
 <h2>Take advantage of <code>git</code> and GitHub</h2>
@@ -894,8 +886,7 @@ Aly Lamuri
 <blockquote>
 <p>Version control systems (VCS), which have long been used to maintain code repositories in the software industry, are now finding new applications in science. One such open source VCS, Git, provides a lightweight yet robust framework that is <strong>ideal for managing the full suite of research outputs</strong> such as datasets, statistical code, figures, lab notes, and manuscripts. For individual researchers, Git provides a powerful way to <em>track and compare versions, retrace errors, explore new approaches in a structured manner</em>, while maintaining a full audit trail. For larger <strong>collaborative efforts</strong>, Git and Git hosting services make it possible for everyone to <strong>work asynchronously and merge their contributions at any time, all the while maintaining a complete authorship trail</strong>. In this paper I provide an overview of Git along with use-cases that highlight how this tool can be leveraged to make science more reproducible and transparent, foster new collaborations, and support novel uses.</p>
 </blockquote>
-</div>
-</div>
+</div></div>
 </div>
 <div id="tabset-3-2">
 <div class="columns">
@@ -910,8 +901,7 @@ Aly Lamuri
 <blockquote>
 <p>Computational reproducibility is the ability to obtain identical results from the same data with the same computer code. It is a building block for transparent and cumulative science because it enables the originator and other researchers, on other computers and later in time, to reproduce and thus understand how results came about, while avoiding a variety of errors that may lead to erroneous reporting of statistical and computational results. In this tutorial, we demonstrate how the R package <code>repro</code> supports researchers in creating fully computationally reproducible research projects with tools from the software engineering community. Building upon this notion of fully automated reproducibility, we present several applications including the preregistration of research plans with code (Preregistration as Code, PAC). PAC eschews all ambiguity of traditional preregistration and offers several more advantages. Making technical advancements that serve reproducibility more widely accessible for researchers holds the potential to innovate the research process and to help it become more productive, credible, and reliable.</p>
 </blockquote>
-</div>
-</div>
+</div></div>
 </div>
 <div id="tabset-3-3">
 <div class="columns">
@@ -926,8 +916,7 @@ Aly Lamuri
 <blockquote>
 <p>Researchers in ecology and evolutionary biology are increasingly dependent on computational code to conduct research. Hence, the use of efficient methods to share, reproduce, and collaborate on code as well as document research is fundamental. GitHub is an online, cloud-based service that can help researchers track, organize, discuss, share, and collaborate on software and other materials related to research production, including data, code for analyses, and protocols. Despite these benefits, the use of GitHub in ecology and evolution is not widespread. We outline features ranging from low to high technical difficulty, including storing code, managing projects, coding collaboratively, conducting peer review, writing a manuscript, and using automated and continuous integration to streamline analyses. Given that members of a research team may have different technical skills and responsibilities, we describe how the optimal use of GitHub features may vary among members of a research collaboration.</p>
 </blockquote>
-</div>
-</div>
+</div></div>
 </div>
 </div>
 </div>
@@ -1198,18 +1187,7 @@ Ram, Karthik. 2013. <span>“Git Can Facilitate Greater Reproducibility and Incr
         }
         return false;
       }
-      const clipboard = new window.ClipboardJS('.code-copy-button', {
-        text: function(trigger) {
-          const codeEl = trigger.previousElementSibling.cloneNode(true);
-          for (const childEl of codeEl.children) {
-            if (isCodeAnnotation(childEl)) {
-              childEl.remove();
-            }
-          }
-          return codeEl.innerText;
-        }
-      });
-      clipboard.on('success', function(e) {
+      const onCopySuccess = function(e) {
         // button target
         const button = e.trigger;
         // don't keep focus
@@ -1241,7 +1219,29 @@ Ram, Karthik. 2013. <span>“Git Can Facilitate Greater Reproducibility and Incr
         }, 1000);
         // clear code selection
         e.clearSelection();
+      }
+      const getTextToCopy = function(trigger) {
+          const codeEl = trigger.previousElementSibling.cloneNode(true);
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+      }
+      const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+        text: getTextToCopy
       });
+      clipboard.on('success', onCopySuccess);
+      if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+        // For code content inside modals, clipBoardJS needs to be initialized with a container option
+        // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+        const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+          text: getTextToCopy,
+          container: window.document.getElementById('quarto-embedded-source-code-modal')
+        });
+        clipboardModal.on('success', onCopySuccess);
+      }
         var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
         var mailtoRegex = new RegExp(/^mailto:/);
           var filterRegex = new RegExp("https:\/\/namakala\.github\.io\/");
@@ -1249,7 +1249,7 @@ Ram, Karthik. 2013. <span>“Git Can Facilitate Greater Reproducibility and Incr
             return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
         }
         // Inspect non-navigation links and adorn them if external
-     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
         for (var i=0; i<links.length; i++) {
           const link = links[i];
           if (!isInternal(link.href)) {
