@@ -12,13 +12,7 @@ options(knitr.kable.NA = "")
 
 ```
 
-:::{.content-visible when-profile="web"}
 # Methods
-:::
-
-:::{.content-hidden when-profile="web"}
-# METHODS
-:::
 
 ::: {.content-hidden unless-profile=rug}
 

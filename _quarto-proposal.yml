@@ -3,7 +3,7 @@ project:
 
 book:
   title: >
-    Mental Resilience as a Determinant of Burnout, Depression, and Anxiety amidst
+    Mental Resilience as a Moderator of Burnout, Depression, and Anxiety amidst
     Adversity
   sidebar:
     title: Policy and Resilience
@@ -52,5 +52,5 @@ supervisor:
 - "Prof. dr. Mondastri Korib Sudaryo, MSc, DSc"
 - "Prof. Talitha Feenstra"
 version:
-  no: 4
-  date: 13-12-2023
+  no: 5
+  date: 23-06-2024

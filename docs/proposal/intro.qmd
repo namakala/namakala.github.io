@@ -3,13 +3,7 @@ citation:
   doi: 10.53962/jn77-mprt
 ---
 
-:::{.content-visible when-profile="web"}
 # Introduction
-:::
-
-:::{.content-hidden when-profile="web"}
-# INTRODUCTION
-:::
 
 \pagenumbering{arabic}
 

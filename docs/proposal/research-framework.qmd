@@ -10,13 +10,7 @@ pkgs_load <- sapply(pkgs, library, character.only = TRUE)
 
 ```
 
-:::{.content-visible when-profile="web"}
 # Research Framework
-:::
-
-:::{.content-hidden when-profile="web"}
-# RESEARCH FRAMEWORK
-:::
 
 ## Conceptual Framework \label{concept} {#sec-concept}
 

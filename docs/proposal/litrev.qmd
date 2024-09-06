@@ -1,10 +1,4 @@
-:::{.content-visible when-profile="web"}
 # Literature Review
-:::
-
-:::{.content-hidden when-profile="web"}
-# LITERATURE REVIEW
-:::
 
 This chapter focuses on elaborating theories and findings pertaining to resilience and psychological outcomes. @sec-motivation elaborates the motivation behind this research, including the economic evaluation of mental disorders. @sec-attachment summarizes child-parent attachments as proposed by @bowlby1973attachment and @ainsworth1979infant. @sec-resilience explains the scope and context of mental resilience in this research. @sec-neurobio-resilience outlines the underlying neurobiological mechanism in psychological resilience. @sec-stressor defines a set of stressors investigated in this research, which will be the generic precipitators of maladaptive behavior. @sec-psych justifies the psychological outcomes.
 
