@@ -70,10 +70,16 @@ alternative hypotheses for each topic of interest.
 
 ::: {.content-visible when-profile="proposal"}
 
-1. What is the role of resilience in the emergence of psychological outcomes?  
-   *H~1~*: Resilience acts as a moderator of stressors and psychological outcomes
-1. What is the functional state of resilience in a cross-sectional setting?  
-   *H~1~*: The state resilience is a buffer reflected as a reactivity against stressors
+1. What is the association between outcome-based resilience, measured via residual approach, and state resilience, measured with CD-RISC?  
+   *H~1~: Outcome-based resilience is positively correlated with the state resilience.*
+1. What is the association between perceived stress and each mental health outcome: depression, anxiety, and burnout?
+   *H~1~: Perceived stress is linearly associated with each mental health outcome.*
+1. Does state resilience moderate the association between stress and depression?
+   *H~1~: State resilience moderate the association between stress and depression, such that the linear relationship between stress and depression is weaker among individuals with higher state resilience.*
+1. Does state resilience moderate the association between stress and anxiety?
+   *H~1~: State resilience moderate the association between stress and anxiety, such that the linear relationship between stress and anxiety is weaker among individuals with higher state resilience.*
+1. Does state resilience moderate the association between stress and burnout?
+   *H~1~: State resilience moderate the association between stress and burnout*, such that the linear relationship between stress and burnout is weaker among individuals with higher state resilience.
 
 :::
 

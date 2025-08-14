@@ -421,25 +421,45 @@ $title.tex()$
 
 \begin{titlepage}
 \begin{center}
-\textbf{RESEARCH PROPOSAL}
-\vfill
-$if(logo)$\includegraphics[width=0.3\textwidth]{$logo$} \\
-\vspace{3em}$endif$
-$if(title)$
-\textbf{\uppercase{$title$}}\\
-\vspace{1em}
+$if(logo)$
+  \includegraphics[width=0.25\textwidth]{$logo$} \\
 $endif$
-$if(author)$$for(author)$
-$author$\\
-$endfor$$endif$
+\vfill
+$if(title)$
+  \textbf{\uppercase{$title$}} \\
+  \vfill
+$endif$
+$if(author)$
+  \textbf{Drafted By:} \\
+  \vspace{1em}
+    $for(author)$
+      $author$ \\
+    $endfor$
+  \vspace{3em}
+$endif$
+$if(npm)$
+  \textbf{NPM} \\
+  \vspace{1em}
+  $npm$ \\
+  \vspace{3em}
+$endif$
 $if(supervisor)$
-\textbf{Supervisor:}\\
+\textbf{Supervisory Team:} \\
+\vspace{1em}
   $for(supervisor)$
-  $supervisor$\\
+    \textbf{$supervisor$} \\
   $endfor$
 $endif$
 \vfill
-\textbf{\uppercase{Universitas Indonesia}}
+$if(program)$
+  \textbf{\uppercase{$program$}} \\
+  \vspace{1.5em}
+  \textbf{\uppercase{$faculty$}} \\
+  \vspace{1.5em}
+  \textbf{\uppercase{$city-date$}}
+$else$
+  \textbf{\uppercase{Universitas Indonesia}}
+$endif$
 \end{center}
 \end{titlepage}
 

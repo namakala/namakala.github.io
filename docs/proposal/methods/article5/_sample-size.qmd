@@ -1,14 +1,33 @@
-The required sample for a survey is estimable following various methods. As proposed by @cochran1977sampling, two factors play an important role in determining the sample size, namely the alpha level and the acceptable level or error. @kotrlik2001organizational summarized several ways of calculating the required sample size, where equation \ref{eq-sample1} and \ref{eq-sample2} excerpted the calculation for continuous variable.
+### Notation and Definitions
+
+* $n$: Required sample size
+* $N$: Population size
+* $\alpha$: Two-sided Type I error probability, set to $\alpha = 0.05$
+* $1-\beta$: Statistical power, set to 0.80
+* $Z_{1-\alpha/2}$: Standard normal critical value for two-sided $\alpha$ (for $\alpha=0.05$, $Z_{1-\alpha/2}=1.96$)
+* $Z_{1-\beta}$: Standard normal quantile for power (for 80% power $Z_{1-\beta}\approx 0.842$)
+* $r$: Pearson correlation coefficient
+* $\operatorname{atanh}(r)$: Fisher $z$ hyperbolic arctangent transformation of $r$
+* $p$: Prevalence (proportion) of an outcome
+* $E$: Acceptable margin of error for a proportion expressed in proportion units
+* $R^2$: Coefficient of determination from regression; $R^2_{\text{incr}}$ denotes incremental $R^2$ attributable to a predictor or interaction
+* $f^2$: Cohen’s effect-size index for multiple regression; defined as $f^2 = \dfrac{R^2}{1-R^2}$ or, for an incremental effect, $f^2 = \dfrac{R^2_{\text{incr}}}{1-R^2_{\text{full}}}$
+* $k$: Number of predictors in the full regression model
+* $\text{DEFF}$: Design effect; multiplicative factor that inflates variance due to sampling design, e.g., by clustering or weighting
+
+### Sample Size for Continuous Variables
+
+The required sample for a survey is estimable following various methods. As proposed by @cochran1977sampling, two factors play an important role in determining the sample size, namely the alpha level and the acceptable level or error. @kotrlik2001organizational summarized several ways of calculating the required sample size, where equation \ref{eq-sample1} excerpted the calculation for continuous variable.
 
 \begin{align}
-n_0 &= \frac{t^2 \cdot s^2}{d^2} \label{eq-sample1} \\
-n   &= \frac{n_0}{1 + \frac{n_0}{N}} \label{eq-sample2}
+n_0 &= \frac{t^2 \cdot s^2}{d^2} \\
+n   &= \frac{n_0}{1 + \frac{n_0}{N}} \label{eq-sample1}
 \end{align}
 
-Denoted in Equation \ref{eq-sample1}, $n$ is the estimated minimum number of samples; $t$ is the value acquired from T distribution, where $t$ = 1.96 when $\alpha$ = 0.05; $s$ is the estimated standard deviation of responses in the population; $d$ is the acceptable margin of error mean estimation. Computing $s$ requires dividing the number of inclusive scale in a questionnaire response by 6, the total number of deviation in a normal distribution. In case we are using a 7-point scale, the value of $s$ would be $\frac{7}{6}$ = 1.167. Lastly, the acceptable margin of error for mean estimation $d$ is the product of points on scale and the acceptable margin of error, conveniently set as 7 $\cdot$ 0.3 = 0.21.  Equation \ref{eq-sample2} is rather straightforward, where the newly introduced variable is $N$ = 10,562,088, representing the total number of population in Jakarta. Plugging in all the numbers into equation resulted in Equation \ref{eq-sample3}, where the minimum number of samples should be 119.
+Denoted in Equation \ref{eq-sample1}, $n$ is the estimated minimum number of samples; $t$ is the value acquired from T distribution, where $t$ = 1.96 when $\alpha$ = 0.05; $s$ is the estimated standard deviation of responses in the population; $d$ is the acceptable margin of error mean estimation. Computing $s$ requires dividing the number of inclusive scale in a questionnaire response by 6, the total number of deviation in a normal distribution. In case we are using a 7-point scale, the value of $s$ would be $\frac{7}{6}$ = 1.167. Lastly, the acceptable margin of error for mean estimation $d$ is the product of points on scale and the acceptable margin of error, conveniently set as 7 $\cdot$ 0.03 = 0.21.  Equation \ref{eq-sample2} is rather straightforward, where the newly introduced variable is $N$ = 10,562,088, representing the total number of population in Jakarta. Plugging in all the numbers into equation resulted in Equation \ref{eq-sample2}, where the minimum number of samples should be 119.
 
 \begin{align}
-n_0 &= \frac{1.96^2 \cdot 1.167^2}{0.21^2} \label{eq-sample3} \\
+n_0 &= \frac{1.96^2 \cdot 1.167^2}{0.21^2} \label{eq-sample2} \\
     &= 118.64 \notag \\
     &\approx 119 \notag \\
 n   &= \frac{119}{1 + \frac{119}{10,562,088}} \notag \\
@@ -16,13 +35,72 @@ n   &= \frac{119}{1 + \frac{119}{10,562,088}} \notag \\
     &\approx 119 \notag
 \end{align}
 
-On the other hand, sample size is also estimable by following equation \ref{eq-sample4}. In this equation, $p$ represents the proportion of an event; $z$ is a Z distribution corresponding to the $\alpha$ value; $E$ is the expected maximum error, which is conveniently agreed to 3%. Following this formula, it is possible to integrate disease prevalence as a proportion $p$ when calculating the required sample size. According to @GBD2022, the global prevalence of depression and anxiety in 2019 was 3,440 and 3,779 per 100,000 people, respectively. Thus, the proportion for depression $p_D$ and anxiety $p_A$ are 0.034 and 0.038. By choosing the highest proportion, we can estimate the required sample size as indicated in Equation \ref{eq-sample5}.
+### Sample Size for Disease Prevalence
+
+On the other hand, sample size is also estimable by following equation \ref{eq-sample3}. In this equation, $p$ represents the proportion of an event; $z$ is a Z distribution corresponding to the $\alpha$ value; $E$ is the expected maximum error, which is conveniently agreed to 3%. Following this formula, it is possible to integrate disease prevalence as a proportion $p$ when calculating the required sample size. According to @GBD2022, the global prevalence of depression and anxiety in 2019 was 3,440 and 3,779 per 100,000 people, respectively. Thus, the proportion for depression $p_D$ and anxiety $p_A$ are 0.034 and 0.038.
 
 \begin{align}
-n &= \frac{p \cdot (1 - p) \cdot z^2}{E^2} \label{eq-sample4} \\
-  &= \frac{0.062 \cdot (1 - 0.062) \cdot 1.96^2}{0.03^2} \label{eq-sample5} \\
-  &\approx 250 \notag
+n    &= \frac{p \cdot (1 - p) \cdot z^2}{E^2} \label{eq-sample3} \\
+n_D  &= \frac{0.034 \cdot (1 - 0.034) \cdot 1.96^2}{0.03^2} \notag \\
+     &\approx 141 \notag \\
+n_A  &= \frac{0.038 \cdot (1 - 0.038) \cdot 1.96^2}{0.03^2} \notag \\
+     &\approx 157 \notag
 \end{align}
 
-Having two sample size estimations, i.e. 119 and 250, the higher number of minimum sample is preferred. Initially, a pilot study according to @Cohen2013 will be commenced to acquire 250 individuals from the general population. Then, the required sample size is recalculated with Monte-Carlo simulation using the pilot data [@Green2016].
+### Sample Size for Correlation Coefficient
 
+For hypothesis 1, we will test the correlation between outcome-based resilience and state resilience. For a two-tailed test of Pearson's $r$, @newman2013designing outlined the sample size calculation as:
+
+\begin{align}
+n &= \frac{(Z_{1-\alpha/2} + Z_{1-\beta})^2}{r^2} + 3 \label{eq-sample4} \\
+\text{For } r = 0.15: \quad n &= \frac{(1.96 + 0.84)^2}{0.15^2} + 3 \notag \\
+  &= \frac{(2.80)^2}{0.0225} + 3 \notag \\
+  &= \frac{7.84}{0.0225} + 3 \notag \\
+  &= 348.44 + 3 \notag \\
+  &\approx 352 \text{ (rounded to nearest integer)} \notag \\
+\text{For } r = 0.20: \quad n &= \frac{(2.80)^2}{0.20^2} + 3 \notag \\
+  &= \frac{7.84}{0.04} + 3 \notag \\
+  &= 196 + 3 \notag \\
+  &\approx 199 \notag \\
+\text{For } r = 0.25: \quad n &= \frac{7.84}{0.0625} + 3 \notag \\
+  &= 125.44 + 3 \notag \\
+  &\approx 129 \notag
+\end{align}
+
+### Sample Size for Multiple Regression
+
+Hypothesis 2 will be tested with regression models to examine associations between perceived stress and mental health outcomes using @Cohen2013 formula for multiple regression:
+
+\begin{align}
+n   &= \frac{(Z_{1 - \alpha/2} + Z_{1 - \beta})^2}{f^2} + k + 1 \label{eq-sample5} \\
+f^2 &= \frac{R^2}{1-R^2} \notag \\
+\text{For } f^2 &= 0.02, k \approx 6-8: \quad n \approx 400 \notag \\
+\text{For } f^2 &= 0.05, k \approx 6-8: \quad n \approx 165 \notag
+\end{align}
+
+### Sample Size for Moderation Analysis
+
+For hypothesis 3-5, the moderation effect is typically represented as an interaction term in regression. According to @aiken1991multiple, effect sizes for interactions are often small with $f^2 \approx 0.02$. The calculation follows \ref{eq-sample5}, but $k$ includes the main effects plus the interaction term and $f^2$ is based on the incremental $R^2$ from adding the interaction term.
+
+\begin{align}
+\text{For } f^2 = 0.01, k \approx 8-10: \quad n &\approx 794 \notag \\
+\text{For } f^2 = 0.02, k \approx 8-10: \quad n &\approx 402 \notag
+\end{align}
+
+### Final Sample Size
+
+| Aim                                       |      Plausible effect / $p$ | 80% power $n$ |
+| ----------------------------------------- | --------------------------: | ------------: |
+| Hypothesis 1: Correlation                 |                    $r=0.15$ |           352 |
+|                                           |                    $r=0.20$ |           199 |
+|                                           |                    $r=0.25$ |           129 |
+| Hypothesis 2: Regression main effect      |  $f^2=0.02,\;k\approx6{-}8$ |         \~400 |
+|                                           |  $f^2=0.05,\;k\approx6{-}8$ |         \~165 |
+| Hypotheses 3-5: Interaction (moderation)  | $f^2=0.01,\;k\approx8{-}10$ |         \~794 |
+|                                           | $f^2=0.02,\;k\approx8{-}10$ |         \~402 |
+| Prevalence: Depression (p=0.034)          |                    $E=0.03$ |           141 |
+|                                           |                    $E=0.02$ |           316 |
+| Prevalence: Anxiety (p=0.038)             |                    $E=0.03$ |           157 |
+|                                           |                    $E=0.02$ |           352 |
+
+Having multiple sample size estimations, the higher number of minimum sample is preferred. To account for non-probability sampling and post-stratification in an online survey, the final sample size must be multiplied by a $DEFF$ variable. $DEFF$ indicates the design effect, where commonly agreed in the range of 1.5-2 in online survey [@lohr2021sampling]. The final sample size is $794 \times 2 = 1,592$ samples. Initially, a pilot study according to @Cohen2013 will be commenced to acquire 250 individuals from the general population. Then, the required sample size is recalculated with Monte-Carlo simulation using the pilot data [@Green2016].

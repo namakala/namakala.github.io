@@ -3,8 +3,7 @@ project:
 
 book:
   title: >
-    Mental Resilience as a Moderator of Burnout, Depression, and Anxiety amidst
-    Adversity
+    Evaluating the Moderating Effect of Resilience to Buffer the Impact of Stress on Depression, Anxiety, and Burnout
   sidebar:
     title: Policy and Resilience
     style: docked
@@ -33,7 +32,7 @@ format:
     linestretch: 1.5
     pdf-engine: xelatex
     template: style/ui.tex
-    documentclass: book
+    documentclass: report
     include-in-header:
       text: |
         \usepackage{longtable}
@@ -48,9 +47,13 @@ format:
         \newcommand{\elandscape}{\end{landscape}}
 
 logo: fig/logo-ui.png
+npm: 2106682703
+program: "Community Epidemiology Doctoral Program"
+faculty: "Public Health Faculty of the University of Indonesia"
+city-date: "Groningen, 14 August 2025"
 supervisor:
-- "Prof. dr. Mondastri Korib Sudaryo, MSc, DSc"
+- "Prof. dr. Mondastri Korib Sudaryo, M.S., D.Sc."
 - "Prof. Talitha Feenstra"
 version:
-  no: 5
-  date: 23-06-2024
+  no: 6
+  date: 14-08-2025
