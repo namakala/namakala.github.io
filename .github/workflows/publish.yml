@@ -1,4 +1,4 @@
-nameAdapted from https://quarto.org/docs/publishing/github-pages.html
+# Adapted from https://quarto.org/docs/publishing/github-pages.html
 on:
   workflow_dispatch:
   push:
