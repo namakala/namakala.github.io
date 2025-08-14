@@ -179,6 +179,7 @@ External factors of ongoing burnout:
 
 ```{r fig-burnout-type}
 #| fig-cap: The type of burnout, as outlined by @Kaschka2011
+#| fig-align: "center"
 
 knitr::include_graphics("../../fig/type-burnout.png")
 
@@ -196,6 +197,7 @@ Both anxious and avoidant styles signify the failure of seeking closeness to eas
 
 ```{r fig-attach-activ}
 #| fig-cap: Activation and dynamics of the attachment system proposed by @mikulincer2002activation
+#| fig-align: "center"
 
 knitr::include_graphics("../../fig/attachment-activation-mikulincer.png")
 

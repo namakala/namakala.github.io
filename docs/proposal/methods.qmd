@@ -14,26 +14,6 @@ options(knitr.kable.NA = "")
 
 # Methods
 
-::: {.content-hidden unless-profile=rug}
-
-This chapter briefly describes the general approach for each proposed investigation, starting from section [-@sec-scoping.rev] to [-@sec-survey].  Section [-@sec-scoping.rev] explains the methods on conducting a scoping review to understand how resilience is related to mental health. Section [-@sec-med] will describes the approach on understanding the trend of medication uses.  Section [-@sec-psych.method] elaborates the methods on exploring mental health profiles before and during the pandemic. Section [-@sec-cost] explains the methods on conducting cost-effectiveness analysis. Lastly, section [-@sec-survey] describes the plan on conducting a mental health survey.
-
-### Data Source {-}
-
-The data in secondary analyses is requested through Lifelines, IADB, BPJS, and Pharmlines. IADB and BPJS data are used in section [-@sec-med]. Lifelines data is used in section [-@sec-psych.method]. Parameters gained from all data is used in section [-@sec-cost] From the Lifelines data base, we are interested to query the questionnaire data from the baseline assessment 1A, follow-up questionnaire 1B, follow-up questionnaire 1C, second assessment 2A, and follow-up questionnaire 2B.
-
-{{< include methods/_article1.qmd >}}
-
-{{< include methods/_article2.qmd >}}
-
-{{< include methods/_article3.qmd >}}
-
-{{< include methods/_article4.qmd >}}
-
-{{< include methods/_article5-rug.qmd >}}
-
-:::
-
 {{< include methods/_article5-ui.qmd >}}
 
 :::{.content-hidden unless-profile="web"}

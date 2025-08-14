@@ -29,6 +29,7 @@ To illustrate these concepts, @fig-define-resilience presents a hypothetical mod
 #| label: fig-define-resilience
 #| fig.cap: "Theoretical conceptualization on how resilience affects the well-being trajectory over time"
 #| out.width: "80%"
+#| fig-align: "center"
 
 knitr::include_graphics("../../fig/resilience-define-resilience.drawio.png")
 
@@ -48,6 +49,7 @@ Beyond secure relationships or moments of happiness, having a clear and enduring
 #| label: fig-seven-pillars
 #| fig.cap: "Seven pillars of a resilient state, as adapted from @precious2019mental also @rutten2013resilience"
 #| out.width: "90%"
+#| fig-align: "center"
 
 knitr::include_graphics("../../fig/resilience-seven-pillars.drawio.png")
 

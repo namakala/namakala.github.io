@@ -23,6 +23,7 @@ pkgs_load <- sapply(pkgs, library, character.only = TRUE)
 ```{r conceptual.framework}
 #| label: fig-concept
 #| fig.cap: Conceptual framework of how stressors are moderated by mental resilience in affecting the psychological outcome
+#| fig-align: "center"
 #| out.width: "90%"
 
 knitr::include_graphics("../../fig/resilience-conceptual-framework.drawio.png")
