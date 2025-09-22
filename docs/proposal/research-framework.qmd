@@ -72,13 +72,13 @@ alternative hypotheses for each topic of interest.
 
 1. What is the association between outcome-based resilience, measured via residual approach, and state resilience, measured with CD-RISC?  
    *H~1~: Outcome-based resilience is positively correlated with the state resilience.*
-1. What is the association between perceived stress and each mental health outcome: depression, anxiety, and burnout?
+1. What is the association between perceived stress and each mental health outcome: depression, anxiety, and burnout?  
    *H~1~: Perceived stress is linearly associated with each mental health outcome.*
-1. Does state resilience moderate the association between stress and depression?
+1. Does state resilience moderate the association between stress and depression?  
    *H~1~: State resilience moderate the association between stress and depression, such that the linear relationship between stress and depression is weaker among individuals with higher state resilience.*
-1. Does state resilience moderate the association between stress and anxiety?
+1. Does state resilience moderate the association between stress and anxiety?   
    *H~1~: State resilience moderate the association between stress and anxiety, such that the linear relationship between stress and anxiety is weaker among individuals with higher state resilience.*
-1. Does state resilience moderate the association between stress and burnout?
+1. Does state resilience moderate the association between stress and burnout?  
    *H~1~: State resilience moderate the association between stress and burnout*, such that the linear relationship between stress and burnout is weaker among individuals with higher state resilience.
 
 :::
