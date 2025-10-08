@@ -33,20 +33,23 @@ knitr::include_graphics("../../fig/resilience-conceptual-framework.drawio.png")
 ## Operational Definition
 
 ```{r tbl-op-def}
+#| tbl-cap: Operational definition of research variables
 
-yaml::read_yaml("op-definition.yml") %>%
-  {Reduce(\(x, y) rbind(x, y), .)} %>%
-  data.frame() %>%
-  tibble::tibble() %>%
-  knitr::kable()
+yaml::read_yaml("op-definition.yml") |>
+  dplyr::bind_rows() |>
+  knitr::kable(format = "latex", booktabs = TRUE, longtable = TRUE) |>
+  kableExtra::kable_styling(latex_options = c("repeat_header")) |>
+  kableExtra::column_spec(2, "2.5cm") |>
+  kableExtra::column_spec(3, "5cm") |>
+  kableExtra::column_spec(4, "5cm") |>
+  kableExtra::collapse_rows(1:2, latex_hline = "major", row_group_label_position = "stack")
 
 ```
 
 ## Research Hypothesis
 
 The proposed research encompasses three main topics of interest, and the
-hypotheses are ordered accordingly. For brevity, this section only enlist the
-alternative hypotheses for each topic of interest.
+hypotheses are ordered accordingly.
 
 ::: {.content-visible when-profile="rug"}
 
@@ -77,15 +80,15 @@ alternative hypotheses for each topic of interest.
    - *H~02a~:* There is no significant association between perceived stress and depression.
    - *H~12a~:* Perceived stress is positively associated with depression.
    - *H~02b~:* There is no significant association between perceived stress and anxiety.
-   - *H~12b~:* Perceived stress is positively associated with anxiety.  
-   - *H~02c~:* There is no significant association between perceived stress and burnout.  
+   - *H~12b~:* Perceived stress is positively associated with anxiety.
+   - *H~02c~:* There is no significant association between perceived stress and burnout.
    - *H~12c~:* Perceived stress is positively associated with burnout.
 1. Does state resilience moderate the association between stress and each mental health outcome: depression, anxiety, and burnout?  
-   - *H~03a~:* State resilience does not moderate the relationship between perceived stress and depression. 
-   - *H~13a~:* State resilience moderates the relationship between perceived stress and depression, such that the positive association between stress and depression is weaker among individuals with higher state resilience.  
-   - *H~03b~:* State resilience does not moderate the relationship between perceived stress and anxiety.  
-   - *H~13b~:* State resilience moderates the relationship between perceived stress and anxiety, such that the positive association between stress and anxiety is weaker among individuals with higher state resilience.  
-   - *H~03c~:* State resilience does not moderate the relationship between perceived stress and burnout.  
+   - *H~03a~:* State resilience does not moderate the relationship between perceived stress and depression.
+   - *H~13a~:* State resilience moderates the relationship between perceived stress and depression, such that the positive association between stress and depression is weaker among individuals with higher state resilience.
+   - *H~03b~:* State resilience does not moderate the relationship between perceived stress and anxiety.
+   - *H~13b~:* State resilience moderates the relationship between perceived stress and anxiety, such that the positive association between stress and anxiety is weaker among individuals with higher state resilience.
+   - *H~03c~:* State resilience does not moderate the relationship between perceived stress and burnout.
    - *H~13c~:* State resilience moderates the relationship between perceived stress and burnout, such that the positive association between stress and burnout is weaker among individuals with higher state resilience.
 
 :::
