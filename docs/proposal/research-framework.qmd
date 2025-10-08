@@ -44,7 +44,7 @@ yaml::read_yaml("op-definition.yml") %>%
 
 ## Research Hypothesis
 
-The proposed research encompasses five main topics of interest, and the
+The proposed research encompasses three main topics of interest, and the
 hypotheses are ordered accordingly. For brevity, this section only enlist the
 alternative hypotheses for each topic of interest.
 
@@ -71,15 +71,22 @@ alternative hypotheses for each topic of interest.
 ::: {.content-visible when-profile="proposal"}
 
 1. What is the association between outcome-based resilience, measured via residual approach, and state resilience, measured with CD-RISC?  
-   *H~1~: Outcome-based resilience is positively correlated with the state resilience.*
+   - *H~01~:* There is no significant association between outcome-based resilience and state resilience.
+   - *H~11~:* Outcome-based resilience is positively correlated with state resilience.
 1. What is the association between perceived stress and each mental health outcome: depression, anxiety, and burnout?  
-   *H~1~: Perceived stress is linearly associated with each mental health outcome.*
-1. Does state resilience moderate the association between stress and depression?  
-   *H~1~: State resilience moderate the association between stress and depression, such that the linear relationship between stress and depression is weaker among individuals with higher state resilience.*
-1. Does state resilience moderate the association between stress and anxiety?   
-   *H~1~: State resilience moderate the association between stress and anxiety, such that the linear relationship between stress and anxiety is weaker among individuals with higher state resilience.*
-1. Does state resilience moderate the association between stress and burnout?  
-   *H~1~: State resilience moderate the association between stress and burnout*, such that the linear relationship between stress and burnout is weaker among individuals with higher state resilience.
+   - *H~02a~:* There is no significant association between perceived stress and depression.
+   - *H~12a~:* Perceived stress is positively associated with depression.
+   - *H~02b~:* There is no significant association between perceived stress and anxiety.
+   - *H~12b~:* Perceived stress is positively associated with anxiety.  
+   - *H~02c~:* There is no significant association between perceived stress and burnout.  
+   - *H~12c~:* Perceived stress is positively associated with burnout.
+1. Does state resilience moderate the association between stress and each mental health outcome: depression, anxiety, and burnout?  
+   - *H~03a~:* State resilience does not moderate the relationship between perceived stress and depression. 
+   - *H~13a~:* State resilience moderates the relationship between perceived stress and depression, such that the positive association between stress and depression is weaker among individuals with higher state resilience.  
+   - *H~03b~:* State resilience does not moderate the relationship between perceived stress and anxiety.  
+   - *H~13b~:* State resilience moderates the relationship between perceived stress and anxiety, such that the positive association between stress and anxiety is weaker among individuals with higher state resilience.  
+   - *H~03c~:* State resilience does not moderate the relationship between perceived stress and burnout.  
+   - *H~13c~:* State resilience moderates the relationship between perceived stress and burnout, such that the positive association between stress and burnout is weaker among individuals with higher state resilience.
 
 :::
 
