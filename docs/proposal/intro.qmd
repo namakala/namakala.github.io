@@ -111,9 +111,7 @@ This research is primarily concerned with examining how variation in resilience 
 
 1. What is the association between outcome-based resilience, measured via residual approach, and state resilience, measured with CD-RISC?
 1. What is the association between perceived stress and each mental health outcome: depression, anxiety, and burnout?
-1. Does state resilience moderate the association between stress and depression?
-1. Does state resilience moderate the association between stress and anxiety?
-1. Does state resilience moderate the association between stress and burnout?
+1. Does state resilience moderate the association between stress and each mental health outcome: depression, anxiety, and burnout?
 
 :::
 
@@ -132,14 +130,14 @@ The general objectives of this research is as a proof of concept regarding the u
 ### Specific Objectives
 
 
-This research poses five specific objectives, each is focused as a separate
+This research poses three specific objectives, each is focused as a separate
 investigation:
 
-1. Measure the distribution of state resilience in the sampled Indonesian population using a validated instrument.
-1. Derive outcome-based resilience scores using the residual approach.
-1. Estimate the association between perceived stress and mental health outcomes, namely, depression, anxiety, and burnout.
-1. Evaluate whether state resilience moderates the association between perceived stress and each mental health outcome.
-1. Compare state resilience and outcome-based resilience to assess convergent or divergent validity.
+1. To examine the relationship between outcome-based and state resilience in order to assess their convergent and divergent validity.  
+   - Measure the distribution of state resilience in the sampled Indonesian population using a validated instrument.  
+   - Derive outcome-based resilience scores using the residual approach.
+1. To estimate the association between perceived stress and each mental health outcome: depression, anxiety, and burnout.
+1. To evaluate whether state resilience moderates the association between perceived stress and each mental health outcome: depression, anxiety, and burnout.
 
 ::: {.content-visible when-profile="rug"}
 
