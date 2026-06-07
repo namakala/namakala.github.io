@@ -1,60 +1,173 @@
-## Study Design
+## Research Approach
+
+This study employed a mixed-methods design that combined quantitative and qualitative approaches to provide a comprehensive understanding of stress, resilience, and mental health outcomes. The quantitative component aimed to evaluate these constructs through an online survey, which enabled efficient cross-sectional data collection from a broad participant pool. However, the use of a non-random sampling strategy inherent in internet-based surveys limits the generalizability and interpretability of the findings. To address this limitation and capture the complexity of participants’ experiences, a qualitative component was incorporated. The qualitative approach was designed to explore in depth how stress, mental health outcomes, and resilience are interrelated, thereby enriching and contextualizing the quantitative results.
+
+## Quantitative Approach
+
+The quantitative approach was designed to quantify the levels of stress, depression, anxiety, and burnout in the study population before determining outcome-oriented resilience. Measuring these variables allows for a systematic examination of how stress-related mental health outcomes interact with resilience as a moderating factor. Although resilience has been conceptualized as a dynamic capacity shaped by biological, psychological, and social mechanisms, empirical evidence linking measured (state) resilience and outcome-oriented resilience remains limited, particularly in Indonesia. Prior studies have documented the high prevalence of stress and depressive symptoms among Indonesian adults but have rarely investigated the statistical association between resilience and mental health outcomes. This quantitative design thus provides essential baseline evidence for understanding the buffering role of resilience against stress-induced psychological distress. The results from this component also serve as the empirical foundation for subsequent qualitative exploration of the interconnections among stress, resilience, and mental health.
+
+### Study Design
 
 {{< include methods/article5/_study-design.qmd >}}
 
-## Location and Time
+### Location and Time
 
 {{< include methods/article5/_location-time.qmd >}}
 
-## Population and Sample
+### Population and Sample
 
-### Research Population
+#### Research Population
 
 {{< include methods/article5/_research-population.qmd >}}
 
-### Research Sample
+#### Research Sample
 
 {{< include methods/article5/_research-sample.qmd >}}
 
-### Inclusion and Exclusion Criteria {-}
+#### Inclusion and Exclusion Criteria
 
-#### Inclusion Criteria {-}
+##### Inclusion Criteria
 
 {{< include methods/article5/_inclusion.qmd >}}
 
-#### Exclusion Criteria {-}
+##### Exclusion Criteria
 
 {{< include methods/article5/_exclusion.qmd >}}
 
-## Sample Size
+### Sample Size
 
 {{< include methods/article5/_sample-size.qmd >}}
 
-## Data Collection
+### Data Collection
 
 {{< include methods/article5/_data-collection.qmd >}}
 
-## Data Processing {#sec-dt-process}
+### Data Processing {#sec-dt-process}
 
 {{< include methods/article5/_data-processing.qmd >}}
 
-## Data Analysis
+### Data Analysis
 
 {{< include methods/article5/_data-analysis.qmd >}}
 
-### Univariate Data Analysis
+#### Univariate Data Analysis
 
 {{< include methods/article5/_univariate.qmd >}}
 
-### Bivariate Data Analysis
+#### Bivariate Data Analysis
 
 {{< include methods/article5/_bivariate.qmd >}}
 
-### Multivariable Data Analysis
+#### Multivariable Data Analysis
 
 {{< include methods/article5/_multivariable.qmd >}}
 
-### Dummy Table {-}
+#### Dummy Table {-}
 
 {{< include methods/article5/_dummy-table.qmd >}}
 
+## Qualitative Approach
+
+The qualitative component aimed to capture how individuals conceptualize resilience and identify the strategies they use to maintain or strengthen it. The inclusion of both professional and lay perspectives was intended to provide a broader understanding of resilience across different social and occupational contexts. By emphasizing participants’ subjective experiences, the qualitative approach complements the quantitative analysis, offering deeper insight into the processes through which resilience interacts with stress and mental health outcomes.
+
+### Study Design
+
+The qualitative component of this study employed a phenomenological design within an explanatory sequential mixed-methods framework. Phenomenology was chosen to explore and understand participants’ lived experiences, focusing on how individuals perceive and experience resilience, stress, and mental health outcomes. This design enabled the study to capture the depth and complexity of participants’ subjective experiences, providing insights that complemented and contextualized the preceding quantitative findings.
+
+Qualitative data were collected through semi-structured individual interviews with two distinct participant groups. The first group consisted of health practitioners (doctors, psychiatrists, clinical psychologists) and policymakers involved in mental health policy or program implementation. The second group included lay individuals from non-health professional backgrounds, providing broader perspectives on resilience. All interviews were conducted online, audio-recorded, transcribed verbatim, and analyzed using a thematic analysis approach to identify recurrent patterns and themes across participant narratives.
+
+### Location and Time
+
+The qualitative component of the study was conducted online, allowing participants to join remotely from various locations. Participants were invited from several academic and governmental institutions in Indonesia, including the University of Indonesia, Padjadjaran University, Airlangga University, the Ministry of Health of the Republic of Indonesia, and the Ministry of Manpower of the Republic of Indonesia. Data collection took place over a two-month period, from January to February 2025.
+
+### Population and Sample
+
+#### Research Population
+
+The study targeted two distinct populations. The first population consisted of health practitioners and policymakers involved in mental health policy, program implementation, or clinical practice in Indonesia. The second population comprised lay individuals with relevant experience in coping with stress and mental health challenges.
+
+#### Research Sample
+
+A total of approximately twelve individual interviews were planned, with six participants from each population group. Participants were recruited via institutional channels and email invitations. This approach allowed for in-depth exploration of participants’ perspectives while providing flexibility and privacy for discussing sensitive topics.
+
+#### Inclusion and Exclusion Criteria
+
+##### Inclusion Criteria
+
+For health practitioners and policymakers, participants were required to have professional experience related to mental health practice or policy. For lay individuals, participants were required to be over 25 years of age and currently employed. All participants were required to be able to communicate in Indonesian and have access to an online platform for participation.
+
+##### Exclusion Criteria
+
+Participants were excluded if they were unable to attend the online interviews or had previously participated in similar qualitative studies on stress, mental health, or resilience.
+
+### Data Collection
+
+Data were collected through semi-structured individual interviews, each lasting approximately one hour. To facilitate discussion, a set of guiding questions was prepared, aimed at eliciting participants’ experiences, perceptions of resilience, and strategies for coping with stress and mental health challenges. In the interviews with healthcare practitioners and policymakers, additional questions specifically addressed the detection, management, and policy-related handling of stress and mental health issues within professional or institutional settings.
+
+The interviews were conducted in a conversational manner, allowing participants to share their experiences freely while following the guiding questions. Audio recordings were made with participants’ consent and transcribed verbatim to ensure accurate data capture for subsequent thematic analysis. Probes and follow-up questions were used as needed to encourage elaboration or clarification, enhancing the depth and richness of the data.
+
+To enhance methodological rigor, guiding questions were pilot-tested prior to data collection to ensure clarity, relevance, and appropriateness for each participant group. The online interview format was chosen to provide flexibility, reduce logistical barriers, and create a more comfortable environment for participants to discuss potentially sensitive experiences.
+
+### Guiding Questions for Interviews
+
+#### Health Practitioners and Policymakers
+
+1. How do you operationalize, identify, or detect signs of stress and mental health challenges among individuals in your professional context?
+2. What strategies or interventions are typically implemented to manage stress and promote mental health?
+3. How do you perceive the concept of resilience in the populations you work with or serve?
+4. Can you describe factors or conditions that help individuals maintain or strengthen resilience?
+5. In your experience, what are the main barriers or challenges in promoting mental health and resilience at an individual or organizational level?
+6. Are there policy or institutional measures that you think could better support resilience and mental health outcomes?
+
+#### Lay Individuals (Non-Health Professionals)
+
+1. How would you describe your understanding of resilience in everyday life?
+2. What strategies do you personally use to cope with stress or maintain mental health?
+3. Can you describe situations where you felt your resilience was challenged, and how you responded?
+4. What factors or support systems help you to strengthen or maintain your resilience?
+5. What challenges or barriers do you face in managing stress or maintaining mental well-being?
+6. Are there resources, programs, or practices that you think could better support resilience in your community or workplace?
+
+### Data Processing
+
+Following data collection, all interview recordings were transcribed verbatim in Indonesian to ensure accurate capture of participants’ responses. Transcripts were reviewed and cleaned to remove any identifiable information, maintaining participant confidentiality. Each transcript was assigned a unique code to facilitate data management and ensure anonymity during analysis.
+
+The transcribed data were then imported into qualitative data analysis software for organization and coding. A thematic analysis approach was applied, following an iterative process of familiarization, coding, and theme development. Initially, open coding was performed to identify meaningful units of text related to stress, resilience, mental health, and coping strategies. Codes were then grouped into categories, and higher-order themes were generated through constant comparison across transcripts.
+
+To enhance trustworthiness, coding and theme development were independently reviewed by at least two researchers, with discrepancies resolved through discussion to reach consensus. Memos were written throughout the process to document analytical decisions and reflections, supporting transparency and rigor in the interpretation of the data.
+
+### Data Analysis
+
+Data from the semi-structured interviews were analyzed using a thematic analysis approach consistent with phenomenological methodology. The analysis aimed to identify and interpret patterns and themes that reflect participants’ lived experiences of resilience, stress, and mental health. 
+
+The analysis proceeded in several stages. First, all transcripts were read repeatedly to achieve familiarity with the data and to gain an overall understanding of participants’ experiences. Second, open coding was applied to meaningful segments of text, capturing concepts and insights relevant to the research objectives. Third, codes were reviewed and organized into categories, and higher-order themes were developed by comparing codes within and across participant groups. 
+
+Throughout the analysis, constant comparison was used to refine codes and themes, ensuring that they accurately represented the data. Analytical memos were maintained to document decisions, reflections, and emerging interpretations. To enhance credibility, at least two researchers independently coded a subset of transcripts and discussed discrepancies until consensus was reached. The final thematic framework was then applied to all transcripts to ensure consistency and comprehensive representation of participants’ perspectives. 
+
+Findings from the qualitative analysis were intended to complement and contextualize the quantitative results, providing deeper insight into how resilience interacts with stress and mental health outcomes across different social and occupational contexts.
+
+## Integration Remarks
+
+### Rationale for the Mixed-Method Approach
+
+This study employed a mixed-methods approach to provide a comprehensive understanding of resilience, stress, and mental health outcomes. The quantitative component was conducted first, enabling the measurement of key variables such as the prevalence of depression, anxiety, and burnout, as well as resilience using both the residual approach and the Connor-Davidson Resilience Scale (CD-RISC). While these quantitative measures provide valuable information on the extent and distribution of mental health outcomes and resilience, they are inherently limited in capturing the complexity and subjective experience of these constructs.
+
+The subsequent qualitative component was designed to address these limitations by exploring participants’ lived experiences, perceptions, and strategies related to resilience and mental health. By contextualizing and enriching the quantitative findings, the qualitative study provides insight into what constitutes mental health and resilience from the perspectives of both professionals and lay individuals. This sequential integration allows for a deeper interpretation of quantitative results, ensuring that the study captures both the measurable and experiential dimensions of resilience.
+
+Overall, combining quantitative and qualitative methods strengthens the study’s conclusions, allowing for a more holistic understanding of resilience as a multifaceted phenomenon, and ensuring that both statistical trends and human experiences are considered in the analysis and interpretation.
+
+### Results Triangulation
+
+To integrate the quantitative and qualitative components, this study employed methodological triangulation, comparing findings from the two approaches to enhance the validity and depth of interpretation. Quantitative results, including the prevalence of depression, anxiety, and burnout, as well as resilience scores derived from the residual approach and the CD-RISC, were first examined independently. Subsequently, qualitative findings from semi-structured interviews were analyzed to contextualize and explain these results, providing insight into why certain patterns or levels were observed across different participant groups.
+
+The comparison involved mapping themes from the qualitative analysis to the corresponding quantitative measures. For example, participants’ narratives about coping strategies, stressors, and support systems were related to individual resilience scores, while descriptions of emotional and occupational challenges were linked to measured levels of depression, anxiety, or burnout. This approach allows for the identification of convergent and divergent evidence, highlighting areas where qualitative experiences support, nuance, or challenge the quantitative findings.
+
+By employing methodological triangulation, the study strengthens the credibility of its conclusions. The integration of qualitative insights ensures that numerical findings are interpreted in light of lived experiences, offering a richer and more comprehensive understanding of resilience and mental health outcomes across both professional and lay populations.
+
+### Integrated Knowledge Synthesis and Conceptual Framework Development
+
+Following the triangulation of quantitative and qualitative findings, the study synthesized evidence to develop a comprehensive understanding of the relationships among stress, mental health outcomes, and resilience. Quantitative measures provided information on the prevalence of depression, anxiety, burnout, and resilience scores, while qualitative data offered contextual insights into participants’ lived experiences, coping strategies, and perceptions of resilience. Integrating these findings enabled the identification of patterns, convergences, and divergences that contribute to a deeper theoretical understanding of resilience and mental health.
+
+Based on this synthesis, a conceptual framework was formulated to illustrate how resilience may modulate the impact of stress on mental health outcomes. The framework incorporates both measurable indicators from the quantitative component and experiential constructs derived from the qualitative analysis, providing a holistic representation of the interplay between individual, social, and occupational factors in shaping resilience and mental well-being. 
+
+This integrated approach enhances the theoretical contribution of the study by offering a model that explains not only the statistical associations between stress and mental health outcomes but also the underlying mechanisms and subjective experiences that inform these relationships. The framework serves as a foundation for future research and theory development in resilience and mental health, bridging quantitative measurement with qualitative understanding.

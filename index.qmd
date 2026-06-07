@@ -17,7 +17,7 @@ citation:
 
 :::{.content-hidden}
 
-# Preface {.unnumbered}
+# Foreword {.unnumbered}
 
 :::
 

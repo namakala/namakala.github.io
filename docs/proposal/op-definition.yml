@@ -51,3 +51,7 @@
   Variable: "Burnout"
   Definition: "Total score of Maslach Burnout Inventory"
   Scale: "Numeric"
+- Category: "Mental Health Outcomes"
+  Variable: "Resilience"
+  Definition: "Total score of Connor-Davidson Resilience Scale"
+  Scale: "Numeric"

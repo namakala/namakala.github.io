@@ -1,4 +1,4 @@
-### Notation and Definitions
+#### Notation and Definitions
 
 * $n$: Required sample size
 * $N$: Population size
@@ -15,7 +15,7 @@
 * $k$: Number of predictors in the full regression model
 * $\text{DEFF}$: Design effect; multiplicative factor that inflates variance due to sampling design, e.g., by clustering or weighting
 
-### Sample Size for Continuous Variables
+#### Sample Size for Continuous Variables
 
 The required sample for a survey is estimable following various methods. As proposed by @cochran1977sampling, two factors play an important role in determining the sample size, namely the alpha level and the acceptable level or error. @kotrlik2001organizational summarized several ways of calculating the required sample size, where equation \ref{eq-sample1} excerpted the calculation for continuous variable.
 
@@ -35,7 +35,7 @@ n   &= \frac{119}{1 + \frac{119}{10,562,088}} \notag \\
     &\approx 119 \notag
 \end{align}
 
-### Sample Size for Disease Prevalence
+#### Sample Size for Disease Prevalence
 
 On the other hand, sample size is also estimable by following equation \ref{eq-sample3}. In this equation, $p$ represents the proportion of an event; $z$ is a Z distribution corresponding to the $\alpha$ value; $E$ is the expected maximum error, which is conveniently agreed to 3%. Following this formula, it is possible to integrate disease prevalence as a proportion $p$ when calculating the required sample size. According to @GBD2022, the global prevalence of depression and anxiety in 2019 was 3,440 and 3,779 per 100,000 people, respectively. Thus, the proportion for depression $p_D$ and anxiety $p_A$ are 0.034 and 0.038.
 
@@ -47,7 +47,7 @@ n_A  &= \frac{0.038 \cdot (1 - 0.038) \cdot 1.96^2}{0.03^2} \notag \\
      &\approx 157 \notag
 \end{align}
 
-### Sample Size for Correlation Coefficient
+#### Sample Size for Correlation Coefficient
 
 For hypothesis 1, we will test the correlation between outcome-based resilience and state resilience. For a two-tailed test of Pearson's $r$, @newman2013designing outlined the sample size calculation as:
 
@@ -67,7 +67,7 @@ n &= \frac{(Z_{1-\alpha/2} + Z_{1-\beta})^2}{r^2} + 3 \label{eq-sample4} \\
   &\approx 129 \notag
 \end{align}
 
-### Sample Size for Multiple Regression
+#### Sample Size for Multiple Regression
 
 Hypothesis 2 will be tested with regression models to examine associations between perceived stress and mental health outcomes using @Cohen2013 formula for multiple regression:
 
@@ -78,7 +78,7 @@ f^2 &= \frac{R^2}{1-R^2} \notag \\
 \text{For } f^2 &= 0.05, k \approx 6-8: \quad n \approx 165 \notag
 \end{align}
 
-### Sample Size for Moderation Analysis
+#### Sample Size for Moderation Analysis
 
 For hypothesis 3-5, the moderation effect is typically represented as an interaction term in regression. According to @aiken1991multiple, effect sizes for interactions are often small with $f^2 \approx 0.02$. The calculation follows \ref{eq-sample5}, but $k$ includes the main effects plus the interaction term and $f^2$ is based on the incremental $R^2$ from adding the interaction term.
 
@@ -87,20 +87,34 @@ For hypothesis 3-5, the moderation effect is typically represented as an interac
 \text{For } f^2 = 0.02, k \approx 8-10: \quad n &\approx 402 \notag
 \end{align}
 
-### Final Sample Size
+#### Sample Size for Prevalence Ratio Analysis
 
-| Aim                                       |      Plausible effect / $p$ | 80% power $n$ |
-| ----------------------------------------- | --------------------------: | ------------: |
-| Hypothesis 1: Correlation                 |                    $r=0.15$ |           352 |
-|                                           |                    $r=0.20$ |           199 |
-|                                           |                    $r=0.25$ |           129 |
-| Hypothesis 2: Regression main effect      |  $f^2=0.02,\;k\approx6{-}8$ |         \~400 |
-|                                           |  $f^2=0.05,\;k\approx6{-}8$ |         \~165 |
-| Hypotheses 3-5: Interaction (moderation)  | $f^2=0.01,\;k\approx8{-}10$ |         \~794 |
-|                                           | $f^2=0.02,\;k\approx8{-}10$ |         \~402 |
-| Prevalence: Depression (p=0.034)          |                    $E=0.03$ |           141 |
-|                                           |                    $E=0.02$ |           316 |
-| Prevalence: Anxiety (p=0.038)             |                    $E=0.03$ |           157 |
-|                                           |                    $E=0.02$ |           352 |
+Rationale for conducting a prevalence ratio analysis was based on established evidence of socioeconomic status differences in the prevalence of psychiatric disorder. According to the @SKI2023, employment status bore the highest risk for mental disorders in the general population, especially for depressive disorder. Unemployment increase the odds of having a depressive disorder and anxiety disorder, with an OR = 2.06 and OR = 2.63, respectively [@Amiri2021; @Franke2024]. The prevalence of depression reported in @GBD2022 were 3.5% for Indonesia, and sample size were calculated using Kelsey's formula for two independent proportions with equal group sizes, i.e., $n_u = n_e$. Assuming a two-sided $\alpha$ = 0.05 and 80% power:
 
-Having multiple sample size estimations, the higher number of minimum sample is preferred. To account for non-probability sampling and post-stratification in an online survey, the final sample size must be multiplied by a $DEFF$ variable. $DEFF$ indicates the design effect, where commonly agreed in the range of 1.5-2 in online survey [@lohr2021sampling]. The final sample size is $794 \times 2 = 1,592$ samples. Initially, a pilot study according to @Cohen2013 will be commenced to acquire 250 individuals from the general population. Then, the required sample size is recalculated with Monte-Carlo simulation using the pilot data [@Green2016].
+\begin{align}
+\text{Weighted prevalence: } & p = \frac{p_u + p_e}{2} \notag \\
+\text{Sample size per group: } & n_u = n_e = \frac{2 \, (Z_{\alpha/2} + Z_\beta)^2 \, p (1-p)}{(p_u - p_e)^2} \\
+\text{Total sample size: } & n_\text{total} = n_u + n_e \notag \\
+\text{Depression (}p_\text{tot}=0.034, \text{OR}=2.06\text{): } \; & n_m = n_f \approx 671, \; n_\text{total} \approx 1{,}342 \notag \\
+\text{Anxiety (}p_\text{tot}=0.038, \text{OR}=2.63\text{): } \; & n_m = n_f \approx 308, \; n_\text{total} \approx 616 \notag
+\end{align}
+
+#### Final Sample Size
+
+| Aim                                       | Plausible effect / $p$      | 80% power $n$ |
+| ----------------------------------------- | --------------------------: | -------------: |
+| Hypothesis 1: Correlation                 | $r=0.15$                    | 352 |
+|                                           | $r=0.20$                    | 199 |
+|                                           | $r=0.25$                    | 129 |
+| Hypothesis 2: Regression main effect      | $f^2=0.02,\;k\approx6{-}8$  | ~400 |
+|                                           | $f^2=0.05,\;k\approx6{-}8$  | ~165 |
+| Hypotheses 3-5: Interaction (moderation)  | $f^2=0.01,\;k\approx8{-}10$ | ~794 |
+|                                           | $f^2=0.02,\;k\approx8{-}10$ | ~402 |
+| Prevalence: Depression (p=0.034)          | $E=0.03$                    | 141 |
+|                                           | $E=0.02$                    | 316 |
+| Prevalence: Anxiety (p=0.038)             | $E=0.03$                    | 157 |
+|                                           | $E=0.02$                    | 352 |
+| Prevalence ratio: Depression (PR=1.4)     | $n_m = n_f = 671$           | 1,342 |
+| Prevalence ratio: Anxiety (PR=1.7)        | $n_m = n_f = 308$           | 616 |
+
+Among the multiple sample size estimations, the largest minimum sample was preferred. To account for non-probability sampling and post-stratification in an online survey, the final sample size was multiplied by a design effect ($DEFF$), commonly assumed between 1.5 and 2 [@lohr2021sampling]. Accordingly, the final sample size was set at $1,342 \times 1.5 = 2,013$ participants. Initially, a pilot study would be conducted to recruit 250 individuals from the general population [@Cohen2013], and the required sample size would be subsequently recalculated using Monte Carlo simulation based on the pilot data [@Green2016].
