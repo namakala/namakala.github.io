@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+#MISE description="Render proposal"
+exec quarto render "$@"

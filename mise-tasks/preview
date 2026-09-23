@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+#MISE description="Live preview + tailscale serve"
+exec ./scripts/preview.sh "$@"
